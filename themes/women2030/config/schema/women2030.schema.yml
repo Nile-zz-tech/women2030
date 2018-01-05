@@ -1,5 +1,5 @@
 # Schema for the configuration files of the Bartik theme.
 
-blog_themes.settings:
+wome2030.settings:
   type: theme_settings
-  label: 'Blog settings'
+  label: 'Women 2030 theme settings'
