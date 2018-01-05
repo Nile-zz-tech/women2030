@@ -1,0 +1,57 @@
+<?php
+use Drupal\Core\Template\RenderWrapper;
+$active_theme = \Drupal::theme()->getActiveTheme()->getName();
+include_once(drupal_get_path('theme', $active_theme) . '/assets/includes/skins-menu/skins_menu.inc');
+
+
+function blog_themes_preprocess_html(&$variables)
+{
+  skmn_preprocess_html($variables);
+}
+
+
+
+function blog_themes_preprocess_page(&$variables) {
+  if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
+    $classes[] = 'two-sidebars';
+    $variables['page']['main_content_width'] = 6;
+    $variables['page']['sidebar_first_width'] = 3;
+    $variables['page']['sidebar_second_width'] = 3;
+  }
+  elseif (!empty($variables['page']['sidebar_first'])) {
+    $classes[] = 'one-sidebar';
+    $classes[] = 'sidebar-first';
+    $variables['page']['main_content_width'] = 8;
+    $variables['page']['sidebar_first_width'] = 4;
+  }
+  elseif (!empty($variables['page']['sidebar_second'])) {
+    $classes[] = 'one-sidebar';
+    $classes[] = 'sidebar-second';
+    $variables['page']['main_content_width'] = 8;
+    $variables['page']['sidebar_second_width'] = 4;
+  }
+  else {
+    $classes[] = 'no-sidebars';
+    $variables['page']['main_content_width'] = 12;
+  }
+
+  skmn_preprocess_page($variables);
+}
+
+function blog_themes_preprocess_node(&$variables) {
+  $node = $variables['node'];
+
+  // get and set created time
+  $createdDate = $node->getCreatedTime();
+  $date = new DateTime();
+  $date->setTimestamp($createdDate);
+  $variables['created_year'] = $date->format('Y');
+  $variables['created_month'] = $date->format('M');
+  $variables['created_day'] = $date->format('d');
+}
+
+function blog_themes_form_system_theme_settings_alter(&$form, $form_state) {
+  
+  skmn_form_system_theme_settings_alter($form, $form_state);
+}
+

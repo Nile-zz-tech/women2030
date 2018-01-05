@@ -1,0 +1,31 @@
+/* fonts */
+@import url(../includes/bootstrap/css/bootstrap.css);
+@import url(../includes/nucleo/outline/css/nucleo-outline.css);
+@import url(../includes/nucleo/mini/css/nucleo-mini.css);
+@import url(../includes/nucleo/glyph/css/nucleo-glyph.css);
+
+/*------------------------------------------------------------------
+CSS
+-------------------------------------------------------------------*/
+
+@import "includes/font-awesome";
+@import "compass/css3";
+
+// Core variables and mixins
+@import "config/variables";
+@import "config/mixins";
+
+// Base
+@import "base/base";
+@import "base/header";
+@import "base/footer";
+@import "base/skincolor";
+@import "base/skinbackground";
+@import "base/skinmenu";
+
+// Partials
+@import "partials/elements";
+@import "partials/block";
+@import "partials/view";
+@import "partials/page";
+@import "partials/responsive";

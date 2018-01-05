@@ -1,0 +1,44 @@
+skins-menu:
+  version: 1.x
+  js:
+    assets/includes/skins-menu/skins_menu.js: {}
+
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+
+
+
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      assets/includes/bootstrap/css/bootstrap.css: {}
+      # assets/includes/fontawesome/css/font-awesome.css: {}
+      assets/includes/fonts/oswald_regular/stylesheet.css: {}
+      assets/includes/slick/slick/slick.css: {}
+      assets/includes/slick/css/style.css: {}
+      assets/css/monokai/monokai.min.css: {}
+      assets/css/style.css: {}
+      assets/css/style-rtl.css: {}
+      assets/css/colors.css: {}
+  js:
+    assets/js/jquery.smooth-scroll.js: {}
+    assets/includes/flexslider/jquery.flexslider.js: {}
+    assets/includes/matchheight/jquery.matchHeight.js: {}
+    assets/js/slideshow.js: {}
+    assets/includes/slick/slick/slick.js: {}
+    assets/js/carousel.js: {}
+    assets/includes/bootstrap/js/bootstrap.js: {}
+    assets/js/fix_script.js: {}
+    assets/js/jquery.cookie.js: {}
+    assets/js/personal_blog.js: {}
+    assets/js/modernizr.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/drupal.ajax
+    - core/drupal.progress
+    - core/jquery.once
