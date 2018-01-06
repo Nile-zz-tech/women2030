@@ -3809,8 +3809,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   font-size: 14px;
-  color: #ccc;
-  background: url(../images/bg-body.jpg) repeat 0 0 #000;
+  /*color: #ccc;*/
 }
 
 /* line 10, ../sass/base/_base.scss */
@@ -3825,10 +3824,12 @@ html {
 header, nav, section, article, figure, aside, footer {
   display: block;
 }
-
+#header {
+  border-bottom: 2px solid #DDDCDC;
+}
 /* line 21, ../sass/base/_base.scss */
 a {
-  color: #f53e3e;
+  color: #B69235;
 }
 
 /* line 27, ../sass/base/_base.scss */
@@ -3845,7 +3846,7 @@ h1, .h1 {
 /* line 36, ../sass/base/_base.scss */
 h1, .h1, h2, .h2, h3, .h3 {
   margin: 0 0 15px;
-  color: #fff;
+  /*color: #fff;*/
 }
 
 /* line 44, ../sass/base/_base.scss */
@@ -3896,16 +3897,18 @@ p {
 /* header */
 /* line 3, ../sass/base/_header.scss */
 #header .container {
-  padding-top: 15px;
+  /*padding-top: 15px;*/
   padding-bottom: 15px;
 }
 /* line 8, ../sass/base/_header.scss */
 #header .site-branding {
   float: left;
+  margin-right: 76px;
 }
 /* line 12, ../sass/base/_header.scss */
 #header .block-search {
   float: right;
+  margin-top: 30px;
 }
 /* line 17, ../sass/base/_header.scss */
 #header .region-header:before, #header .region-header:after {
@@ -3915,7 +3918,7 @@ p {
 /* search */
 /* line 24, ../sass/base/_header.scss */
 #search-block-form {
-  background: url(../images/bg-search.png) no-repeat 100% 0;
+  /*background: url(../images/bg-search.png) no-repeat 100% 0;*/
   height: 32px;
   width: 249px;
   padding: 4px 5px;
@@ -3990,67 +3993,67 @@ p {
 }
 /* line 11, ../sass/base/_skinbackground.scss */
 .change-skin-menu-wrapper .bg-1 a {
-  background: url(../images/skins-menu/bg-1.png) 0 0 repeat;
+  /*background: url(../images/skins-menu/bg-1.png) 0 0 repeat;*/
 }
 /* line 15, ../sass/base/_skinbackground.scss */
 .change-skin-menu-wrapper .bg-2 a {
-  background: url(../images/skins-menu/bg-2.png) 0 0 repeat;
+  /*background: url(../images/skins-menu/bg-2.png) 0 0 repeat;*/
 }
 /* line 19, ../sass/base/_skinbackground.scss */
 .change-skin-menu-wrapper .bg-3 a {
-  background: url(../images/skins-menu/bg-3.png) 0 0 repeat;
+  /*background: url(../images/skins-menu/bg-3.png) 0 0 repeat;*/
 }
 /* line 23, ../sass/base/_skinbackground.scss */
 .change-skin-menu-wrapper .bg-4 a {
-  background: url(../images/skins-menu/bg-4.png) 0 0 repeat;
+  /*background: url(../images/skins-menu/bg-4.png) 0 0 repeat;*/
 }
 /* line 27, ../sass/base/_skinbackground.scss */
 .change-skin-menu-wrapper .bg-5 a {
-  background: url(../images/skins-menu/bg-5.png) 0 0 repeat;
+  /*background: url(../images/skins-menu/bg-5.png) 0 0 repeat;*/
 }
 /* line 31, ../sass/base/_skinbackground.scss */
 .change-skin-menu-wrapper .bg-6 a {
-  background: url(../images/skins-menu/bg-6.png) 0 0 repeat;
+  /*background: url(../images/skins-menu/bg-6.png) 0 0 repeat;*/
 }
 /* line 35, ../sass/base/_skinbackground.scss */
 .change-skin-menu-wrapper .bg-7 a {
-  background: url(../images/skins-menu/bg-7.png) 0 0 repeat;
+  /*background: url(../images/skins-menu/bg-7.png) 0 0 repeat;*/
 }
 
 /* change background */
 /* line 45, ../sass/base/_skinbackground.scss */
 .bg-1 {
-  background: url("../images/skins-menu/bg-1.png") 0 0 repeat;
+  /*background: url("../images/skins-menu/bg-1.png") 0 0 repeat;*/
 }
 
 /* line 49, ../sass/base/_skinbackground.scss */
 .bg-2 {
-  background: url("../images/skins-menu/bg-2.png") 0 0 repeat;
+  /*background: url("../images/skins-menu/bg-2.png") 0 0 repeat;*/
 }
 
 /* line 53, ../sass/base/_skinbackground.scss */
 .bg-3 {
-  background: url("../images/skins-menu/bg-3.png") 0 0 repeat;
+  /*background: url("../images/skins-menu/bg-3.png") 0 0 repeat;*/
 }
 
 /* line 57, ../sass/base/_skinbackground.scss */
 .bg-4 {
-  background: url("../images/skins-menu/bg-4.png") 0 0 repeat;
+  /*background: url("../images/skins-menu/bg-4.png") 0 0 repeat;*/
 }
 
 /* line 61, ../sass/base/_skinbackground.scss */
 .bg-5 {
-  background: url("../images/skins-menu/bg-5.png") 0 0 repeat;
+  /*background: url("../images/skins-menu/bg-5.png") 0 0 repeat;*/
 }
 
 /* line 65, ../sass/base/_skinbackground.scss */
 .bg-6 {
-  background: url("../images/skins-menu/bg-6.png") 0 0 repeat;
+  /*background: url("../images/skins-menu/bg-6.png") 0 0 repeat;*/
 }
 
 /* line 69, ../sass/base/_skinbackground.scss */
 .bg-7 {
-  background: url("../images/skins-menu/bg-7.png") 0 0 repeat;
+  /*background: url("../images/skins-menu/bg-7.png") 0 0 repeat;*/
 }
 
 /* line 73, ../sass/base/_skinbackground.scss */
@@ -4242,7 +4245,7 @@ p {
 
 /* line 1, ../sass/partials/_elements.scss */
 .forum {
-  background: transparent url("../images/bg-info-2.jpg") repeat scroll 0 0;
+  /*background: transparent url("../images/bg-info-2.jpg") repeat scroll 0 0;*/
   border: medium none;
   margin-bottom: 30px;
   padding: 28px;
@@ -4288,6 +4291,7 @@ p {
 #main-menu {
   float: right;
   margin: 0;
+  margin-top: 30px;
   clear: right;
   padding-top: 15px;
 }
@@ -4551,8 +4555,8 @@ p {
 }
 /* line 250, ../sass/partials/_block.scss */
 .navbar-default ul.menu > li:hover > a, .navbar-default ul.menu > li:focus > a {
-  background: #f53e3e;
-  color: #fff;
+  /*background: #f53e3e;*/
+  color: #B69235;
 }
 /* line 255, ../sass/partials/_block.scss */
 .navbar-default ul.menu > li:hover ul.menu, .navbar-default ul.menu > li:focus ul.menu {
@@ -4727,7 +4731,7 @@ p {
   position: absolute;
   right: 28px;
   top: 0;
-  background: url(../images/bg-date.png) no-repeat 100% 0;
+  /*  background: url(../images/bg-date.png) no-repeat 100% 0;*/
   z-index: 10;
   height: 55px;
   width: 100%;
@@ -4953,8 +4957,9 @@ p {
 /* footer */
 /* line 647, ../sass/partials/_block.scss */
 #footer {
-  background: #000;
-  border-top: 1px solid #222;
+  background: #595959;
+  height: 197px;
+  /*border-top: 1px solid #222;*/
 }
 /* line 651, ../sass/partials/_block.scss */
 #footer .container {
@@ -4985,7 +4990,7 @@ p {
 }
 /* line 676, ../sass/partials/_block.scss */
 #footer .menu li a {
-  color: #ccc;
+  color: #fff;
 }
 /* line 679, ../sass/partials/_block.scss */
 #footer .menu li a:hover {
@@ -5090,18 +5095,18 @@ p {
 }
 /* line 786, ../sass/partials/_block.scss */
 .navbar-default ul.menu > li > a.is-active {
-  background: #f53e3e;
-  color: #fff;
+  /*background: #f53e3e;*/
+  color: #424242;
   text-shadow: inherit;
   -webkit-text-shadow: inherit;
 }
 /* line 792, ../sass/partials/_block.scss */
 .navbar-default ul.menu > li > a.is-active:hover, .navbar-default ul.menu > li > a.is-active:focus {
-  color: #fff;
+  color: #B69235;
 }
 /* line 797, ../sass/partials/_block.scss */
 .navbar-default ul.menu > li > a:hover, .navbar-default ul.menu > li > a:focus {
-  color: #f53e3e;
+  color: #B69235;
 }
 
 /* line 2, ../sass/partials/_view.scss */
@@ -5121,7 +5126,7 @@ p {
 
 /* line 22, ../sass/partials/_view.scss */
 .view-node .views-field-created {
-  background: transparent url("../images/bg-date-2.png") no-repeat scroll 100% 0;
+  /*  background: transparent url("../images/bg-date-2.png") no-repeat scroll 100% 0;*/
   display: block;
   margin: 0 0 15px;
   overflow: hidden;
@@ -5139,7 +5144,7 @@ p {
 }
 /* line 39, ../sass/partials/_view.scss */
 .view-node .views-field-created {
-  background: url(../images/bg-date-2.png) no-repeat 100% 0;
+  /*  background: url(../images/bg-date-2.png) no-repeat 100% 0;*/
   display: block;
   margin: 0 0 15px;
   overflow: hidden;
@@ -5188,7 +5193,7 @@ p {
 }
 /* line 88, ../sass/partials/_view.scss */
 .view-node .views-field-nothing {
-  background: transparent url("../images/bg-info-2.jpg") repeat;
+  /*  background: transparent url("../images/bg-info-2.jpg") repeat;*/
   border: 0 none;
   margin-bottom: 30px;
   padding: 28px;
@@ -5298,7 +5303,7 @@ p {
 }
 /* line 17, ../sass/partials/_page.scss */
 .page #main {
-  padding-top: 30px;
+  padding-top: 42px;
   padding-bottom: 30px;
   /* forum */
   /* comment */
@@ -5329,7 +5334,7 @@ p {
 }
 /* line 47, ../sass/partials/_page.scss */
 .page #main .content .node .date-wrapper {
-  background: url(../images/bg-date-2.png) no-repeat 100% 0;
+  /*  background: url(../images/bg-date-2.png) no-repeat 100% 0;*/
   display: block;
   margin: 0 0 15px;
   overflow: hidden;
@@ -6011,7 +6016,7 @@ p {
 
 /* line 771, ../sass/partials/_page.scss */
 .page {
-  background: transparent url("../images/bg-main.jpg") repeat fixed 50% 0;
+  /*  background: transparent url("../images/bg-main.jpg") repeat fixed 50% 0;*/
 }
 
 /* line 775, ../sass/partials/_page.scss */
@@ -6028,7 +6033,7 @@ p {
 
 /* line 789, ../sass/partials/_page.scss */
 #main-content .node__content {
-  background: transparent url("../images/bg-info-2.jpg") repeat;
+  /*  background: transparent url("../images/bg-info-2.jpg") repeat;*/
   border: 0 none;
 }
 
@@ -6224,6 +6229,10 @@ p {
   display: none;
 }
 
+#header #block-socialheader {
+  float: right;
+  margin-top: 30px;
+}
 @media (min-width: 992px) and (max-width: 1199px) {
   /* line 3, ../sass/partials/_responsive.scss */
   .page .sidebar #user-login-form .form-actions {
