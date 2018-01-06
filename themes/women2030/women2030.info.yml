@@ -2,10 +2,10 @@ name: Women 2030
 type: theme
 base theme: classy
 description: Women 2030 custom theme by Nile Tech
-package: Custom
+package: Core
 core: 8.x
 libraries: 
-  -women2030/global-styling
+  - women2030/global-styling
 regions:
     header: Header
     help: Help
