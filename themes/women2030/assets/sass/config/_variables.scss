@@ -1,12 +1,15 @@
 /* */
-$light_grey: #ccc;
 $red: #f53e3e;
 $white: #fff;
 $black: #000;
 $dark: #141414;
-$grey: #999;
+$gold: #B69235;
+$grey: #CCC;
+$dark_grey: #595959;
+$light_grey: #DDDCDC;
 
-$link-color: $red;
+$link-color: $gold;
+
 /*  */
 %box_shadow {
     box-shadow: 0 0 5px #ccc;
@@ -35,14 +38,14 @@ $link-color: $red;
     border: none;
     padding: 8px 20px;
     color: #fff;
-    background: $red;
+    background: $gold;
     cursor: pointer;
 
     @extend %button_effect_3;
 
     &:hover, &:focus {
         background: $white;
-        color: $red;
+        color: $gold;
     }
 
     &:first-child {
