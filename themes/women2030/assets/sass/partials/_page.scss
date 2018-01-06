@@ -15,7 +15,7 @@
 
 .page {
     #main {
-        padding-top: 30px;
+        padding-top: 42px;
         padding-bottom: 30px;
 
         .content {
@@ -45,7 +45,6 @@
                 }
 
                 .date-wrapper {
-                    background: url(../images/bg-date-2.png) no-repeat 100% 0;
                     display: block;
                     margin: 0 0 15px;
                     overflow: hidden;
@@ -769,7 +768,6 @@
 }
 
 .page {
-    background: rgba(0, 0, 0, 0) url("../images/bg-main.jpg") repeat fixed 50% 0;
 }
 
 .page #main .content .node h2 {
@@ -787,7 +785,6 @@
 }
 
 #main-content .node__content {
-    background: rgba(0, 0, 0, 0) url("../images/bg-info-2.jpg") repeat;
     border: 0 none;
 }
 

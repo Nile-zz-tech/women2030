@@ -1,16 +1,18 @@
 /* header */
 #header {
     .container {
-        padding-top: 15px;
+        padding-top: 0px;
         padding-bottom: 15px;
     }
 
     .site-branding {
         float: left;
+        margin-right: 76px;
     }
 
     .block-search {
         float: right;
+        margin-top: 30px;
     }
 
     .region-header {
@@ -22,7 +24,6 @@
 
 /* search */
 #search-block-form {
-    background: url(../images/bg-search.png) no-repeat 100% 0;
     height: 32px;
     width: 249px;
     padding: 4px 5px;
