@@ -120,20 +120,17 @@
                 color: $white;
                 display: block;
                 padding: 4px 20px;
-                text-shadow: 1px 1px 0 #000000, 1px 2px 0 #000000;
                 font-size: 1.14em;
                 background-color: transparent;
                 &:hover, &:focus {
                     color: $gold;
                     background-color: transparent;
-                    text-shadow: 1px 1px 0 #000000, 1px 2px 0 #000000;
                 }
             }
             &.active, &.active-trail{
                 > a, > a:hover, > a:focus {
                     background: $gold;
                     color: $white;
-                    text-shadow: 1px 1px 0 #000000, 1px 2px 0 #000000;
                 }
             }
         }
@@ -234,7 +231,6 @@
                 color: $black;
                 display: block;
                 padding: 4px 20px;
-                text-shadow: 1px 1px 0 #000000, 1px 2px 0 #000000;
                 font-size: 1.14em;
 
                 &:hover, &:focus {
@@ -785,7 +781,6 @@
             background: none;
             color: $gold;
 
-            @include text-shadow(inherit);
 
             &:hover, &:focus {
                 color: $gold;
