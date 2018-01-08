@@ -1,80 +1,97 @@
 /* header */
 #header {
-    .container {
-        padding-top: 0px;
-        padding-bottom: 15px;
-    }
+  border-bottom: 2px solid $light_grey;
 
-    .site-branding {
-        float: left;
-        margin-right: 76px;
-    }
+  .container {
+    padding-top: 0px;
+    padding-bottom: 15px;
+  }
 
-    .block-search {
-        float: right;
-        margin-top: 30px;
-    }
+  .site-branding {
+    float: left;
+    margin-right: 76px;
+  }
 
-    .region-header {
-        &:before, &:after {
-            display: none;
-        }
+  .block-search, .block-social-media-links {
+    float: right;
+    margin-top: 30px;
+
+    h2, .content {
+      float: left;
     }
+    h2 {
+      font-size: 18px;
+    }
+    a {
+      color: $dark_grey;
+      
+      &:before {
+        content: none;
+      }
+    }
+  }
+
+  .region-header {
+    &:before, &:after {
+      display: none;
+    }
+  }
+
 }
 
 /* search */
 #search-block-form {
-    height: 32px;
-    width: 249px;
-    padding: 4px 5px;
+  height: 32px;
+  width: 249px;
+  padding: 4px 5px;
+  position: relative;
+
+  &:after {
+    @include fontawesome;
+
+    content: "\f002";
+    font-size: 18px;
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    color: $black;
+    z-index: 1;
+  }
+
+  .form-item {
+    margin: 0;
+  }
+
+  .form-search {
+    background: none;
+    border: none;
+    padding: 2px 4px 4px;
+    width: 198px;
+    text-indent: 5px;
+    color: $black;
+    font-style: italic;
+  }
+
+  .button {
+    margin: 0;
+    float: right;
+    background: none;
+    z-index: 1;
+    border: none;
+    width: 17px;
+    height: 25px;
+    text-indent: -999em;
+  }
+
+  .form-actions {
     position: relative;
-
-    &:after {
-        @include fontawesome;
-
-        content: "\f002";
-        font-size: 18px;
-        position: absolute;
-        right: 10px;
-        top: 7px;
-        color: $black;
-        z-index: 1;
-    }
-
-    .form-item {
-        margin: 0;
-    }
-
-    .form-search {
-        background: none;
-        border: none;
-        padding: 2px 4px 4px;
-        width: 198px;
-        text-indent: 5px;
-        color: $black;
-        font-style: italic;
-    }
-
-    .button {
-        margin: 0;
-        float: right;
-        background: none;
-        z-index: 1;
-        border: none;
-        width: 17px;
-        height: 25px;
-        text-indent: -999em;
-    }
-
-    .form-actions {
-        position: relative;
-        z-index: 5;
-    }
+    z-index: 5;
+  }
 
 }
 
 .search-block-form{
-    &.contextual-region{
-        position: static;
-    }
+  &.contextual-region{
+    position: static;
+  }
 }

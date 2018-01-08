@@ -1513,8 +1513,11 @@
       }
     }
 
-    #block-socialheader {
+    .block-social-media-links-block{
       float: left;
+      h2, .content {
+        float: right;
+      }
     }
   }
 

@@ -16,9 +16,6 @@ html {
 header, nav, section, article, figure, aside, footer {
   display: block;
 }
-#header{
-  border-bottom: 2px solid $light_grey;
-}
 
 a {
   color: $gold;
@@ -40,7 +37,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 
   @extend %font_oswald;
 
-  color: $black;
+  color: $gold;
 }
 
 h2 {
@@ -49,14 +46,10 @@ h2 {
   @extend %font_oswald;
 }
 
-h2 {
-  @include text-shadow(1px 1px 0 #000, 1px 2px 0 #333);
-}
-
 h4, h5, h6 {
   margin-bottom: 15px;
   font-size: 1em;
-  color: $white;
+  color: $gold;
 }
 
 address {
