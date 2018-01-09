@@ -585,14 +585,6 @@
     ul.inline, ul.links.inline {
         display: block;
 
-        li {
-            a {
-                &:before {
-                    content: "+";
-                    margin-right: 5px;
-                }
-            }
-        }
     }
 
     #title {

@@ -3,7 +3,8 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   font-size: 14px;
-  color: $black;
+  color: $default_color;
+  @extend %font_noto;
 }
 
 html {
@@ -29,13 +30,14 @@ a:hover, a:hover {
 }
 
 h1, .h1 {
-  font-size: 1.84em;
+  font-size: 52px;
+  font-weight: bold;
 }
 
 h1, .h1, h2, .h2, h3, .h3 {
   margin: 0 0 15px;
 
-  @extend %font_oswald;
+  @extend %font_noto;
 
   color: $gold;
 }
@@ -43,7 +45,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 h2 {
   font-size: 1.71em;
 
-  @extend %font_oswald;
+  @extend %font_noto;
 }
 
 h4, h5, h6 {

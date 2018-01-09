@@ -3,7 +3,7 @@
 @import url(../includes/nucleo/outline/css/nucleo-outline.css);
 @import url(../includes/nucleo/mini/css/nucleo-mini.css);
 @import url(../includes/nucleo/glyph/css/nucleo-glyph.css);
-
+@import url(//fonts.googleapis.com/earlyaccess/notonaskharabic.css); 
 /*------------------------------------------------------------------
 CSS
 -------------------------------------------------------------------*/
@@ -28,4 +28,5 @@ CSS
 @import "partials/block";
 @import "partials/view";
 @import "partials/page";
+@import "partials/woman";
 @import "partials/responsive";
