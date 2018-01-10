@@ -1,0 +1,110 @@
+/*
+The following content was designed & implemented under AlexSeif.com
+*/
+/* 
+    Created on : Jan 10, 2018, 7:24:58 PM
+    Author     : Alex Seif <me@alexseif.com>
+*/
+
+.page-node-type-article {
+
+  .block-system-main-block {
+    margin: 0 auto;
+    padding: 0 50px;
+
+    .field--name-field-image {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .field--name-node-title {
+      h1 {
+        font-size: 48px;
+        line-height: 61px;
+        color: $grey_font_article;
+      }
+    }
+
+    .field--name-user {
+      float: right;
+      clear: right;
+      margin-bottom: 20px;
+      
+      .field--name-user-picture, .field--name-username {
+        float: right;
+        margin-left: 10px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          width: 100px;
+        }
+        span {
+          color: $gold;
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .field--name-node-post-date {
+      float: left;
+      clear: left;
+    }
+
+    .field--name-field-tags {
+      clear: both;
+      float: none;
+      width: 100%;
+      border-top: 1px solid $light_grey;
+      border-bottom: 1px solid $light_grey;
+      padding: 17px 0;
+      margin-bottom: 22px;
+
+      h3 {
+        color: $grey_tag_title;
+        font-size: 20px;
+        float: right;
+        margin: 0;
+      }
+
+      ul {
+        list-style: none;
+        float: right;
+        margin: 0;
+
+        li {
+          float: right;
+          background: $grey_tag_background;
+          padding: 0 5px;
+          margin-left: 10px;
+
+          h2 {
+            margin: 0;
+            font-size: 12px;
+
+            a {
+              &:hover, &:focus {
+                color: $gold;
+              }
+
+              .field--name-name{
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    p {
+      font-size: 22px;
+      line-height: 37px;
+      margin-bottom: 20px;
+    }
+    
+    img {
+      margin-bottom: 22px;
+    }
+  }
+}
