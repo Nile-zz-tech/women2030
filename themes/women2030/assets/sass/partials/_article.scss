@@ -12,15 +12,6 @@ The following content was designed & implemented under AlexSeif.com
     margin: 0 auto;
     padding: 0 50px;
 
-    p {
-      font-size: 22px;
-      line-height: 37px;
-      margin-bottom: 20px;
-    }
-
-    img {
-      margin-bottom: 22px;
-    }
 
     .field--name-field-image {
       text-align: center;
@@ -107,5 +98,15 @@ The following content was designed & implemented under AlexSeif.com
         }
       }
     }
+
+    .field--name-field-women-in-this-article {
+      background: $light_grey;
+
+      .field__label {
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+
   }
 }
