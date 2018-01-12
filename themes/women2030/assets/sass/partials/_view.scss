@@ -169,30 +169,72 @@
   }
 }
 
-.view-header {
-  font-size: 60px;
-  text-align: center;
-  font-weight: bold;
-  color: #000000;
-  display: block;
-  position: relative;
-  margin-bottom: 20px;
+.view.view-frontpage {
 
-  &:after, &:before {
-    content: " ";
-    position: absolute;
-    border: 1px solid $gold;
-    width: 33%;
-    height: 1px;
+  .view-header {
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+    color: #000000;
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+
+    &:after, &:before {
+      content: " ";
+      position: absolute;
+      border: 1px solid $gold;
+      width: 33%;
+      height: 1px;
+    }
+
+    &:before {
+      top: 50%;
+      right: 0;
+    }
+
+    &:after {
+      bottom: 50%;
+      left: 0;
+    }
   }
 
-  &:before {
-    top: 50%;
-    right: 0;
-  }
+  .view-content {
+    margin-bottom: 60px;
 
-  &:after {
-    bottom: 50%;
-    left: 0;
+    .field--name-node-title {
+      display: block;
+      position: relative;
+
+      &:after, &:before {
+        content: " ";
+        position: absolute;
+        border: 1px solid #DDDDDD;
+        width: 13%;
+        height: 1px;
+      }
+
+      &:before {
+        top: 50%;
+        right: 0;
+      }
+
+      &:after {
+        bottom: 50%;
+        left: 0;
+      }
+
+      h2 {
+        text-align: center;
+        width: 70%;
+        margin: 0 auto;
+
+        a {
+          line-height: 33px;
+          color: #000000;
+          font-size: 29px;
+        }
+      }
+    }
   }
 }

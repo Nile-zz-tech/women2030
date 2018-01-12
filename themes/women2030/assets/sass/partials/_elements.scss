@@ -84,3 +84,15 @@ blockquote {
   }
 
 }
+
+.more-link {
+  text-align: center !important;
+
+  a {
+    padding: 9px 118px 3px;
+    font-size: 28px;
+    font-weight: bold;
+    border: 1px solid #000000;
+    color: black;
+  }
+}
