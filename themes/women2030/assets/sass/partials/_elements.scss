@@ -1,47 +1,98 @@
 .forum {
-    background: rgba(0, 0, 0, 0) url("../images/bg-info-2.jpg") repeat scroll 0 0;
-    border: medium none;
-    margin-bottom: 30px;
-    padding: 28px;
+  background: rgba(0, 0, 0, 0) url("../images/bg-info-2.jpg") repeat scroll 0 0;
+  border: medium none;
+  margin-bottom: 30px;
+  padding: 28px;
 
-    .submitted {
-        color: #cccccc !important;
-    }
+  .submitted {
+    color: #cccccc !important;
+  }
 
-    table {
-        width: 100%;
-        margin: {
-            bottom: 30px;
-        };
-    }
+  table {
+    width: 100%;
+    margin: {
+      bottom: 30px;
+    };
+  }
 
-    th {
-        padding: 7px;
-        border-bottom: 2px solid  #555;
-        color: #fff;
-    }
+  th {
+    padding: 7px;
+    border-bottom: 2px solid  #555;
+    color: #fff;
+  }
 
-    td {
-        padding: 7px;
-    }
+  td {
+    padding: 7px;
+  }
 
-    tbody {
-        tr {
-            background-color: #333;
-            border-bottom: 1px solid #555;
-        }
+  tbody {
+    tr {
+      background-color: #333;
+      border-bottom: 1px solid #555;
     }
+  }
 }
 
 
 
 /*--chrome only--*/
 @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
-    .path-user .collapse-processed > summary
-    {
-        color: #000;
-        &:before{
-            display: none;
-        }
+  .path-user .collapse-processed > summary
+  {
+    color: #000;
+    &:before{
+      display: none;
     }
+  }
+}
+blockquote {
+  border: none;
+
+  p {
+    text-align: center;
+
+    &:first-child {
+      width: 50%;
+      margin: 0 auto;
+      position: relative;
+      padding: 0 30px;
+      font-size: 30px;
+      color: $grey_font_header;
+
+      &:after, &:before {
+        content: " ";
+        position: absolute;
+        border: 1px solid $gold;
+        width: 40%;
+        height: 1px;
+      }
+
+      &:before {
+        top: 50%;
+        right: -48%;
+      }
+
+      &:after {
+        bottom: 50%;
+        left: -48%;
+      }
+    }
+
+    &:last-child {
+      font-size: 18px;
+    }
+  }
+
+}
+
+.more-link {
+  text-align: center !important;
+
+  a {
+    padding: 9px 118px 3px;
+    font-size: 28px;
+    font-weight: bold;
+    border: 1px solid #000000;
+    color: black;
+  }
 }
