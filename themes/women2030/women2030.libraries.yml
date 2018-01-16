@@ -15,7 +15,7 @@ global-styling:
   css:
     theme:
       assets/includes/bootstrap/css/bootstrap.css: {}
-#      assets/includes/fontawesome/css/font-awesome.css: {}
+      assets/includes/fontawesome/css/font-awesome.css: {}
       assets/includes/fonts/oswald_regular/stylesheet.css: {}
       assets/includes/slick/slick/slick.css: {}
       assets/includes/slick/css/style.css: {}
