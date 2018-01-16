@@ -269,5 +269,13 @@
     .node__links {
       float: left;
     }
+
+    .field--name-body {
+      p {
+        text-align: center;
+        padding: 0 15px;
+        font-size: 17px;
+      }
+    }
   }
 }
