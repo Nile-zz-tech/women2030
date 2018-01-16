@@ -4984,7 +4984,7 @@ blockquote p:last-child {
 }
 
 /* line 546, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
-#panel_second .block .views-field-title a {
+#panel_second .block h3 a {
   color: #000000;
   font-size: 20px;
 }
