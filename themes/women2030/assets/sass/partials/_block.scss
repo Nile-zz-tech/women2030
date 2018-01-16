@@ -529,13 +529,17 @@
 
 /* panel second */
 #panel_second {
-  background: $dark;
   padding: 30px 0;
 
   h2 {
-    font-size: 1.285em;
-    color: $white;
+    font-size: 20px;
     text-transform: uppercase;
+    text-align: center;
+  }
+
+  .block {
+    background: #f0eee9;
+    padding: 15px;
   }
 
   .menu {
