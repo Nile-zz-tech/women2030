@@ -4974,42 +4974,49 @@ blockquote p:last-child {
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
+  color: #000000;
 }
 
-/* line 540, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 541, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #panel_second .block {
   background: #f0eee9;
   padding: 15px;
 }
 
-/* line 545, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 546, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+#panel_second .block .views-field-title a {
+  color: #000000;
+  font-size: 20px;
+}
+
+/* line 553, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #panel_second .menu {
   margin: 0;
 }
 
-/* line 548, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 556, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #panel_second .menu li {
   border-top: 1px dotted #393939;
   padding: 7px 0 7px 15px;
   position: relative;
 }
 
-/* line 553, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 561, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #panel_second .menu li:first-child {
   border-top: none;
 }
 
-/* line 557, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 565, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #panel_second .menu li a {
   color: #DDDCDC;
 }
 
-/* line 560, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 568, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #panel_second .menu li a:hover, #panel_second .menu li a:focus {
   color: #B69235;
 }
 
-/* line 564, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 572, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #panel_second .menu li a:before {
   content: "+";
   position: absolute;
@@ -5017,63 +5024,63 @@ blockquote p:last-child {
   top: 6px;
 }
 
-/* line 574, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 582, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #panel_second .views-row {
   margin-bottom: 20px;
 }
 
-/* line 577, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 585, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #panel_second .views-row .views-field-field-image {
   float: left;
   margin: 0 15px 5px 0;
 }
 
-/* line 585, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 593, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .gallery-list .views-row {
   margin-bottom: 10px !important;
 }
 
-/* line 588, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 596, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .gallery-list .views-row .views-col {
   margin-right: 10px;
 }
 
-/* line 592, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 600, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .gallery-list .views-row .views-field {
   margin-bottom: 0;
 }
 
-/* line 600, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 608, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .contact-info p {
   margin-bottom: 5px;
 }
 
-/* line 605, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 613, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .social-wrap {
   overflow: hidden;
   padding-top: 10px;
   border-top: 1px dotted #393939;
 }
 
-/* line 609, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 617, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .social-wrap p {
   display: inline-block;
   margin: 0 5px 0 0;
 }
 
-/* line 614, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 622, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .social-wrap .social-list {
   margin: 0;
   display: inline-block;
 }
 
-/* line 618, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 626, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .social-wrap .social-list li {
   padding: 0;
   margin-right: 3px;
 }
 
-/* line 622, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 630, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .social-wrap .social-list li a {
   display: inline-block;
   background: #B69235;
@@ -5085,43 +5092,43 @@ blockquote p:last-child {
   text-align: center;
 }
 
-/* line 632, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 640, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .social-wrap .social-list li a:hover {
   background: #fff;
   color: #B69235;
 }
 
 /* footer */
-/* line 642, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 650, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #footer {
   background: #595959;
   /*border-top: 1px solid #222;*/
 }
 
-/* line 646, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 654, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #footer .container {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-/* line 650, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 658, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #footer .container .block {
   width: 50%;
   float: left;
 }
 
-/* line 655, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 663, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #footer .container .block-menu {
   padding-top: 3px;
 }
 
-/* line 660, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 668, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #footer .menu {
   margin: 0;
   float: right;
 }
 
-/* line 664, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 672, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #footer .menu li {
   float: left;
   margin-left: 10px;
@@ -5130,34 +5137,34 @@ blockquote p:last-child {
   padding: 0 0 0 10px;
 }
 
-/* line 671, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 679, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #footer .menu li a {
   color: #fff;
 }
 
-/* line 674, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 682, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #footer .menu li a:hover {
   color: #B69235;
 }
 
-/* line 679, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 687, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #footer .menu li:first-child {
   border-left: none;
 }
 
 /* breadcrumb */
-/* line 688, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 696, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .front #breadcrumb {
   display: none;
 }
 
-/* line 693, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 701, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #breadcrumb {
   background: #000;
   border-top: 1px solid #222;
 }
 
-/* line 697, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 705, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #breadcrumb .breadcrumb {
   margin-bottom: 0;
   background: none;
@@ -5165,17 +5172,17 @@ blockquote p:last-child {
   border-radius: 0;
 }
 
-/* line 703, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 711, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #breadcrumb .breadcrumb a {
   color: #DDDCDC;
 }
 
-/* line 706, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 714, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #breadcrumb .breadcrumb a:hover, #breadcrumb .breadcrumb a:focus {
   color: #B69235;
 }
 
-/* line 713, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 721, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .btn-btt {
   position: fixed;
   right: 20px;
@@ -5191,7 +5198,7 @@ blockquote p:last-child {
   opacity: 0.7;
 }
 
-/* line 727, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 735, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .btn-btt:before {
   content: "\f176";
   display: inline-block;
@@ -5202,56 +5209,56 @@ blockquote p:last-child {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 732, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 740, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .btn-btt:hover, .btn-btt:focus {
   background: #B69235;
   color: #fff;
   opacity: 1;
 }
 
-/* line 740, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 748, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .page #main .content .node .node__meta {
   margin-bottom: 14px;
 }
 
-/* line 746, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 754, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .menu--account ul.menu {
   margin-left: 0;
 }
 
-/* line 752, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 760, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .menu--account ul.menu a:before {
   content: "+";
   margin-right: 5px;
 }
 
-/* line 759, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 767, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .menu--account .menu-item:hover {
   background: transparent;
 }
 
-/* line 764, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 772, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .navbar-default ul.menu > li {
   padding: 0;
 }
 
-/* line 767, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 775, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .navbar-default ul.menu > li:hover, .navbar-default ul.menu > li:focus {
   background: transparent;
 }
 
-/* line 772, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 780, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .navbar-default ul.menu > li > a.is-active {
   background: none;
   color: #B69235;
 }
 
-/* line 777, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 785, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .navbar-default ul.menu > li > a.is-active:hover, .navbar-default ul.menu > li > a.is-active:focus {
   color: #B69235;
 }
 
-/* line 782, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 790, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .navbar-default ul.menu > li > a:hover, .navbar-default ul.menu > li > a:focus {
   color: #B69235;
 }

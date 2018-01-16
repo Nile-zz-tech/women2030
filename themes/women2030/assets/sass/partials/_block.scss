@@ -535,11 +535,19 @@
     font-size: 20px;
     text-transform: uppercase;
     text-align: center;
+    color: #000000;
   }
 
   .block {
     background: #f0eee9;
     padding: 15px;
+
+    .views-field-title {
+      a { 
+        color: #000000;
+        font-size: 20px;
+      }
+    }
   }
 
   .menu {
