@@ -12,8 +12,9 @@
     margin-right: 76px;
   }
 
-  .block-search, .block-social-media-links {
-    float: right;
+  .block-search, 
+  .block-social-media-links {
+    float: right; /* ltr */
     margin-top: 30px;
 
     h2, .content {
@@ -24,7 +25,7 @@
     }
     a {
       color: $dark_grey;
-      
+
       &:before {
         content: none;
       }
@@ -87,11 +88,20 @@
     position: relative;
     z-index: 5;
   }
-
 }
+
 
 .search-block-form{
   &.contextual-region{
     position: static;
+  }
+}
+
+#block-languagedropdownswitcher {
+  float: left; /* ltr */
+  margin: 30px;
+  select {
+    padding: 0;
+    background: transparent;
   }
 }
