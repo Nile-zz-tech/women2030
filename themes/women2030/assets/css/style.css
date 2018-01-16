@@ -5556,6 +5556,13 @@ blockquote p:last-child {
   float: left;
 }
 
+/* line 274, /srv/www/women2030/themes/women2030/assets/sass/partials/_view.scss */
+.view.view-frontpage .view-content .field--name-body p, .view-frontpage-header .view-content .field--name-body p {
+  text-align: center;
+  padding: 0 15px;
+  font-size: 17px;
+}
+
 /* line 1, /srv/www/women2030/themes/women2030/assets/sass/partials/_page.scss */
 .container {
   padding-left: 0;
