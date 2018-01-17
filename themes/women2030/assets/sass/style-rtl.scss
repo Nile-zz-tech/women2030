@@ -1829,6 +1829,7 @@
     padding-left: 130px;
   }
   ul.menu {
+    margin-right: 200px;
     padding-right: 0;
   }
 
@@ -1858,23 +1859,16 @@
   }
 
   #footer .container .block {
-    float: right;
     p{
       padding-right: 0;
       padding-left: 20px;
     }
   }
   #footer .menu{
-    float: left;
     li{
       margin-left: 0;
       margin-right: 10px;
       padding: 0 10px 0 0;
-      border-right: 1px solid #333;
-      border-left: none;
-      &:last-child{
-        border-right: none;
-      }
     }
   }
 

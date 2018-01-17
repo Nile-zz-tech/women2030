@@ -658,24 +658,21 @@
     padding-bottom: 20px;
 
     .block {
-      width: 50%;
-      float: left;
     }
 
     .block-menu {
+      display: inline-block;
       padding-top: 3px;
     }
   }
 
   .menu {
-    margin: 0;
-    float: right;
-
+    margin-left: 200px;
+    
     li {
       float: left;
       margin-left: 10px;
       line-height: 100%;
-      border-left: 1px solid #333;
       padding: 0 0 0 10px;
 
       a {
@@ -686,9 +683,6 @@
         }
       }
 
-      &:first-child {
-        border-left: none;
-      }
     }
   }
 }
