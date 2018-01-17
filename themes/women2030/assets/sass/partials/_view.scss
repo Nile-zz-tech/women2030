@@ -170,6 +170,9 @@
 }
 
 .view.view-frontpage, .view-frontpage-header{
+  .feed-icon{
+    display: none;
+  }
 
   .view-header {
     font-size: 60px;
@@ -280,6 +283,31 @@
   }
 }
 
+
+.view-frontpage-footer{
+  .field--name-field-women-in-this-article {
+
+    .field--name-field-photo {
+      img {
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0;
+      }
+    }
+
+    .field--name-node-title {
+      margin-top: -30px;
+      margin-right: 70px;
+
+      &:before, &:after {
+        content: none;
+      }  
+      h3 {
+        font-size: 14px;
+      }
+    }
+  }
+}
 .view-frontpage-header::before {
   @include page_gold_border(1);
 }
