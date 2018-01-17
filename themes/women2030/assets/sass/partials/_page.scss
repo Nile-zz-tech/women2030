@@ -251,6 +251,18 @@
     }
 
     /* comment */
+    .field--name-comment {
+      padding: 20px 80px;
+      border: 1px solid #9b9b9b;
+      border-radius: 4px;
+
+      h2 {
+        font-size: 20px;
+        color: black;
+        text-align: center;
+      }
+    }
+
     #comments {
       padding-top: 30px;
       margin-top: 30px;
@@ -276,7 +288,6 @@
     }
 
     .comment {
-      background: #333;
       border: 1px solid #444;
       margin-bottom: 30px;
       padding: 20px;
@@ -319,9 +330,6 @@
     }
 
     #comment-form {
-      background: $gold;
-      padding: 30px;
-      margin-bottom: 30px;
 
       .preview {
         padding: 15px;
@@ -333,23 +341,28 @@
           }
         }
       }
-
+      .form-textarea-wrapper{
+        display: inline-block;
+      }
       .form-item {
         margin: 0 0 15px;
 
         label {
+          color: #9b9b9b;
+          font-weight: bold;
           min-width: 100px;
+          float: right;
         }
 
         .form-text, .form-textarea, .form-select {
-          background-color: $gold;
-          border: 1px solid #2E2E2E;
-          color: $white;
+          border: 2px solid #e5e4e3;
+          border-radius: 3px;
         }
       }
 
       .form-actions {
-        margin: 0;
+        margin: 20px 0 0;
+        text-align: center;
       }
 
       .form-type-textarea {

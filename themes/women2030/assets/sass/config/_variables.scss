@@ -46,18 +46,11 @@ $default_color: $grey_font;
 
 .form-submit {
   margin: 0 10px 10px 0;
-  border: none;
-  padding: 8px 20px;
-  color: #fff;
-  background: $gold;
+  border: 1px solid black;
+  padding: 8px 80px;
+  color: #000;
   cursor: pointer;
-
-  @extend %button_effect_3;
-
-  &:hover, &:focus {
-    background: $white;
-    color: $gold;
-  }
+background: white;
 
   &:first-child {
     margin: 0 10px 10px 0;
