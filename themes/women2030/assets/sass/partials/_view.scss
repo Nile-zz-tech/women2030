@@ -213,7 +213,8 @@
       display: block;
       position: relative;
       margin-bottom: 30px;
-
+      margin-top: -15px;
+      
       &:after, &:before {
         content: " ";
         position: absolute;
@@ -236,6 +237,7 @@
         text-align: center;
         width: 70%;
         margin: 0 auto;
+        line-height: 33px;
 
         a {
           line-height: 33px;
