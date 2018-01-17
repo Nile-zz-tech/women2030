@@ -16,6 +16,18 @@ The following content was designed & implemented under AlexSeif.com
     .field--name-field-image {
       text-align: center;
       margin-bottom: 20px;
+
+      &::before{
+        @include page_gold_border(1);
+        right: -259px;
+        height: 25%;
+      }
+    }
+
+    .field--name-body::before {
+      @include page_gold_border(0.2);
+      right: -259px;
+      height: 60%;
     }
 
     .field--name-node-title {
