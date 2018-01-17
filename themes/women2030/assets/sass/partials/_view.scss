@@ -169,7 +169,9 @@
   }
 }
 
-.view.view-frontpage, .view-frontpage-header{
+.view.view-frontpage, 
+.view-frontpage-header,  
+.block-views-blockrelated-articles-block-1{
   .feed-icon{
     display: none;
   }
