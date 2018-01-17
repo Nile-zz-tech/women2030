@@ -55,7 +55,7 @@
     position: absolute;
     right: 10px;
     top: 7px;
-    color: $black;
+    color: #bebebe;
     z-index: 1;
   }
 
@@ -69,7 +69,7 @@
     padding: 2px 4px 4px;
     width: 198px;
     text-indent: 5px;
-    color: $black;
+    color: #bebebe;
     font-style: italic;
   }
 
@@ -82,6 +82,7 @@
     width: 17px;
     height: 25px;
     text-indent: -999em;
+    color: #bebebe;
   }
 
   .form-actions {

@@ -203,6 +203,10 @@ The following content was designed & implemented under AlexSeif.com
                 font-size: 20px;
                 line-height: 30px;
               }
+
+              &:before {
+                content: none;
+              }
             }
 
             .social-media-links--platforms {
