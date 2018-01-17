@@ -5497,7 +5497,7 @@ blockquote p:last-child {
   content: " ";
   position: absolute;
   border: 1px solid #B69235;
-  width: 33%;
+  width: 30%;
   height: 1px;
 }
 
@@ -6806,7 +6806,7 @@ blockquote p:last-child {
 .page-node-type-woman-profile .layout__region--first:after {
   content: "";
   position: absolute;
-  bottom: 5px;
+  margin-top: 50px;
   height: 1px;
   width: 45%;
   /* or 100px */
