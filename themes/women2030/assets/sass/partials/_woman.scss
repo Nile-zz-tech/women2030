@@ -7,7 +7,7 @@
   .layout__region--first:after {
     content : "";
     position: absolute;
-    bottom  : 5px;
+    margin-top: 50px;
     height  : 1px;
     width   : 45%;  /* or 100px */
     border-bottom:1px solid $gold;
