@@ -171,13 +171,13 @@
 
 .view.view-frontpage, 
 .view-frontpage-header,  
-.block-views-blockrelated-articles-block-1{
+.block-views-blockrelated-articles-block-1,
+.view-taxonomy-term {
   .feed-icon{
     display: none;
   }
 
-  .view-header, 
-  h2 {
+  .view-header {
     font-size: 60px;
     text-align: center;
     font-weight: bold;
@@ -321,4 +321,28 @@
 
 #panel_second .row::before {
   @include page_gold_border(0.1);
+}
+
+.view-taxonomy-term {
+  .view-header{
+    height: 300px;
+    background-image: -webkit-linear-gradient(#bfa39b 0%, #e3cdc7 100%);
+    background-image: -moz-linear-gradient(#bfa39b 0%, #e3cdc7 100%);
+    background-image: -o-linear-gradient(#bfa39b 0%, #e3cdc7 100%);
+    background-image: linear-gradient(#bfa39b 0%, #e3cdc7 100%);
+    text-align: center;
+    padding-top: 150px;
+    margin-bottom: 60px;
+
+    h2 {
+      font-size: 60px;
+      a {
+        color: white;
+      }
+    }
+
+    &:after, &:before {
+      content: none;
+    }
+  }
 }
