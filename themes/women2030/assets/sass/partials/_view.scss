@@ -214,7 +214,7 @@
       position: relative;
       margin-bottom: 30px;
       margin-top: -15px;
-      
+
       &:after, &:before {
         content: " ";
         position: absolute;
@@ -284,6 +284,33 @@
         text-align: center;
         padding: 0 15px;
         font-size: 17px;
+      }
+    }
+
+    .field--name-field-category{
+      float: right;
+      margin: 0;
+
+      .taxonomy-term  {
+        float: right;
+        background: $grey_tag_background;
+        padding: 5px 10px;
+        margin-left: 10px;
+
+        h2 {
+          margin: 0;
+          font-size: 12px;
+
+          a {
+            &:hover, &:focus {
+              color: $gold;
+            }
+
+            .field--name-name{
+              margin: 0;
+            }
+          }
+        }
       }
     }
   }
