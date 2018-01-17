@@ -252,14 +252,51 @@
 
     /* comment */
     .field--name-comment {
-      padding: 20px 80px;
-      border: 1px solid #9b9b9b;
-      border-radius: 4px;
+      margin-bottom: 40px;
 
-      h2 {
-        font-size: 20px;
-        color: black;
-        text-align: center;
+      .comment-form-block {
+        padding: 20px 80px;
+        border: 1px solid #9b9b9b;
+        border-radius: 4px;
+        margin-bottom: 50px;
+
+        h2 {
+          font-size: 20px;
+          color: black;
+          text-align: center;
+        }
+      }
+
+      h2.title {
+        color: #4c4c4c;
+        border-bottom: 5px solid #e5e4e3;
+        padding-bottom: 4px;
+
+        &:before {
+          content: "\f104";
+          font-family: 'Ionicons';
+          font-size: 20px;
+          color: $gold;
+          margin: 10px;
+        }
+
+        &:after {
+          content: " ";
+          border-bottom: 5px solid #B69235;
+          width: 215px;
+          height: 5px;
+          display: block;
+          padding-top: 4px;
+          position: absolute;
+        }
+      }
+
+      .field--name-field-comment-body {
+        font-size: 18px;
+        color: #555555;
+        margin: 0 100px;
+        padding-bottom: 22px;
+        border-bottom: 1px solid #dddddd;
       }
     }
 
@@ -288,7 +325,9 @@
     }
 
     .comment {
-      border: 1px solid #444;
+      .comment__meta{
+        display: none;
+      }
       margin-bottom: 30px;
       padding: 20px;
 
