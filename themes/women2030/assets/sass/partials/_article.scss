@@ -19,6 +19,7 @@ The following content was designed & implemented under AlexSeif.com
     }
 
     .field--name-node-title {
+      clear: both;
       h1 {
         font-size: 48px;
         line-height: 61px;
@@ -43,11 +44,11 @@ The following content was designed & implemented under AlexSeif.com
         }
       }
 
-      .field--name-username {
+      .field--name-field-name {
         float: right;
         margin-left: 10px;
 
-        span {
+        a {
           color: $gold;
           font-size: 18px;
           font-weight: bold;
@@ -56,6 +57,8 @@ The following content was designed & implemented under AlexSeif.com
     }
 
     .field--name-node-post-date {
+      color: $grey_font_header;
+      margin-top: 80px;
       float: left;
       clear: left;
     }
@@ -66,7 +69,7 @@ The following content was designed & implemented under AlexSeif.com
       width: 100%;
       border-top: 1px solid $light_grey;
       border-bottom: 1px solid $light_grey;
-      padding: 17px 0;
+      padding: 17px 10px 15px;
       margin-bottom: 22px;
 
       h3 {
@@ -84,7 +87,7 @@ The following content was designed & implemented under AlexSeif.com
         li {
           float: right;
           background: $grey_tag_background;
-          padding: 0 5px;
+          padding: 5px 10px;
           margin-left: 10px;
 
           h2 {
