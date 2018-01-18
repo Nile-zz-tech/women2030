@@ -5478,6 +5478,12 @@ blockquote p:last-child {
   margin: 0;
 }
 
+/* line 936, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+.page-node-type-woman-profile .block-views-blockrelated-articles-block-1:before,
+.page-node-type-woman-profile .block-views-blockduplicate-of-related-articles-block-1:before {
+  content: none;
+}
+
 /* line 2, /srv/www/women2030/themes/women2030/assets/sass/partials/_view.scss */
 .gallery-thumbs .views-field-field-image, #panel_second .views-field-field-image {
   margin: 0 5px 15px 0;
@@ -7201,7 +7207,8 @@ blockquote p:last-child {
   /* or 100px */
   border-bottom: 1px solid #B69235;
   margin-top: -60px;
-  right: 45px;
+  left: 45px;
+  /* ltr */
 }
 
 /* line 16, /srv/www/women2030/themes/women2030/assets/sass/partials/_woman.scss */

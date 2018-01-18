@@ -2179,11 +2179,31 @@
       margin: 0 10px;
     }
   }
-}
 
 
-/* gold bars */
-.field--name-field-image:before {
-  right: 0;
-  margin-right: -194px; /* LTR */
+  /* gold bars */
+  .view-frontpage,
+  .view-taxonomy-term .view-content,
+  .view-frontpage-header, 
+  .field--name-field-image {
+    &::before {
+      right: 0; 
+      margin-left: 0px;
+      margin-right: -194px;
+    }
+  }
+
+  #panel_second:before {
+    right: 0;
+    margin-left: 0px;
+  }
+
+  .page-node-type-woman-profile {
+
+    .layout__region--bottom:before {
+      /*right: 45px;  ltr */
+      left: auto; /* ltr */
+
+    }
+  }
 }
