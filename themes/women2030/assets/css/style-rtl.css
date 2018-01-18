@@ -2901,4 +2901,10 @@
   float: left;
 }
 
+/* line 2261, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
+[dir="rtl"] .micro-teaser .field--name-node-title {
+  margin-right: 0px;
+  margin-left: 70px;
+}
+
 /*# sourceMappingURL=../css/style-rtl.map */

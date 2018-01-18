@@ -326,19 +326,22 @@
         margin: 0;
       }
     }
-
     .field--name-node-title {
       margin-top: -30px;
-      margin-right: 70px;
+      margin-right: 70px; /* ltr */
 
       &:before, &:after {
         content: none;
       }  
       h3 {
         font-size: 14px;
+        a {
+          color: $gold;
+        }
       }
     }
   }
+
 }
 .view-taxonomy-term .view-content,
 .view-frontpage-header {
