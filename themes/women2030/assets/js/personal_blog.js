@@ -99,7 +99,7 @@
     };
 
     Drupal.Personal.mobileMenu = function() {
-      $('#btn-main-menu').mobileMenu();
+//      $('#btn-main-menu').mobileMenu();
     }
 
     Drupal.Personal.matchHeight = function() {

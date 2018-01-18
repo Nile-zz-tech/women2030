@@ -1829,7 +1829,6 @@
     padding-left: 130px;
   }
   ul.menu {
-    margin-right: 200px;
     padding-right: 0;
   }
 
@@ -1866,9 +1865,10 @@
   }
   #footer .menu{
     li{
-      margin-left: 0;
+      float: right;
       margin-right: 10px;
       padding: 0 10px 0 0;
+      white-space: nowrap;
     }
   }
 

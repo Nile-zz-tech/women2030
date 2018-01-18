@@ -2431,50 +2431,50 @@
 
 /* line 1831, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
 [dir="rtl"] ul.menu {
-  margin-right: 200px;
   padding-right: 0;
 }
 
-/* line 1836, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
+/* line 1835, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
 [dir="rtl"] .views-view-grid .views-col {
   float: right;
 }
 
-/* line 1840, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
+/* line 1839, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
 [dir="rtl"] .gallery-thumbs .views-field-field-image, [dir="rtl"] #panel_second .views-field-field-image {
   margin-right: 0;
   margin-left: 5px;
 }
 
-/* line 1847, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
+/* line 1846, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
 [dir="rtl"] .socials {
   padding-right: 0;
 }
 
-/* line 1851, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
+/* line 1850, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
 [dir="rtl"] .socials li {
   float: right;
   margin-right: 0;
   margin-left: 5px;
 }
 
-/* line 1856, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
+/* line 1855, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
 [dir="rtl"] .social-wrap p {
   display: inline-block;
   margin: 0 0 0 5px;
 }
 
-/* line 1862, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
+/* line 1861, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
 [dir="rtl"] #footer .container .block p {
   padding-right: 0;
   padding-left: 20px;
 }
 
-/* line 1868, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
+/* line 1867, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
 [dir="rtl"] #footer .menu li {
-  margin-left: 0;
+  float: right;
   margin-right: 10px;
   padding: 0 10px 0 0;
+  white-space: nowrap;
 }
 
 /* line 1877, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
