@@ -1,16 +1,21 @@
 /* Woman Profile */
 .page-node-type-woman-profile, .view-women-profiles {
+
   .layout__region {
     padding: 0 20px;
   }
+  .layout__region--second {
+    margin-bottom: 40px;
+  }
 
-  .layout__region--first:after {
+  .field--name-field-photo:after {
     content : "";
     position: absolute;
-    margin-top: 50px;
     height  : 1px;
     width   : 45%;  /* or 100px */
     border-bottom:1px solid $gold;
+    top: 800px;
+    right: 45px;
   }
 
   .field--name-node-title {
@@ -34,6 +39,12 @@
     font-weight: bold;
     line-height: 40px;
     text-align: center;
+  }
+  .field--name-field-biography {
+    font-size: 22px;
+    color: #555555;
+    line-height: 37px;
+    margin-bottom: 40px;
   }
 
   ul.social-media-links--platforms {
