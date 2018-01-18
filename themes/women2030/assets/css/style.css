@@ -4032,6 +4032,11 @@ p {
   background: transparent;
 }
 
+/* line 1, /srv/www/women2030/themes/women2030/assets/sass/base/_footer.scss */
+.region.region-footer {
+  text-align: center;
+}
+
 /* color for skin */
 /* line 3, /srv/www/women2030/themes/women2030/assets/sass/base/_skincolor.scss */
 .change-skin-menu-wrapper .color-default {
