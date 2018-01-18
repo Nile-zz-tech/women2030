@@ -262,7 +262,6 @@
         h2 {
           font-size: 20px;
           color: black;
-          text-align: center;
         }
       }
 
@@ -389,7 +388,7 @@
           color: #9b9b9b;
           font-weight: bold;
           min-width: 100px;
-          float: right;
+          /*float: right;*/
         }
 
         .form-text, .form-textarea, .form-select {

@@ -149,7 +149,7 @@ The following content was designed & implemented under AlexSeif.com
           text-align: center;
           position: absolute;
           margin-top: 14px;
-          margin-right: 37%;
+          margin-left: 37%; /* ltr */
         }       
       }
 
@@ -159,8 +159,8 @@ The following content was designed & implemented under AlexSeif.com
           margin-bottom: 40px;
 
           .field--name-field-photo {
-            float: right;
-            margin-left: 10px;
+            float: left; /* ltr */
+            margin-left: 10px; /* ltr */
             border-radius: 50%;
             overflow: hidden;
 
@@ -201,7 +201,7 @@ The following content was designed & implemented under AlexSeif.com
               display: block;
               clear: both;
               width: 75%;
-              float: right;
+              float: left; /* ltr */
 
               p {
                 font-size: 20px;
