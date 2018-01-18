@@ -47,5 +47,11 @@ jQuery(function () {
       console.log('removing');
       jQuery('#panel_second').hide();
     }
+
+//    $page_gold_border_ele = jQuery('.block-views-blockrelated-articles-block-1, .block-views-blockduplicate-of-related-articles-block-1');
+//    if ($page_gold_border_ele.length) {
+//      jQuery('.block-views-blockrelated-articles-block-1:before').css('height', $page_gold_border_ele.height());
+//      jQuery('.block-views-blockduplicate-of-related-articles-block-1').css('height', $page_gold_border_ele.height());
+//    }
   }
 });
