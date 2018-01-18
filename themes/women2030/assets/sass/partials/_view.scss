@@ -317,7 +317,7 @@
 }
 
 
-.view-frontpage-footer{
+.micro-teaser{
   .field--name-field-women-in-this-article {
 
     .field--name-field-photo {
@@ -342,15 +342,16 @@
   }
 }
 .view-frontpage-header::before {
-  @include page_gold_border(1);
+  @include page_gold_border_header();
 }
 
 .view-frontpage::before {
-  @include page_gold_border(0.2);
+  @include page_gold_border_content();
 }
 
-#panel_second .row::before {
-  @include page_gold_border(0.1);
+#panel_second::before {
+  @include page_gold_border_footer;
+  margin-right: 0px;
 }
 
 .view-taxonomy-term {
