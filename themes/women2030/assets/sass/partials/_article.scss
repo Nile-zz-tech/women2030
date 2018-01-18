@@ -18,7 +18,7 @@ The following content was designed & implemented under AlexSeif.com
       margin-bottom: 20px;
 
       &::before{
-        @include page_gold_border(1);
+        @include page_gold_border_header();
       }
     }
 
@@ -28,10 +28,6 @@ The following content was designed & implemented under AlexSeif.com
         margin: 0 auto 15px;
       }
 
-      &::before {
-        @include page_gold_border(0.2);
-        height: 45% !important;
-      }
     }
 
     .field--name-node-title {
@@ -40,6 +36,10 @@ The following content was designed & implemented under AlexSeif.com
         font-size: 48px;
         line-height: 61px;
         color: $grey_font_article;
+      }
+      &::before {
+        @include page_gold_border_content();
+        height: calc(100% - 3200px);
       }
     }
 
@@ -128,7 +128,7 @@ The following content was designed & implemented under AlexSeif.com
       padding: 20px 100px;
       border: 1px solid #DDDDDD;
       margin-bottom: 40px;
-      
+
       .field__item.wrapper.col-md-12 {
         border-bottom: 1px solid #DDDDDD;
       }
@@ -236,6 +236,7 @@ The following content was designed & implemented under AlexSeif.com
         }
       }
     } 
+
   }
 
 }

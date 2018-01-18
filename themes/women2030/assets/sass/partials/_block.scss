@@ -230,8 +230,8 @@
         text-transform: uppercase;
         color: $black;
         display: block;
-        padding: 4px 15px;
-        font-size: 1.14em;
+        padding: 4px 12px;
+        font-size: 16px;
 
         &:hover, &:focus {
           color: $gold;
@@ -791,8 +791,8 @@
 .block-views-blockrelated-articles-block-1,
 .block-views-blockduplicate-of-related-articles-block-1 {
   &:before {
-    @include page_gold_border(0.1);
-    height: 2536px;
+    @include page_gold_border_footer();
+    height: 2416px;
   }
   
    .field--name-node-title {

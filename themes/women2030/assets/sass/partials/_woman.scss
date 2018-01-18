@@ -1,4 +1,16 @@
 /* Woman Profile */
+.page-node-type-woman-profile {
+
+  .layout__region--bottom:before {
+    content : "";
+    position: absolute;
+    height  : 1px;
+    width   : 45%;  /* or 100px */
+    border-bottom:1px solid $gold;
+    margin-top: -60px;
+    right: 45px;
+  }
+}
 .page-node-type-woman-profile, .view-women-profiles {
 
   .layout__region {
@@ -8,15 +20,6 @@
     margin-bottom: 40px;
   }
 
-  .field--name-field-photo:after {
-    content : "";
-    position: absolute;
-    height  : 1px;
-    width   : 45%;  /* or 100px */
-    border-bottom:1px solid $gold;
-    top: 800px;
-    right: 45px;
-  }
 
   .field--name-node-title {
     h1, .h1 {
