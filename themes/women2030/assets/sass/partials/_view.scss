@@ -341,8 +341,11 @@
     }
   }
 }
-.view-frontpage-header::before {
-  @include page_gold_border_header();
+.view-taxonomy-term .view-content,
+.view-frontpage-header {
+  &::before {
+    @include page_gold_border_header();
+  }
 }
 
 .view-frontpage::before {
