@@ -1476,6 +1476,9 @@
 
 [dir="rtl"] {
   /*menu*/
+  #menu {
+    float: right;
+  }
   ul.menu {
     margin-right: 0;
   }
@@ -1489,7 +1492,7 @@
     } 
     /* search form */
     .block-search {
-      /*float: left;*/
+      float: right;
 
       .form-item {
         float: right;
@@ -1509,6 +1512,12 @@
       }
     }
 
+    #block-languagedropdownswitcher {
+      float: right;
+      h2, .content {
+        float: right;
+      }
+    }
     .block-social-media-links-block{
       float: left;
       h2, .content {
