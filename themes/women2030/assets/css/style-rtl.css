@@ -2815,4 +2815,12 @@
   }
 }
 
+/* gold bars */
+/* line 2186, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
+.field--name-field-image:before {
+  right: 0;
+  margin-right: -194px;
+  /* LTR */
+}
+
 /*# sourceMappingURL=../css/style-rtl.map */

@@ -156,8 +156,8 @@
   content: " ";
   width: 48px;
   position: absolute;
-  right: 0;
-  margin-right: -194px; /* LTR */
+  left: 0; /* LTR */
+  margin-left: -194px; /* LTR */
   opacity: $opacity;
   background-image: -webkit-linear-gradient(-90deg, #a88231 0%, #e9d16c 100%);
   background-image: -moz-linear-gradient(-90deg, #a88231 0%, #e9d16c 100%);

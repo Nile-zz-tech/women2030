@@ -5284,8 +5284,9 @@ blockquote p:last-child {
   content: " ";
   width: 48px;
   position: absolute;
-  right: 0;
-  margin-right: -194px;
+  left: 0;
+  /* LTR */
+  margin-left: -194px;
   /* LTR */
   opacity: 0.1;
   background-image: -webkit-linear-gradient(-90deg, #a88231 0%, #e9d16c 100%);
@@ -5972,8 +5973,9 @@ blockquote p:last-child {
   content: " ";
   width: 48px;
   position: absolute;
-  right: 0;
-  margin-right: -194px;
+  left: 0;
+  /* LTR */
+  margin-left: -194px;
   /* LTR */
   opacity: 1;
   background-image: -webkit-linear-gradient(-90deg, #a88231 0%, #e9d16c 100%);
@@ -5988,8 +5990,9 @@ blockquote p:last-child {
   content: " ";
   width: 48px;
   position: absolute;
-  right: 0;
-  margin-right: -194px;
+  left: 0;
+  /* LTR */
+  margin-left: -194px;
   /* LTR */
   opacity: 0.2;
   background-image: -webkit-linear-gradient(-90deg, #a88231 0%, #e9d16c 100%);
@@ -6004,8 +6007,9 @@ blockquote p:last-child {
   content: " ";
   width: 48px;
   position: absolute;
-  right: 0;
-  margin-right: -194px;
+  left: 0;
+  /* LTR */
+  margin-left: -194px;
   /* LTR */
   opacity: 0.1;
   background-image: -webkit-linear-gradient(-90deg, #a88231 0%, #e9d16c 100%);
@@ -7284,8 +7288,9 @@ The following content was designed & implemented under AlexSeif.com
   content: " ";
   width: 48px;
   position: absolute;
-  right: 0;
-  margin-right: -194px;
+  left: 0;
+  /* LTR */
+  margin-left: -194px;
   /* LTR */
   opacity: 1;
   background-image: -webkit-linear-gradient(-90deg, #a88231 0%, #e9d16c 100%);
@@ -7318,8 +7323,9 @@ The following content was designed & implemented under AlexSeif.com
   content: " ";
   width: 48px;
   position: absolute;
-  right: 0;
-  margin-right: -194px;
+  left: 0;
+  /* LTR */
+  margin-left: -194px;
   /* LTR */
   opacity: 0.2;
   background-image: -webkit-linear-gradient(-90deg, #a88231 0%, #e9d16c 100%);
