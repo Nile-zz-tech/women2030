@@ -601,6 +601,31 @@
       margin-left: 0;
     }
   }   
+
+  .article-teaser .view-header, 
+  .teaser .view-header, 
+  .block-views-blockrelated-articles-block-1 .view-header, 
+  .view-taxonomy-term .view-header, 
+  .view-women-profiles .view-header {
+    font-size: 26px;
+
+    &:before, &:after {
+      width: 20%;
+    }
+  }
+
+  .article-teaser .view-content .field--name-node-title h2 a, 
+  .teaser .view-content .field--name-node-title h2 a, 
+  .block-views-blockrelated-articles-block-1 .view-content .field--name-node-title h2 a, 
+  .view-taxonomy-term .view-content .field--name-node-title h2 a, 
+  .view-women-profiles .view-content .field--name-node-title h2 a {
+    font-size: 16px;
+  }
+
+  .page-node-type-article .block-system-main-block,
+  .page-node-type-video .block-system-main-block {
+    padding: 0;
+  }
 }
 
 @media (max-width: 480px) {

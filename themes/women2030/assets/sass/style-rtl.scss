@@ -2262,4 +2262,87 @@
     margin-right: 70px;
     margin-left: 0px;
   }
+
+  /* article */
+  .page-node-type-article , 
+  .page-node-type-video  {
+    .block-system-main-block {
+
+      .field--name-user {
+        float: right;
+        clear: right;
+
+        .field--name-field-name,
+        .field--name-user-picture {
+          float: right;
+          margin-left: 10px;
+          margin-right: auto;
+        }
+      }
+
+      .field--name-node-post-date {
+        float: left;
+        text-align: left;
+        right: auto;
+        left: 95px; 
+      }
+
+      .node__links {
+        float: left; 
+        right: auto; 
+        left: -100px; 
+      }
+
+      .field--name-field-tags {
+        h3 {
+          float: right; 
+
+        }
+        ul {
+          float: right; 
+          li {
+            float: left; 
+            margin-left: auto; 
+            margin-right: 10px; 
+          }
+        }
+      }
+
+
+      
+      .field--name-field-women-in-this-article {
+        .field__items {
+          .field__item.wrapper {
+            .field--name-field-photo {
+              float: right;
+              margin-right: auto;
+              margin-left: 10px;
+            }
+
+            .field--name-node-title {
+              float: right;
+              margin-left: auto;
+              margin-right: 10px;
+            }
+
+            .field--name-field-subtitle {
+              float: right; 
+              right: 80px; 
+            }
+
+            &:first-child .field--name-body{
+              float: right;
+            }
+
+            .social-media-links--platforms {
+              float: left;
+            }
+
+          }
+        }
+      }
+
+    }
+  }
+
 }

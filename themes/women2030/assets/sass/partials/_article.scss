@@ -15,7 +15,6 @@ The following content was designed & implemented under AlexSeif.com
 
     .field--name-field-image {
       text-align: center;
-      margin-bottom: 20px;
 
       &::before{
         @include page_gold_border_header();
@@ -31,12 +30,13 @@ The following content was designed & implemented under AlexSeif.com
     }
 
     .field--name-node-title {
-      clear: both;
+
       h1 {
         font-size: 48px;
         line-height: 61px;
         color: $grey_font_article;
       }
+
       &::before {
         @include page_gold_border_content();
         height: calc(100% - 3200px);
@@ -44,21 +44,20 @@ The following content was designed & implemented under AlexSeif.com
     }
 
     .field--name-user {
-      float: right;
-      clear: right;
-      margin-bottom: 20px;
+      float: left; /* ltr */
+      clear: left; /* ltr */
 
       .field--name-user-picture {
-        float: right;
-        margin-left: 10px;
+        float: left; /* ltr */
+        margin-right: 10px; /* ltr */
         border-radius: 50%;
         overflow: hidden;
-
       }
 
       .field--name-field-name {
-        float: right;
-        margin-left: 10px;
+        float: left; /* ltr */
+        margin-right: 10px; /* ltr */
+        margin-top: 5px;
 
         a {
           color: $gold;
@@ -66,13 +65,29 @@ The following content was designed & implemented under AlexSeif.com
           font-weight: bold;
         }
       }
+
+      .field--name-field-description {
+        font-size: 15px;
+        font-weight: bold;
+        color: $grey_font_header;
+      }
     }
 
     .field--name-node-post-date {
       color: $grey_font_header;
-      margin-top: 80px;
-      float: left;
-      clear: left;
+      margin-top: 30px;
+      float: right; /* ltr */
+      text-align: right; /* ltr */
+      right: 95px; /* ltr */
+      position: relative;
+      font-size: 12px;
+    }
+
+    .node__links {
+      margin-top: 30px;
+      position: relative;
+      float: right; /* ltr */
+      right: -140px; /* ltr */
     }
 
     .field--name-field-tags {
@@ -87,20 +102,21 @@ The following content was designed & implemented under AlexSeif.com
       h3 {
         color: $grey_tag_title;
         font-size: 20px;
-        float: right;
+        float: left; /* ltr */
         margin: 0;
       }
 
       ul {
         list-style: none;
-        float: right;
+        float: left; /* ltr */
         margin: 0;
+        padding: 0;
 
         li {
-          float: right;
+          float: left; /* ltr */ 
           background: $grey_tag_background;
           padding: 5px 10px;
-          margin-left: 10px;
+          margin-left: 10px; /* ltr */
 
           h2 {
             margin: 0;
@@ -160,7 +176,7 @@ The following content was designed & implemented under AlexSeif.com
 
           .field--name-field-photo {
             float: left; /* ltr */
-            margin-left: 10px; /* ltr */
+            margin-right: 10px; /* ltr */
             border-radius: 50%;
             overflow: hidden;
 
@@ -170,7 +186,7 @@ The following content was designed & implemented under AlexSeif.com
           }
 
           .field--name-node-title {
-            display: inline-block;
+            float: left;
             margin-left: 10px;
 
             h3 {
@@ -180,8 +196,13 @@ The following content was designed & implemented under AlexSeif.com
             }
           }
 
+
           .field--name-field-subtitle {
-            clear: none;
+            clear: both;
+            position: relative;
+            top: -30px;
+            left: 80px; /* ltr */
+            float: left; /* ltr */
 
             a {
               font-size: 15px;
@@ -215,8 +236,8 @@ The following content was designed & implemented under AlexSeif.com
 
             .social-media-links--platforms {
               display: block;
-              float: right;
-              margin-right: 40px;
+              float: right; /* ltr */
+              /* margin-right: 40px; */
 
               li{
                 margin-bottom: 10px;
