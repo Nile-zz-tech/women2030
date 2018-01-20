@@ -428,6 +428,11 @@
     .site-branding {
       float: none;
       margin-top: 10px;
+
+      .site-branding__logo_ar {
+        display: initial !important;
+        margin-left: 5px; /* ltr */
+      }
     }
   }
 

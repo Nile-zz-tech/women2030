@@ -42,9 +42,7 @@ jQuery(function () {
   }
 
   function fix_goldbar() {
-    console.log(jQuery('.region-panel-second-1').text().trim());
     if ("" == jQuery('.region-panel-second-1').text().trim()) {
-      console.log('removing');
       jQuery('#panel_second').hide();
     }
 

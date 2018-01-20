@@ -2,7 +2,7 @@
 
 (function($, window, Drupal, drupalSettings) {
 
-    Drupal.Personal = Drupal.Personal || {};
+    Drupal.Women = Drupal.Women || {};
 
 
     Drupal.behaviors.zircon = {
@@ -44,8 +44,8 @@
                 }
             });
 
-            Drupal.Personal.matchHeight();
-            Drupal.Personal.mobileMenu();
+            Drupal.Women.matchHeight();
+            Drupal.Women.mobileMenu();
 
 
             if ($('html').attr('dir') == 'rtl') {
@@ -98,11 +98,11 @@
         }
     };
 
-    Drupal.Personal.mobileMenu = function() {
-//      $('#btn-main-menu').mobileMenu();
+    Drupal.Women.mobileMenu = function() {
+      $('#btn-main-menu').mobileMenu();
     }
 
-    Drupal.Personal.matchHeight = function() {
+    Drupal.Women.matchHeight = function() {
        /* console.log('hello');*/
         var maxHeight = 0;
         $('.gallery-list .view-row .views-col .views-field-title').each(function() {
