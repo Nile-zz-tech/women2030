@@ -3770,18 +3770,18 @@ CSS
 
 /* */
 /*  */
-/* line 35, /srv/www/women2030/themes/women2030/assets/sass/config/_variables.scss */
+/* line 38, /srv/www/women2030/themes/women2030/assets/sass/config/_variables.scss */
 body, h1, .h1, h2, .h2, h3, .h3 {
   font-family: 'Noto Naskh Arabic', serif;
 }
 
-/* line 40, /srv/www/women2030/themes/women2030/assets/sass/config/_variables.scss */
+/* line 43, /srv/www/women2030/themes/women2030/assets/sass/config/_variables.scss */
 [class*="nc-icon"] span {
   display: none;
 }
 
 /* BUTTON */
-/* line 47, /srv/www/women2030/themes/women2030/assets/sass/config/_variables.scss */
+/* line 50, /srv/www/women2030/themes/women2030/assets/sass/config/_variables.scss */
 .form-submit {
   margin: 0 10px 10px 0;
   border: 1px solid black;
@@ -3791,12 +3791,12 @@ body, h1, .h1, h2, .h2, h3, .h3 {
   background: white;
 }
 
-/* line 55, /srv/www/women2030/themes/women2030/assets/sass/config/_variables.scss */
+/* line 58, /srv/www/women2030/themes/women2030/assets/sass/config/_variables.scss */
 .form-submit:first-child {
   margin: 0 10px 10px 0;
 }
 
-/* line 88, /srv/www/women2030/themes/women2030/assets/sass/config/_variables.scss */
+/* line 91, /srv/www/women2030/themes/women2030/assets/sass/config/_variables.scss */
 a, .slick-slider .slick-prev, .slick-slider .slick-next {
   -webkit-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;
@@ -4447,10 +4447,10 @@ blockquote p:last-child {
   .we-mega-menu-submenu {
     position: absolute;
     left: 0;
-    top: 30px;
+    /*top: 30px;*/
     z-index: 100;
-    background: #272727;
-    border: 5px solid #B69235;
+    background: #785A0C;
+    /*border: 5px solid $gold;*/
     width: 220px;
     box-shadow: inherit !important;
     -webkit-box-shadow: inherit !important;
@@ -4458,22 +4458,23 @@ blockquote p:last-child {
     margin-top: 0;
     margin-left: 0;
     padding: 0;
+    border: 0;
   }
-  /* line 55, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+  /* line 56, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
   .we-mega-menu-submenu > .we-mega-menu-submenu-inner {
     min-height: inherit;
   }
-  /* line 58, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+  /* line 59, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
   .we-mega-menu-submenu li.we-mega-menu-li {
     float: none;
     border: none;
     margin: 0;
     padding: 0;
-    border-top: #444 solid 1px;
+    /*border-top: #444 solid 1px;*/
   }
-  /* line 64, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+  /* line 65, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
   .we-mega-menu-submenu li.we-mega-menu-li a {
-    color: #fff;
+    color: #000;
     border-radius: 0;
     padding: 7px 15px;
     text-transform: none;
@@ -4483,7 +4484,7 @@ blockquote p:last-child {
     margin: 0;
     font-weight: normal;
   }
-  /* line 75, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+  /* line 76, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
   .we-mega-menu-submenu li.we-mega-menu-li a:hover, .we-mega-menu-submenu li.we-mega-menu-li a:focus {
     background: none;
     color: #B69235;
@@ -4491,28 +4492,28 @@ blockquote p:last-child {
     text-decoration: none;
     border-radius: 0;
   }
-  /* line 83, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+  /* line 84, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
   .we-mega-menu-submenu li.we-mega-menu-li a:before {
     margin-top: -6px;
   }
-  /* line 88, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+  /* line 89, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
   .we-mega-menu-submenu li.we-mega-menu-li.active a, .we-mega-menu-submenu li.we-mega-menu-li.active a:hover, .we-mega-menu-submenu li.we-mega-menu-li.active a:focus, .we-mega-menu-submenu li.we-mega-menu-li.active-trail a, .we-mega-menu-submenu li.we-mega-menu-li.active-trail a:hover, .we-mega-menu-submenu li.we-mega-menu-li.active-trail a:focus {
     background: none;
     color: #fff;
   }
-  /* line 93, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+  /* line 94, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
   .we-mega-menu-submenu li.we-mega-menu-li:first-child {
     border: 0 none;
   }
-  /* line 95, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+  /* line 96, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
   .we-mega-menu-submenu li.we-mega-menu-li:first-child > a {
     padding-top: 7px;
   }
-  /* line 97, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+  /* line 98, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
   .we-mega-menu-submenu li.we-mega-menu-li:first-child > a:before, .we-mega-menu-submenu li.we-mega-menu-li:first-child > a:after {
     margin-top: -6px;
   }
-  /* line 109, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+  /* line 110, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
   .we-mega-menu-ul > .we-mega-menu-li {
     list-style-image: none;
     list-style-type: none;
@@ -4522,25 +4523,24 @@ blockquote p:last-child {
     position: relative;
     border: 0 none;
   }
-  /* line 117, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+  /* line 118, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
   .we-mega-menu-ul > .we-mega-menu-li > a {
-    font-family: 'oswaldregular';
+    /*font-family: 'oswaldregular';*/
     text-transform: uppercase;
-    color: #fff;
+    /*color: $white;*/
     display: block;
     padding: 4px 20px;
-    font-size: 1.14em;
+    /*font-size: 18px;*/
     background-color: transparent;
   }
-  /* line 125, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+  /* line 126, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
   .we-mega-menu-ul > .we-mega-menu-li > a:hover, .we-mega-menu-ul > .we-mega-menu-li > a:focus {
     color: #B69235;
     background-color: transparent;
   }
-  /* line 131, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+  /* line 132, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
   .we-mega-menu-ul > .we-mega-menu-li.active > a, .we-mega-menu-ul > .we-mega-menu-li.active > a:hover, .we-mega-menu-ul > .we-mega-menu-li.active > a:focus, .we-mega-menu-ul > .we-mega-menu-li.active-trail > a, .we-mega-menu-ul > .we-mega-menu-li.active-trail > a:hover, .we-mega-menu-ul > .we-mega-menu-li.active-trail > a:focus {
-    background: #B69235;
-    color: #fff;
+    color: #B69235;
   }
   /* line 137, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
   .we-mega-menu-ul .dropdown-menu {
@@ -4592,7 +4592,7 @@ blockquote p:last-child {
   }
   /* line 179, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
   .we-mega-menu-ul li.dropdown-menu:hover > a, .we-mega-menu-ul li.dropdown-menu:focus > a {
-    background: #B69235;
+    background: #785A0C;
     color: #fff;
   }
   /* line 183, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
