@@ -1489,6 +1489,10 @@
       float: right;
       margin-right: 0;
       margin-left: 76px;
+
+      .site-branding__logo_ar {
+        display: initial !important;
+      }
     } 
     /* search form */
     .block-search {
@@ -2132,6 +2136,24 @@
       padding-left: 0;
       padding-right: 0;
     }
+
+    #header {
+      #logo {
+        width: 140px;
+      }
+      .site-branding {
+        float: none;
+        margin-top: 10px;
+        margin-right: 76px;
+      }
+    }
+
+    #search-block-form {
+      right: 0px;
+      left: auto;
+      top: 15px;
+    }
+    
     #search-form{
       .form-item label {
         margin-right: 0;
@@ -2309,7 +2331,7 @@
       }
 
 
-      
+
       .field--name-field-women-in-this-article {
         .field__items {
           .field__item.wrapper {

@@ -14,11 +14,14 @@
  */
 #}
 {% set attributes = attributes.addClass('site-branding') %}
+
 {% block content %}
   {% if site_logo %}
     <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-branding__logo">
       {#      <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />#}
-      <img src="{{  path('<front>')|replace({'/index.php':''}) ~ 'logo.png' }}" alt="{{ 'Home'|t }}" />
+      <img src="{{  path('<front>')|replace({'/index.php':''}) ~ 'logo.png' }}" class="hidden-xs" alt="{{ 'Home'|t }}" />
+      <img src="{{  path('<front>')|replace({'/index.php':''}) ~ 'logosaudis.png' }}" class="visible-xs site-branding__logo_ar" alt="{{ 'Home'|t }}" width="106" />
+      <img src="{{  path('<front>')|replace({'/index.php':''}) ~ 'logo2030.png' }}" class="visible-xs site-branding__logo_ar" alt="{{ 'Home'|t }}" width="86" />
     </a>
   {% endif %}
   {% if site_name or site_slogan %}

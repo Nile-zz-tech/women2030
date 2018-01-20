@@ -154,15 +154,13 @@
     .navbar-toggle {
       border: none;
       border-radius: 0;
-      margin: 23px 0 0 0;
       padding: 0;
       width: 40px;
       height: 29px;
-      background-color: #e0dfdf;
       text-align: center;
       display: block;
       .icon-bar {
-        background-color: #333;
+        background-color: $dark_grey;
         margin-left: auto;
         margin-right: auto;
       }
@@ -174,7 +172,6 @@
       padding-top: 9px;
     }
     .collapsed {
-      background-color: #e0dfdf;
     }
   }
 
@@ -427,6 +424,10 @@
   #header {
     #logo {
       width: 140px;
+    }
+    .site-branding {
+      float: none;
+      margin-top: 10px;
     }
   }
 
