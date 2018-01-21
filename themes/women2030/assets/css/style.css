@@ -4381,6 +4381,11 @@ blockquote p:last-child {
   font-size: 18px;
 }
 
+/* line 87, /srv/www/women2030/themes/women2030/assets/sass/partials/_elements.scss */
+.pager {
+  display: none;
+}
+
 /* line 88, /srv/www/women2030/themes/women2030/assets/sass/partials/_elements.scss */
 .more-link {
   text-align: center !important;

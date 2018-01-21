@@ -7,6 +7,7 @@ jQuery(function () {
 
   fix_gallery();
   fix_goldbar();
+  fix_morelink();
 
 
   function fix_gallery() {
@@ -51,5 +52,12 @@ jQuery(function () {
 //      jQuery('.block-views-blockrelated-articles-block-1:before').css('height', $page_gold_border_ele.height());
 //      jQuery('.block-views-blockduplicate-of-related-articles-block-1').css('height', $page_gold_border_ele.height());
 //    }
+  }
+
+  function fix_morelink() {
+    jQuery('.more-link a').click(function () {
+      jQuery('.pager__item.pager__item--next a')[0].click();
+      return false;
+    });
   }
 });
