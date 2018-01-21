@@ -204,9 +204,12 @@
       left: 0;
     }
   }
-
   .view-content {
     margin-bottom: 60px;
+
+    .field--name-field-image {
+      margin-bottom: 10px;   
+    }
 
     .field--name-node-title {
       display: block;
@@ -273,16 +276,23 @@
     .field--name-field-category,
     .field--name-node-post-date {
       float: left; /* ltr */
+      font-size: 12px;
+      color: $grey_font_header;
+      text-align: right;
     }
     .node__links {
       float: right; /* ltr */
     }
 
     .field--name-body {
+      height: 135px;
+
       p {
         text-align: center;
         padding: 0 15px;
         font-size: 17px;
+        line-height: 30px;
+        font-weight: bold;
       }
     }
 
@@ -292,13 +302,14 @@
       .taxonomy-term  {
         float: right;
         background: $grey_tag_background;
-        padding: 5px 10px;
+        padding: 6px 10px;
         margin-left: 10px;
         margin-right: 10px;
 
         h2 {
           margin: 0;
           font-size: 12px;
+          font-weight: bold;
 
           a {
             &:hover, &:focus {

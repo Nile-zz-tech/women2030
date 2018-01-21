@@ -5,6 +5,7 @@
   }
   body {
     direction: rtl;
+    font-family: 'Noto Naskh Arabic', serif; 
   }
   .flip.text-left {
     text-align: right;
@@ -1479,6 +1480,9 @@
   #menu {
     float: right;
   }
+  .we-mega-menu-ul > .we-mega-menu-li > a {
+    font-size: 18px;
+  }
   ul.menu {
     margin-right: 0;
   }
@@ -1524,14 +1528,17 @@
       h2, .content {
         float: right;
       }
+      h2 {
+        margin-left: 10px;
+      }
     }
   }
 
 
   #search-block-form {
     &:after {
-      right: auto;
-      left: 13px;
+      position: absolute;
+      right: -15px;
     }
   }
 
@@ -1540,6 +1547,8 @@
   #main-menu-wrapper, #main-menu {
     float: right;
     clear: left;
+    margin-right: -30px;
+    margin-left: auto;
   }
 
   .navbar-default ul.menu > li {
