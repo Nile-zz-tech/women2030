@@ -6332,7 +6332,7 @@ blockquote p:last-child {
   background-image: -moz-linear-gradient(-90deg, #a88231 0%, #e9d16c 100%);
   background-image: -o-linear-gradient(-90deg, #a88231 0%, #e9d16c 100%);
   background-image: linear-gradient(-90deg, #a88231 0%, #e9d16c 100%);
-  margin-right: 0px;
+  margin-left: 0px;
 }
 
 /* line 593, /srv/www/women2030/themes/women2030/assets/sass/partials/_view.scss */
