@@ -1841,10 +1841,10 @@
   .page #main .content .node .date-wrapper {
     /*background: url(../images/bg-date-3.png) no-repeat 0 0;*/
   }
-  .page #main .content .node h2{
-    padding-right: 0;
-    padding-left: 130px;
-  }
+  /*  .page #main .content .node h2{
+      padding-right: 0;
+      padding-left: 130px;
+    }*/
   ul.menu {
     padding-right: 0;
   }
@@ -2267,7 +2267,9 @@
   .view-taxonomy-term .view-content .node__links,
   .view-women-profiles .view-content .node__links {
     float: left;
+    margin-left: 10px; 
   }
+  
   .page-node-type-article .block-system-main-block .field--name-field-women-in-this-article .field__label:after, 
     .page-node-type-video .block-system-main-block .field--name-field-women-in-this-article .field__label:after {
     margin-right: 37%; 

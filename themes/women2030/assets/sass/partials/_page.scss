@@ -20,7 +20,7 @@
 
     .content {
       .node {
-        .content {
+/*        .content {
           margin-bottom: 30px;
           padding: 30px;
           position: relative;
@@ -36,13 +36,13 @@
             z-index: 10;
             left: 30px;
           }
-        }
+        }*/
 
-        h2 {
+/*        h2 {
           margin: -40px 0 30px;
           padding-right: 130px;
           line-height: 1.4;
-        }
+        }*/
 
         .date-wrapper {
           display: block;
@@ -811,7 +811,7 @@
 }
 
 .page #main .content .node h2 {
-  font-size: 2em;
+  /*font-size: 2em;*/
 
   // width: 80%;
 }
@@ -829,9 +829,9 @@
 }
 
 .node {
-  .field--type-image {
+/*  .field--type-image {
     margin-bottom: 1em;
-  }
+  }*/
 
   ul.inline {
     margin-bottom: 0;
@@ -885,7 +885,7 @@
 }
 
 .node__links {
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
 }
 
 #main {
