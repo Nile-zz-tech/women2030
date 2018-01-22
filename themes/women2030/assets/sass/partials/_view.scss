@@ -171,7 +171,36 @@
 
 .article-teaser,
 .teaser {
+  .node--type-article  {
+    margin-bottom: 30px;
+  }
+  .view-header {
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+    color: #000000;
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
 
+    &:after, &:before {
+      content: " ";
+      position: absolute;
+      border: 1px solid $gold;
+      width: 30%;
+      height: 1px;
+    }
+
+    &:before {
+      top: 50%;
+      right: 0;
+    }
+
+    &:after {
+      bottom: 50%;
+      left: 0;
+    }
+  }
   .view-content {
     margin-bottom: 60px;
 

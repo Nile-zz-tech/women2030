@@ -7,6 +7,9 @@
     direction: rtl;
     font-family: 'Noto Naskh Arabic', serif; 
   }
+  div ul { 
+    float: left;
+  }
   .flip.text-left {
     text-align: right;
   }
@@ -2273,7 +2276,7 @@
     float: left;
     margin-left: 10px; 
   }
-  
+
   .page-node-type-article .block-system-main-block .field--name-field-women-in-this-article .field__label:after, 
     .page-node-type-video .block-system-main-block .field--name-field-women-in-this-article .field__label:after {
     margin-right: 37%; 

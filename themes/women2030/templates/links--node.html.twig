@@ -33,14 +33,11 @@
  * @ingroup themeable
  */
 #}
-{#{% if links %}#}
-<div class="node__links">
-  {#    {% include "links.html.twig" %}#}
-  <a href="#" class="share-link">
-    <img src="/{{ directory }}/assets/images/icn_lite_share.png" />
-  </a>
-  <a href="#" class="comment-link">
-    <img src="/{{ directory }}/assets/images/icn_lite_comments.png" alt=""/>
-  </a>
-</div>
-{#{% endif %}#}
+{% if links %}
+  <div class="node__links">
+    <a href="#" class="comment-link">
+      <img src="/{{ directory }}/assets/images/icn_lite_comments.png" alt=""/>
+    </a>
+    {% include "links.html.twig" %}
+  </div>
+{% endif %}
