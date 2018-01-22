@@ -168,6 +168,7 @@
     }
   }
 }
+
 .article-teaser,
 .teaser {
 
@@ -264,7 +265,7 @@
       border-radius: 4px;
       height: 40px;
       padding: 6px 0;
-      
+
       .field--name-field-category {
         float: left; /* ltr */
         font-size: 12px;
@@ -470,8 +471,12 @@
   }
 }
 
-
 .micro-teaser{
+  margin-top: 50px;
+
+  .layout--onecol {
+    height: 124px;
+  }
   .field--name-field-women-in-this-article {
 
     .field--name-field-photo {
@@ -481,23 +486,64 @@
         margin: 0;
       }
     }
+
     .field--name-node-title {
-      margin-top: -30px;
-      margin-left: 70px; /* ltr */
+      margin-top: -70px;
+      margin-left: 70px;
 
       &:before, &:after {
         content: none;
       }  
+
       h3 {
-        font-size: 14px;
-        a {
+        margin-bottom: 0px;
+
+        a{
           color: $gold;
+          font-size: 14px;
         }
       }
     }
   }
 
+  .field--name-node-title {
+    margin-left: 70px;
+
+    h3{
+      a {
+        color: black;
+        font-size: 18px;
+      }
+    }
+  }
+  /*  .field--name-field-women-in-this-article {
+      float: left;
+      
+      .field--name-field-photo {
+        img {
+          border-radius: 50%;
+          overflow: hidden;
+          margin: 0;
+        }
+      }
+      
+      .field--name-node-title {
+        margin-top: -30px;
+        margin-left: 70px;  ltr 
+  
+        &:before, &:after {
+          content: none;
+        }  
+        h3 {
+          font-size: 14px;
+          a {
+            color: $gold;
+          }
+        }
+      }
+    }*/
 }
+
 .view-taxonomy-term .view-content,
 .view-frontpage-header {
   &::before {

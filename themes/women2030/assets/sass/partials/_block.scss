@@ -526,24 +526,35 @@
 #panel_second {
   padding: 30px 0;
 
-  h2 {
-    font-weight: bold;
-    font-size: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    color: #000000;
-  }
 
   .block {
     background: #f0eee9;
-    padding: 15px;
+    padding: 25px 15px 15px;
     border-radius: 4px;
 
+    h2 {
+      font-weight: bold;
+      font-size: 20px;
+      text-transform: uppercase;
+      text-align: center;
+      color: #000000;
+      
+      &:after {
+        content: " ";
+        width: 70px;
+        height: 1px;
+        border-bottom: 1px solid #d3d1cc;
+        position: absolute;
+        top: 72px;
+        left: 40%;
+      }
+    }
+    
     h3 {
-      a { 
+/*      a { 
         color: #000000;
         font-size: 20px;
-      }
+      }*/
     }
   }
 

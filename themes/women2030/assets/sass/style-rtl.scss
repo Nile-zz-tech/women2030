@@ -1573,6 +1573,10 @@
       right: 0;
     }
   }
+  #panel_second .block h2:after {
+    left: auto;
+    right: 40%;
+  }
 
   /*slideshow*/
   .jcarousel-skin-default .jcarousel-prev-horizontal, .slick-prev {
