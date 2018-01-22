@@ -38,7 +38,7 @@
 
   .we-mega-menu-submenu {
     position: absolute;
-    left: 0;
+    left: 0; /* ltr */
     /*top: 30px;*/
     z-index: 100;
     background: $sub_menu_bg;
@@ -60,7 +60,7 @@
       padding: 0;
       /*border-top: #444 solid 1px;*/
       a {
-        color: #000;
+        color: #fff;
         border-radius: 0;
         padding: 7px 15px;
         text-transform: none;
@@ -116,7 +116,7 @@
         font-family: inherit;
         text-transform: uppercase;
         display: block;
-        padding: 4px 40px 4px 0; /* ltr */
+        padding: 4px 20px; /* ltr */
         background-color: transparent;
         &:hover, &:focus {
           color: $gold;
@@ -134,18 +134,18 @@
       > a {
         padding-right: 25px;
         &:before {
-          content: "\f0dd";
-          color: $white;
+          content: "\f107";
           @include fontawesome;
-          position: absolute;
-          right: 9px;
-          top: 50%;
+          position: relative;
+          /*right: 9px;*/
+          /*top: 50%;*/
           // font-size: 8px;
           background: none;
           width: auto;
           height: auto;
           line-height: 1;
           margin-top: -10px;
+          float: right; /* ltr */
         }
         &:after{
           display: none;

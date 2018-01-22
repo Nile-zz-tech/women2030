@@ -926,7 +926,12 @@
     left: auto;
     float: left;
     text-align: right;
+
+    > a:before {
+      float: left;
+    }
   }
+
   .dropdown-menu.pull-right {
     left: 0;
     right: auto;
@@ -2370,7 +2375,6 @@
     >.we-mega-menu-li{
       >a{
         /*@extend %font_noto;*/
-        padding: 4px 0px 4px 40px; /* ltr */
       }
     }
   }
@@ -2389,6 +2393,13 @@
       li[hreflang="ar"] {
         display: none;
       }
+    }
+  }
+
+  @media (min-width: 992px) {
+    .we-mega-menu-submenu {
+      right: 0; 
+      margin-right: -2px;
     }
   }
 }

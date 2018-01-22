@@ -4456,6 +4456,7 @@ blockquote p:last-child {
   .we-mega-menu-submenu {
     position: absolute;
     left: 0;
+    /* ltr */
     /*top: 30px;*/
     z-index: 100;
     background: #785A0C;
@@ -4483,7 +4484,7 @@ blockquote p:last-child {
   }
   /* line 62, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
   .we-mega-menu-submenu li.we-mega-menu-li a {
-    color: #000;
+    color: #fff;
     border-radius: 0;
     padding: 7px 15px;
     text-transform: none;
@@ -4538,7 +4539,7 @@ blockquote p:last-child {
     font-family: inherit;
     text-transform: uppercase;
     display: block;
-    padding: 4px 40px 4px 0;
+    padding: 4px 20px;
     /* ltr */
     background-color: transparent;
   }
@@ -4561,22 +4562,23 @@ blockquote p:last-child {
   }
   /* line 136, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
   .we-mega-menu-ul .dropdown-menu > a:before {
-    content: "\f0dd";
-    color: #fff;
+    content: "\f107";
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    position: absolute;
-    right: 9px;
-    top: 50%;
+    position: relative;
+    /*right: 9px;*/
+    /*top: 50%;*/
     background: none;
     width: auto;
     height: auto;
     line-height: 1;
     margin-top: -10px;
+    float: right;
+    /* ltr */
   }
   /* line 150, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
   .we-mega-menu-ul .dropdown-menu > a:after {
