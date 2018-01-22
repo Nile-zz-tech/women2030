@@ -939,3 +939,19 @@
     content: none;
   }
 }
+
+.block-we-megamenu-blockmain {
+  /*float: left;  ltr */
+}
+.block-language {
+  /*float: right;  ltr */
+  
+  ul.links {
+    list-style: none;
+    padding: 0px;
+    
+    li[hreflang="en"] {
+      display: none;
+    }
+  }
+}

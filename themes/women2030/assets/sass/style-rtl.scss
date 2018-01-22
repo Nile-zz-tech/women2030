@@ -2373,4 +2373,20 @@
     }
   }
 
+  .block-we-megamenu-blockmain {
+    /*float: right;*/ 
+  }
+  .block-language {
+    /*float: left;*/
+
+    ul.links {
+      li[hreflang="en"] {
+        display: block;
+      }
+      li[hreflang="ar"] {
+        display: none;
+      }
+    }
+  }
 }
+

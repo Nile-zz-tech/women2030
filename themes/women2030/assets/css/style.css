@@ -5493,6 +5493,27 @@ blockquote p:last-child {
   content: none;
 }
 
+/* line 943, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+.block-we-megamenu-blockmain {
+  /*float: left;  ltr */
+}
+
+/* line 946, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+.block-language {
+  /*float: right;  ltr */
+}
+
+/* line 949, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+.block-language ul.links {
+  list-style: none;
+  padding: 0px;
+}
+
+/* line 953, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+.block-language ul.links li[hreflang="en"] {
+  display: none;
+}
+
 /* line 2, /srv/www/women2030/themes/women2030/assets/sass/partials/_view.scss */
 .gallery-thumbs .views-field-field-image, #panel_second .views-field-field-image {
   margin: 0 5px 15px 0;
