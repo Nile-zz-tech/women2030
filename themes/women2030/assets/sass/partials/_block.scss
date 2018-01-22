@@ -1,11 +1,7 @@
 /* nav */
 #main-menu {
   float: left; /* LTR */
-  margin-left: -30px; /* LTR */
-  margin: 0;
-  clear: right;
-  padding-top: 10px;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 @media (min-width: 992px){
@@ -106,7 +102,6 @@
     }
   }
 
-
   .we-mega-menu-ul{
     >.we-mega-menu-li{
       list-style-image: none;
@@ -120,10 +115,8 @@
         /*@extend %font_noto;*/
         font-family: inherit;
         text-transform: uppercase;
-        /*color: $white;*/
         display: block;
-        padding: 4px 20px;
-        /*font-size: 18px;*/
+        padding: 4px 40px 4px 0; /* ltr */
         background-color: transparent;
         &:hover, &:focus {
           color: $gold;
@@ -941,15 +934,15 @@
 }
 
 .block-we-megamenu-blockmain {
-  /*float: left;  ltr */
+  float: left;  /* ltr */
 }
+
 .block-language {
-  /*float: right;  ltr */
-  
+  float: right;  /* ltr */
+
   ul.links {
     list-style: none;
-    padding: 0px;
-    
+
     li[hreflang="en"] {
       display: none;
     }

@@ -8,20 +8,25 @@
   }
 
   .site-branding {
-    float: left;
-    margin-right: 76px;
+    float: left; /* ltr */
+    margin-right: 60px;
+
+    img {margin-bottom: 0px;}
   }
 
   .block-search {
     float: left; /* ltr */
     margin-top: 30px;
+    height: 30px;
 
     h2, .content {
       float: left;
     }
+
     h2 {
       font-size: 18px;
     }
+
     a {
       color: $dark_grey;
 
@@ -29,32 +34,36 @@
         content: none;
       }
     }
+
+    #search-block-form {
+      &:after {
+        position: absolute;
+        left: -15px; /* ltr */
+      }
+    }
   }
+
   .block-social-media-links {
     float: right; /* ltr */
     margin-top: 30px;
 
-    h2, .content {
+    .content {
       float: left;
     }
+
     h2 {
+      float: left;
       font-size: 18px;
+      margin-top: 5px; 
+      margin-right: 10px; /* ltr */
     }
+
     a {
       color: $dark_grey;
 
       &:before {
         content: none;
       }
-    }
-  }
-
-  #block-languagedropdownswitcher {
-    float: left; /* ltr */
-    margin: 30px;
-    select {
-      padding: 0;
-      background: transparent;
     }
   }
 
@@ -73,16 +82,15 @@
   padding: 4px 5px;
   position: relative;
 
-  &:after {
+  &:before {
     @include fontawesome;
-
     content: "\f002";
     font-size: 18px;
-    position: absolute;
-    right: 10px;
     top: 7px;
     color: #bebebe;
     z-index: 1;
+    float: left; /* ltr */
+    margin-top: 3px;
   }
 
   .form-item {
