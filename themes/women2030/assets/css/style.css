@@ -4428,6 +4428,16 @@ blockquote p:last-child {
   color: black;
 }
 
+/* line 100, /srv/www/women2030/themes/women2030/assets/sass/partials/_elements.scss */
+.se-block .block-content .se-container .se-links-container .se-links {
+  position: inherit;
+}
+
+/* line 104, /srv/www/women2030/themes/women2030/assets/sass/partials/_elements.scss */
+.se-block .block-content .se-container .se-links-container .se-links .se-link img {
+  height: 20px;
+}
+
 /* nav */
 /* line 2, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #main-menu {

@@ -96,3 +96,11 @@ blockquote {
     color: black;
   }
 }
+
+.se-block .block-content .se-container .se-links-container .se-links {
+  position: inherit;
+}
+
+.se-block .block-content .se-container .se-links-container .se-links .se-link img {
+  height: 20px;
+}
