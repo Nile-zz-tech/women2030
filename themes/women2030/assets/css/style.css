@@ -7580,17 +7580,18 @@ blockquote p:last-child {
 
 /* line 53, /srv/www/women2030/themes/women2030/assets/sass/partials/_woman.scss */
 .page-node-type-woman-profile ul.social-media-links--platforms, .view-women-profiles ul.social-media-links--platforms {
+  float: none;
   text-align: center;
 }
 
-/* line 56, /srv/www/women2030/themes/women2030/assets/sass/partials/_woman.scss */
+/* line 57, /srv/www/women2030/themes/women2030/assets/sass/partials/_woman.scss */
 .page-node-type-woman-profile ul.social-media-links--platforms a, .view-women-profiles ul.social-media-links--platforms a {
   padding: 0 5px;
   font-size: 18px;
   font-weight: bold;
 }
 
-/* line 61, /srv/www/women2030/themes/women2030/assets/sass/partials/_woman.scss */
+/* line 62, /srv/www/women2030/themes/women2030/assets/sass/partials/_woman.scss */
 .page-node-type-woman-profile ul.social-media-links--platforms a .fa, .view-women-profiles ul.social-media-links--platforms a .fa {
   color: #9B9B9B;
 }
