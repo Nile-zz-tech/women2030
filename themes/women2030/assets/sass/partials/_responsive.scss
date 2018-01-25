@@ -33,6 +33,17 @@
     padding-right: 20px;
   }
 
+  .btn-btt {
+    display: none;
+  }
+  .view-taxonomy-term .view-content,
+  .view-frontpage-header,
+  .view-frontpage::before,
+  #panel_second::before {
+    &::before {
+      content: "";
+    }
+  }
   #featured .slick-slide img{
     width: 100%;
   }
@@ -85,6 +96,7 @@
     color: white;
   }
   #page.toggled .mobile-main-menu {
+    padding-top: 74px;
     right: 0;
     display: block;
   }
@@ -179,6 +191,32 @@
     margin-top: 3px;
   }
 
+  /* Mega mobile menu */
+  .navbar-we-mega-menu.navbar {
+    background-color: #FFFFFF;
+  }
+
+  .navbar-we-mega-menu.navbar ul {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .navbar-we-mega-menu.navbar .we-mega-menu-ul>li>a{
+    color: $menu_color;
+    text-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-weight: bold;
+    border-top-color: #EEEEEE;
+
+  }
+  .navbar-we-mega-menu.navbar .nav-tabs>li.active>a, 
+  .navbar-we-mega-menu.navbar .nav-tabs>li.active>a:focus, 
+  .navbar-we-mega-menu.navbar .nav-tabs>li.active>a:hover {
+    background-color: #FFFFFF;
+    color: $gold !important;
+    border-top-color: $gold;
+  }
 
   /* slideshow */
   #search-block-form {
