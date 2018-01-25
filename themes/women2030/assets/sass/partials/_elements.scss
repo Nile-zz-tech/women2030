@@ -96,11 +96,24 @@ blockquote {
     color: black;
   }
 }
-
-.se-block .block-content .se-container .se-links-container .se-links {
-  position: inherit;
+/* Share everywhere */
+.se-block .block-content .se-container {
+  width: auto;
 }
-
+.se-block .block-content .se-container .se-links-container .se-links.se-active {
+  /*position: inherit;*/
+}
+.se-block .block-content .se-container .se-trigger img {
+  padding-top: 5px;
+}
 .se-block .block-content .se-container .se-links-container .se-links .se-link img {
   height: 20px;
+}
+.se-block.se-align-left .block-content .se-container .se-links-container {
+  position: absolute;
+  z-index: 100;
+}
+.se-block.se-align-left .block-content .se-container .se-links-container ul {
+  background: grey;
+  border-radius: 8px;
 }
