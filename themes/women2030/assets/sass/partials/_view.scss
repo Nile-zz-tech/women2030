@@ -531,7 +531,7 @@
 
         a{
           color: $gold;
-          font-size: 14px;
+          font-size: 12px;
         }
       }
     }
@@ -575,7 +575,7 @@
     }*/
 }
 
-.view-taxonomy-term .view-content,
+.path-taxonomy .block-system-main-block .view-taxonomy-term .view-content,
 .view-frontpage-header {
   &::before {
     @include page_gold_border_header();
@@ -604,8 +604,18 @@
 
     h2 {
       font-size: 60px;
+
       a {
         color: white;
+      }
+
+      &:after {
+        content: " ";
+        border-bottom: 2px solid white;
+        height: 1px;
+        width: 160px;
+        position: absolute;
+        right: 43%;
       }
     }
 
