@@ -442,6 +442,7 @@
 
 //mobile
 @media (max-width: 767px) {
+
   h2, .h2 {
     font-size: 1.42em;
   }
@@ -472,6 +473,20 @@
         margin-left: 5px; /* ltr */
       }
     }
+    .block-social-media-links {
+      display: none;
+    }
+    .language-switcher-language-url {
+      display: none;
+    }
+    .block-search {
+      height: auto;
+      margin-top: 15px;
+    }
+  }
+
+  .se-block .block-content .se-container .se-links-container {
+    width: auto !important;
   }
 
   .logged-in {
