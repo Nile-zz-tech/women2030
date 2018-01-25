@@ -205,11 +205,13 @@
     margin-bottom: 60px;
 
     .group-header {
+      margin-bottom: 30px;
+
       .field--name-field-image {
         margin-bottom: 10px;   
       }
       .field--name-field-video {
-        height: 379px;
+        height: 394px;
       }
 
       .field--name-field-women-in-this-article {
@@ -238,7 +240,6 @@
       }
 
       .field--name-node-title {
-        height: 70px;
         position: relative;
         margin-bottom: 10px;
         margin-top: 20px;
@@ -266,6 +267,7 @@
           width: 70%;
           margin: 0 auto;
           line-height: 33px;
+          height: 70px;
 
           a {
             line-height: 33px;
@@ -276,7 +278,7 @@
       }
 
       .field--name-body {
-        height: 135px;
+        height: 100px;
         overflow: hidden;
 
         p {
