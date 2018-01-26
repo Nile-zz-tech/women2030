@@ -551,7 +551,7 @@
 
         .form-item {
           .form-text {
-            max-width: 220px;
+            max-width: 100%;
 
             label {
               display: block;
@@ -695,7 +695,7 @@
   }
   .page #main .content .node h2{
     font-size: 1.71em;
-    margin-top: -10px;
+    /*margin-top: -10px;*/
     padding-right: 0;
   }
   .view-node .views-field-title{
@@ -721,6 +721,21 @@
       }
     }
   }
+  .view-taxonomy-term .view-header h2:after {
+    right: 28%;
+  }
+  .article-teaser .view-content .group-header .field--name-node-title h2, .teaser .view-content .group-header .field--name-node-title h2 {
+    height: auto;
+  }
+  .page #main .field--name-comment .field--name-field-comment-body {
+    margin: auto;
+  }
+  /* gold bars */
+  .block-views-blockrelated-articles-block-1:before, .block-views-blockduplicate-of-related-articles-block-1:before,
+  .page-node-type-article .block-system-main-block .field--name-field-image::before, .page-node-type-video .block-system-main-block .field--name-field-image::before {
+    content: none;
+  }
+
 }
 
 @media (max-width: 479px) {
