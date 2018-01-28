@@ -1,14 +1,14 @@
-(function($) {
+(function ($) {
 
   "use strict";
 
-  $.fn.mobileMenu = function(options) {
+  $.fn.mobileMenu = function (options) {
 
     var settings = $.extend({
       pageSelector: '#page',
       targetWrapper: '.navbar-we-mega-menu',
       accordionMenu: 'true',
-      toggledClass : 'toggled'
+      toggledClass: 'toggled'
     }, options);
 
     if ($(window).width() <= 991) {
@@ -17,7 +17,7 @@
 
     var toggleButton = this;
 
-    $(window).resize(function() {
+    $(window).resize(function () {
       if ($(window).width() <= 991) {
         $(settings.targetWrapper).addClass('mobile-main-menu');
       } else {
@@ -34,7 +34,7 @@
     });
 
     this.off('click.mobileMenu');
-    this.on('click.mobileMenu', function(e) {
+    this.on('click.mobileMenu', function (e) {
       var wrapper = $(settings.pageSelector);
       if (!wrapper.hasClass(settings.toggledClass)) {
         wrapper.addClass(settings.toggledClass).css('position', 'relative');
@@ -42,7 +42,7 @@
         if (wrapper.find('.overlay').length == 0) {
           var overlay = $('<div class="overlay"></div>');
           overlay.prependTo(wrapper);
-          overlay.click(function() {
+          overlay.click(function () {
             toggleButton.trigger('click');
           });
           $('html, body').css('overflow', 'hidden');
@@ -52,9 +52,9 @@
         }
         if (wrapper.find('.btn-close').length == 0) {
           var btnClose = $('<span class="btn-close"></span>');
-          btnClose.prependTo(wrapper);
+          btnClose.prependTo('.mobile-main-menu');
 
-          $('.btn-close').on('click', function(e) {
+          $('.btn-close').on('click', function (e) {
             toggleButton.trigger('click');
             e.preventDefault();
             return false;
@@ -89,7 +89,7 @@
         item_active.addClass('open');
         item_active.find('> ul').css('display', 'block');
       }
-      item.click(function() {
+      item.click(function () {
         if ($(window).width() <= 991) {
           var $this = $(this);
           var $sub_menu_inner = $this.find('> .we-mega-menu-submenu');
@@ -99,7 +99,7 @@
             $this.toggleClass('open');
             if ($this.hasClass('open')) {
               $sub_menu_inner.slideDown();
-              setTimeout(function() {
+              setTimeout(function () {
                 $(settings.targetWrapper).animate({
                   scrollTop: $this.offset().top
                 }, 700);
@@ -113,6 +113,7 @@
         }
       });
     }
+
   }
 
 }(jQuery));

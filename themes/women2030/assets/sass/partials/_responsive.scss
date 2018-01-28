@@ -87,6 +87,7 @@
   #page.toggled {
     right: 250px;
   }
+
   .btn-close {
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -97,10 +98,17 @@
     cursor: pointer;
     position: absolute;
     padding: 5px 10px;
-    right: 20px;
-    top: -30px;
+    right: auto;
+    left: 20px;
+    top: 30px;
     font-size: 12px;
-    color: #aaa;
+    color: #CCC;
+    box-shadow: none;
+    background: none;
+
+    &:before, &:after {
+      background-color: #AAA;
+    }
   }
   .btn-close:hover, .btn-close:focus {
     color: white;
@@ -485,9 +493,32 @@
         margin-left: 5px; /* ltr */
       }
     }
+
     .block-social-media-links {
-      display: none;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      text-align: center;
+
+      h2 {
+        float: none !important;
+        text-align: center;
+        border-bottom: 1px solid $gold;
+        padding-bottom: 20px;
+      }
+      .content {
+        float: none !important;
+        ul{
+          li {
+            display: inline-block !important;
+            text-align: center;
+            padding: .2em .35em !important;
+            font-size: 1.3em;
+          }
+        }
+      }
     }
+
     .language-switcher-language-url {
       display: none;
     }

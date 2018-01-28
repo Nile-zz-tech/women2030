@@ -9,7 +9,6 @@ jQuery(function () {
   fix_goldbar();
   fix_morelink();
 
-
   function fix_gallery() {
     // preprocess for gallery
     jQuery('#gallery-slider li img').each(function (i, e) {
@@ -60,4 +59,5 @@ jQuery(function () {
       return false;
     });
   }
+
 });
