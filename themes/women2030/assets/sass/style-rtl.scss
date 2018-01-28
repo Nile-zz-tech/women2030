@@ -2105,7 +2105,10 @@
     #page {
       /* slider */
     }
-
+    #block-languageswitcher {
+      right: -20px;
+      left: auto;
+    }
     #page .responsive-menu-button {
       left: 15px;
       right: auto;
@@ -2415,6 +2418,7 @@
   .se-block  {
     float: left;
   }
+
 
 }
 

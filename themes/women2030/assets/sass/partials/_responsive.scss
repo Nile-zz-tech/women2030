@@ -521,15 +521,21 @@
       }
     }
 
-    .language-switcher-language-url {
-      display: none;
-    }
+    /*    .language-switcher-language-url {
+          display: none;
+        }*/
     .block-search {
       height: auto;
       margin-top: 15px;
     }
   }
 
+  #block-languageswitcher {
+    position: absolute;
+    top: 20px;
+    left: -20px; /* ltr */
+    font-weight: bold;
+  }
 
   .logged-in {
     #search-block-form {
@@ -919,6 +925,7 @@
   }
   .page #main .field--name-comment .field--name-field-comment-body {
     margin: auto;
+    word-wrap: break-word;
   }
 
 }
