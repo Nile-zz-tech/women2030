@@ -8498,7 +8498,7 @@ The following content was designed & implemented under AlexSeif.com
   /* line 533, /srv/www/women2030/themes/women2030/assets/sass/partials/_responsive.scss */
   #block-languageswitcher {
     position: absolute;
-    top: 20px;
+    top: 30%;
     left: -20px;
     /* ltr */
     font-weight: bold;
