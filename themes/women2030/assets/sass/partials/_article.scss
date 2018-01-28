@@ -140,13 +140,15 @@ The following content was designed & implemented under AlexSeif.com
       }
     }
 
+    .field--name-body {
+      margin-bottom: 15px;
+    }
+
     .field--name-field-women-in-this-article {
       background-color: #F0EEE9;
-      background-position-x: 50%;
-      background-position-y: 70%;
-      background-repeat: no-repeat;
       padding: 20px 100px;
       border: 1px solid #DDDDDD;
+      border-radius: 8px;
       margin-bottom: 40px;
 
       .field__item.wrapper.col-md-12 {
@@ -176,7 +178,6 @@ The following content was designed & implemented under AlexSeif.com
       .field__items {
 
         .field__item.wrapper {
-          margin-bottom: 40px;
 
           .field--name-field-photo {
             float: left; /* ltr */
@@ -221,6 +222,7 @@ The following content was designed & implemented under AlexSeif.com
           }
 
           &:first-child {
+            margin-bottom: 40px;
             clear: both;
 
             .field--name-body {
@@ -237,6 +239,7 @@ The following content was designed & implemented under AlexSeif.com
               &:before {
                 content: none;
               }
+
             }
 
             .social-media-links--platforms {
@@ -257,7 +260,6 @@ The following content was designed & implemented under AlexSeif.com
                 }
               }
             }
-
           }
         }
       }

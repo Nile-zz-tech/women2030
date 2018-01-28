@@ -556,12 +556,16 @@
     }
 
     #main {
+      .field--name-comment .comment-form-block {
+        padding: 20px;
+      }
       #comment-form {
         padding: 15px;
 
         .form-item {
           .form-text {
             max-width: 100%;
+            width: 100%;
 
             label {
               display: block;
@@ -695,41 +699,108 @@
 
 
   /* articles */
-  .page-node-type-article .block-system-main-block,
-  .page-node-type-video .block-system-main-block {
-    padding: 0;
+  .page-node-type-article ,
+  .page-node-type-video {
+    .block-system-main-block {
+      padding: 0;
 
-    .field--name-user {
+      .field--name-user {
 
-      .field--name-user-picture {
-        width: 40px;
+        .field--name-user-picture {
+          width: 40px;
 
-        img {
+          img {
+            margin:0;
+          }
+        }
+
+        .field--name-field-name {
+          margin: 0 5px 0 0;
+
+          a {
+            font-size: 12px;
+          }
+        }
+        .field--name-field-description {
+          font-size: 12px;
           margin:0;
         }
       }
 
-      .field--name-field-name {
-        margin:0;
+      .field--name-node-post-date {
+        clear: both;
+        margin-top: 0;
+        left: auto;
+        right: auto;
+        float: right;
+      }
 
-        a {
-          font-size: 12px;
+      .field--name-field-women-in-this-article {
+        padding: 20px;
+        .field__label {
+          margin-bottom: 20px;
+          &:after {
+            right: 41%;
+          }
         }
-      }
-      .field--name-field-description {
-        font-size: 12px;
-        margin:0;
-      }
-    }
+        .field__items {
+          .field__item.wrapper {
+            clear: both;
 
-    .field--name-node-post-date {
-      clear: both;
-      margin-top: 0;
-      left: auto;
-      right: auto;
-      float: right;
+            .field--name-field-photo {
+              width: 40px;
+              margin-left: auto !important;
+            }
+            .field--name-node-title {
+              margin: auto;
+
+              h3 {
+                font-size: 12px;
+              }
+            }
+            .field--name-field-subtitle {
+              left: 50px !important;
+              top: -25px;
+              a{
+                font-size: 12px;
+              }
+            }
+
+            &:first-child {
+              margin-bottom: 20px;
+              .field--name-body {
+                float: none !important;
+                width: auto;
+                p {
+                  font-size: 16px;
+                }
+              }
+            }
+
+            .social-media-links--platforms {
+              float: none !important;
+              padding: 0px;
+              margin-bottom: 20px;
+              li{
+                a{
+                  font-size: 14px;
+                }
+              }
+            }
+
+
+          }
+        }
+
+      }
+
     }
   }
+  [dir="rtl"] .page-node-type-article .block-system-main-block .field--name-field-women-in-this-article .field__items .field__item.wrapper .field--name-field-subtitle {
+    right: 50px !important;
+
+  }
+
 
   /* Block Related Articles */
   .block-views-blockrelated-articles-block-1,
