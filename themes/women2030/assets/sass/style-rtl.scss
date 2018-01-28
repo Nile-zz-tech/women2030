@@ -2412,26 +2412,9 @@
     }
   }
 
-  .se-block .block-content .se-container .se-links-container {
-    width: 120px;
-  }
-  .se-block.se-align-left .block-title {
-    text-align: right;
-  }
-
-  .se-block.se-align-left.block-content .se-like-container {
-    text-align: right;
-    float: right;
-  }
-  .se-block.se-align-left .block-content .se-container {
+  .se-block  {
     float: left;
   }
-  .se-block.se-align-left .block-content .se-container .se-trigger {
-    /*float: right;*/
-  }
-  .se-block.se-align-left .block-content .se-container .se-links-container {
-    float: right;
-    margin-right: 12px;
-  }
+
 }
 

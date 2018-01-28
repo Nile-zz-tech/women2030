@@ -97,34 +97,30 @@ blockquote {
   }
 }
 /* Share everywhere */
-.se-block.se-align-left .block-content .se-container .se-trigger{ float: none;}
 .se-block  {
+  float: right;
+
   .block-content {
     .se-container {
-      width: auto;
+      /*width: auto;*/
       .se-links-container{
-        width: auto;
+        /*width: auto;*/
         position: absolute;
         left: 0;
+        ul.se-links {
+          background: grey;
+          border-radius: 8px 0 0 8px;
+          padding: 0 4px;
+
+          .se-link img {
+            height: 20px; 
+          }
+        }
+      } 
+      .se-trigger {
+        /*float: none;*/
+        padding-top: 5px;
       }
     }
   }
-
-}
-.se-block .block-content .se-container .se-links-container .se-links.se-active {
-  /*position: inherit;*/
-}
-.se-block .block-content .se-container .se-trigger img {
-  padding-top: 5px;
-}
-.se-block .block-content .se-container .se-links-container .se-links .se-link img {
-  height: 20px;
-}
-.se-block.se-align-left .block-content .se-container .se-links-container {
-  /*position: absolute;*/
-  /*z-index: 100;*/
-}
-.se-block.se-align-left .block-content .se-container .se-links-container ul {
-  background: grey;
-  border-radius: 8px;
 }
