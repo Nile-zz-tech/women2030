@@ -240,9 +240,9 @@
   /* slideshow */
   #search-block-form {
     position: absolute;
-    right: 70px;
-    top: 35px;
-    width: 40px;
+    left: 15px;
+    right: auto;
+    top: 15px;
 
     .form-search {
       width: 0px;
@@ -485,8 +485,10 @@
     }
     .site-branding {
       float: none;
-      margin-top: 10px;
-      margin-left: 60px;
+      padding-top: 10px;
+      width: 80%;
+      text-align: center;
+      margin: 0 auto;
 
       .site-branding__logo_ar {
         display: initial !important;

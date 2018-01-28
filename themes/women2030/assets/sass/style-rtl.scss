@@ -2156,13 +2156,15 @@
       }
       .site-branding {
         float: none;
-        margin-top: 10px;
-        margin-right: 76px;
+        padding-top: 10px;
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
       }
     }
 
     #search-block-form {
-      right: 0px;
+      right: 15px;
       left: auto;
       top: 15px;
     }
