@@ -36,14 +36,24 @@
   .btn-btt {
     display: none;
   }
+
+  /* Gold Bars */
+  .block-views-blockrelated-articles-block-1, 
+  .block-views-blockduplicate-of-related-articles-block-1,
+  .page-node-type-article .block-system-main-block .field--name-field-image, 
+  .page-node-type-video .block-system-main-block .field--name-field-image,
+  .page-node-type-article .block-system-main-block .field--name-node-title, 
+  .page-node-type-video .block-system-main-block .field--name-node-title,
   .view-taxonomy-term .view-content,
   .view-frontpage-header,
-  .view-frontpage::before,
-  #panel_second::before {
+  .view-frontpage,
+  #panel_second{
     &::before {
-      content: "";
+      content: none;
     }
   }
+
+
   #featured .slick-slide img{
     width: 100%;
   }
@@ -430,7 +440,7 @@
           float: none;
           display: inline-block;
           padding: 0 6px;
-          margin: 0 0 5px;
+          margin: 10px 5px;
         }
       }
     }
@@ -683,9 +693,88 @@
     font-size: 16px;
   }
 
+
+  /* articles */
   .page-node-type-article .block-system-main-block,
   .page-node-type-video .block-system-main-block {
     padding: 0;
+
+    .field--name-user {
+
+      .field--name-user-picture {
+        width: 40px;
+
+        img {
+          margin:0;
+        }
+      }
+
+      .field--name-field-name {
+        margin:0;
+
+        a {
+          font-size: 12px;
+        }
+      }
+      .field--name-field-description {
+        font-size: 12px;
+        margin:0;
+      }
+    }
+
+    .field--name-node-post-date {
+      clear: both;
+      margin-top: 0;
+      left: auto;
+      right: auto;
+      float: right;
+    }
+  }
+
+  /* Block Related Articles */
+  .block-views-blockrelated-articles-block-1,
+  .block-views-blockduplicate-of-related-articles-block-1 {
+    h2 {
+      font-size: 26px;
+      &:after, &:before {
+        width: 15%;
+      }
+    }
+  }
+
+  /* Teaser */
+  .article-teaser,
+  .teaser {
+    margin-bottom: 20px;
+
+    .field--name-body {
+      height: 150px !important;
+
+      p { 
+        font-size: 16px !important;
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  /* Woman Profile */
+  .page-node-type-woman-profile,
+  .view-women-profiles {
+
+    .layout__region--bottom:before {
+      content: none;
+    }
+
+    .field--name-node-title {
+      h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+    .field--name-field-subtitle {
+      margin-bottom: 5px;
+    }
+
   }
 }
 
@@ -694,7 +783,7 @@
     width: 81px !important;
   }
   .page #main .content .node h2{
-    font-size: 1.71em;
+    /*font-size: 1.71em;*/
     /*margin-top: -10px;*/
     padding-right: 0;
   }
@@ -729,11 +818,6 @@
   }
   .page #main .field--name-comment .field--name-field-comment-body {
     margin: auto;
-  }
-  /* gold bars */
-  .block-views-blockrelated-articles-block-1:before, .block-views-blockduplicate-of-related-articles-block-1:before,
-  .page-node-type-article .block-system-main-block .field--name-field-image::before, .page-node-type-video .block-system-main-block .field--name-field-image::before {
-    content: none;
   }
 
 }
