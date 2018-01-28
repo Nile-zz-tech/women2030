@@ -97,8 +97,19 @@ blockquote {
   }
 }
 /* Share everywhere */
-.se-block .block-content .se-container {
-  width: auto;
+.se-block.se-align-left .block-content .se-container .se-trigger{ float: none;}
+.se-block  {
+  .block-content {
+    .se-container {
+      width: auto;
+      .se-links-container{
+        width: auto;
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+
 }
 .se-block .block-content .se-container .se-links-container .se-links.se-active {
   /*position: inherit;*/
@@ -110,8 +121,8 @@ blockquote {
   height: 20px;
 }
 .se-block.se-align-left .block-content .se-container .se-links-container {
-  position: absolute;
-  z-index: 100;
+  /*position: absolute;*/
+  /*z-index: 100;*/
 }
 .se-block.se-align-left .block-content .se-container .se-links-container ul {
   background: grey;

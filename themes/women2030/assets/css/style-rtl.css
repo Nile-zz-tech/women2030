@@ -3083,7 +3083,7 @@
 
 /* line 2429, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
 [dir="rtl"] .se-block.se-align-left .block-content .se-container .se-trigger {
-  float: right;
+  /*float: right;*/
 }
 
 /* line 2432, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
