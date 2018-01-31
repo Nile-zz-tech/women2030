@@ -858,8 +858,9 @@
   .teaser {
     margin-bottom: 20px;
 
+    .field--name-field-biography,
     .field--name-body {
-      height: 150px !important;
+      height: auto !important;
 
       p { 
         font-size: 16px !important;
