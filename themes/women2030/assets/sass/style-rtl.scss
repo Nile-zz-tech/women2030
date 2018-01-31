@@ -1992,7 +1992,7 @@
   }
 
   .navbar-toggle {
-    float: left;
+    float: right;
     margin: 15px 10px 0 0;
   }
 
@@ -2018,32 +2018,32 @@
   }
   @media (max-width: 991px) {
     /* --- Mobile menu --- */
-    #page {
-      left: 0;
-      right: auto;
-    }
+    /*    #page {
+          left: 0;
+          right: auto;
+        }*/
 
-    #page.toggled {
-      left: 250px;
-      right: auto;
-    }
+    /*    #page.toggled {
+          left: 250px;
+          right: auto;
+        }*/
 
-    #page.toggled .mobile-main-menu {
-      left: 0;
-      right: auto;
-    }
+    /*    #page.toggled .mobile-main-menu {
+          left: 0;
+          right: auto;
+        }*/
 
-    #page .overlay {
-      left: auto;
-      right: 0;
-    }
+    /*    #page .overlay {
+          left: auto;
+          right: 0;
+        }*/
 
-    #page .mobile-main-menu {
-      left: -250px;
-      right: auto;
-    }
+    /*    #page .mobile-main-menu {
+          left: -250px;
+          right: auto;
+        }*/
 
-    #page #main-menu-wrapper ul.menu {
+/*    #page #main-menu-wrapper ul.menu {
       padding-right: 0;
     }
 
@@ -2069,7 +2069,6 @@
       right: auto;
       left: 70px;
     }
-    /* End Mobile menu */
     #page #block-search-form {
       left: 50px;
       right: auto;
@@ -2081,7 +2080,8 @@
 
     #page .region-main-menu {
       background-position: 0 0;
-    }
+    }*/
+    /* End Mobile menu */
 
     #page .quicktabs-wrapper .quicktabs-tabs li:first-child,
       #page #sidebar-first-wrapper .item-list .quicktabs-tabs li:first-child,
@@ -2105,13 +2105,14 @@
     #page {
       /* slider */
     }
-    #block-languageswitcher {
-      right: -20px;
-      left: auto;
-    }
+
     #page .responsive-menu-button {
       left: 15px;
       right: auto;
+    }
+
+    #block-languageswitcher {
+      left: 20px; 
     }
 
     #page #search-block-form .form-submit {
@@ -2166,11 +2167,6 @@
       }
     }
 
-    #search-block-form {
-      right: 15px;
-      left: auto;
-      top: 15px;
-    }
 
     #search-form{
       .form-item label {

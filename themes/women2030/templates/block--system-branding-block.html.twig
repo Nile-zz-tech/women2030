@@ -20,8 +20,8 @@
     <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-branding__logo">
       {#      <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />#}
       <img src="{{  path('<front>')|replace({'/index.php':''}) ~ 'logo.png' }}" class="hidden-xs" alt="{{ 'Home'|t }}" width="257"/>
-      <img src="{{  path('<front>')|replace({'/index.php':''}) ~ 'logosaudis.png' }}" class="visible-xs site-branding__logo_ar" alt="{{ 'Home'|t }}" width="42%" />
-      <img src="{{  path('<front>')|replace({'/index.php':''}) ~ 'logo2030.png' }}" class="visible-xs site-branding__logo_ar" alt="{{ 'Home'|t }}" width="40%" />
+      <img src="{{  path('<front>')|replace({'/index.php':''}) ~ 'logosaudis.png' }}" class="visible-xs site-branding__logo_ar" alt="{{ 'Home'|t }}" width="38%" />
+      <img src="{{  path('<front>')|replace({'/index.php':''}) ~ 'logo2030.png' }}" class="visible-xs site-branding__logo_ar" alt="{{ 'Home'|t }}" width="36%" />
     </a>
   {% endif %}
   {% if site_name or site_slogan %}
