@@ -428,6 +428,9 @@
           color: #000000;
           font-size: 29px;
         }
+        &:after, &:before {
+          content: none;
+        }
       }
     }
 

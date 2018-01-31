@@ -20,29 +20,29 @@
 
     .content {
       .node {
-/*        .content {
-          margin-bottom: 30px;
-          padding: 30px;
-          position: relative;
-          background: $dark;
+        /*        .content {
+                  margin-bottom: 30px;
+                  padding: 30px;
+                  position: relative;
+                  background: $dark;
+        
+                  &:before {
+                    border-color: transparent transparent $dark transparent;
+                    border-style: solid;
+                    border-width: 0 15px 15px;
+                    content: "";
+                    position: absolute;
+                    top: -15px;
+                    z-index: 10;
+                    left: 30px;
+                  }
+                }*/
 
-          &:before {
-            border-color: transparent transparent $dark transparent;
-            border-style: solid;
-            border-width: 0 15px 15px;
-            content: "";
-            position: absolute;
-            top: -15px;
-            z-index: 10;
-            left: 30px;
-          }
-        }*/
-
-/*        h2 {
-          margin: -40px 0 30px;
-          padding-right: 130px;
-          line-height: 1.4;
-        }*/
+        /*        h2 {
+                  margin: -40px 0 30px;
+                  padding-right: 130px;
+                  line-height: 1.4;
+                }*/
 
         .date-wrapper {
           display: block;
@@ -289,11 +289,15 @@
         }
       }
 
+      .form-item-name,
       .field--name-field-comment-body {
         font-size: 18px;
         color: #555555;
         margin: 0 100px;
-        padding-bottom: 22px;
+        /*padding-bottom: 22px;*/
+      }
+
+      .field--name-field-comment-body {
         border-bottom: 1px solid #dddddd;
       }
     }
@@ -382,7 +386,8 @@
         display: inline-block;
       }
       .form-item {
-        margin: 0 0 15px;
+        /*margin: 0 0 15px;*/
+        margin-bottom: 15px;
 
         label {
           color: #9b9b9b;
@@ -394,6 +399,7 @@
         .form-text, .form-textarea, .form-select {
           border: 2px solid #e5e4e3;
           border-radius: 3px;
+          width: 100%;
         }
       }
 
@@ -707,7 +713,6 @@
 /* search */
 .search-results {
   margin: 0;
-  background: $gold;
   padding: 30px;
 
   li {
@@ -732,7 +737,6 @@
 }
 
 #search-form {
-  background: $gold;
   padding: 30px;
   margin-bottom: 30px;
 
@@ -829,9 +833,9 @@
 }
 
 .node {
-/*  .field--type-image {
-    margin-bottom: 1em;
-  }*/
+  /*  .field--type-image {
+      margin-bottom: 1em;
+    }*/
 
   ul.inline {
     margin-bottom: 0;
