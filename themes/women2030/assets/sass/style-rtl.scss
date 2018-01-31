@@ -2043,44 +2043,44 @@
           right: auto;
         }*/
 
-/*    #page #main-menu-wrapper ul.menu {
-      padding-right: 0;
-    }
-
-    #page #main-menu-wrapper ul.menu > li {
-      margin-right: 0;
-      padding-left: 0;
-    }
-
-    #page #main-menu-wrapper ul.menu > li ul {
-      padding: 5px 30px 15px 0;
-    }
-
-    #page #main-menu-wrapper ul.menu > li ul li ul {
-      padding-left: 0;
-      padding-right: 20px;
-    }
-
-    #page #main-menu-wrapper ul.menu .expanded > a:before {
-      left: 10px;
-      right: auto;
-    }
-    #search-block-form {
-      right: auto;
-      left: 70px;
-    }
-    #page #block-search-form {
-      left: 50px;
-      right: auto;
-    }
-
-    #page #block-system-main-menu ul.menu li {
-      float: none;
-    }
-
-    #page .region-main-menu {
-      background-position: 0 0;
-    }*/
+    /*    #page #main-menu-wrapper ul.menu {
+          padding-right: 0;
+        }
+    
+        #page #main-menu-wrapper ul.menu > li {
+          margin-right: 0;
+          padding-left: 0;
+        }
+    
+        #page #main-menu-wrapper ul.menu > li ul {
+          padding: 5px 30px 15px 0;
+        }
+    
+        #page #main-menu-wrapper ul.menu > li ul li ul {
+          padding-left: 0;
+          padding-right: 20px;
+        }
+    
+        #page #main-menu-wrapper ul.menu .expanded > a:before {
+          left: 10px;
+          right: auto;
+        }
+        #search-block-form {
+          right: auto;
+          left: 70px;
+        }
+        #page #block-search-form {
+          left: 50px;
+          right: auto;
+        }
+    
+        #page #block-system-main-menu ul.menu li {
+          float: none;
+        }
+    
+        #page .region-main-menu {
+          background-position: 0 0;
+        }*/
     /* End Mobile menu */
 
     #page .quicktabs-wrapper .quicktabs-tabs li:first-child,
@@ -2418,6 +2418,40 @@
     float: left;
   }
 
+  @media (max-width: 991px) {
+    /* Article Mobile */
+    .page-node-type-article .block-system-main-block {
+      .field--name-node-post-date {
+        left: auto;
+        float: right;
+      }
+      .node__links {
+        float: none;
+        left: auto;
+        ul.inline  {
+          margin-bottom: 0;
+        }
+      }
+      .field--name-field-tags {
+        padding: 6px 0;
+        margin-bottom: 0;
 
+        h3 {
+          display: none;
+        } 
+        ul li:first-child {
+          margin-right: 0px;
+        }
+      }
+
+      .field--name-node-title h1 {
+        font-size: 22px;
+      }
+
+      .field--name-body {
+        font-size: 16px;
+      }
+    }
+  }
 }
 

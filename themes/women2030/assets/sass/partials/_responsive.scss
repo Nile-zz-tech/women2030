@@ -767,8 +767,28 @@
         margin-top: 0;
         left: auto;
         right: auto;
-        float: right;
+        float: left;
       }
+
+      .field--name-node-title h1 {
+        font-size: 22px;
+      }
+
+      .field--name-body p {
+        font-size: 16px;
+      }
+      .field--name-field-tags {
+        padding: 6px 0;
+        margin-bottom: 0;
+
+        h3 {
+          display: none;
+        } 
+        ul li:first-child {
+          margin-left: 0px;
+        }
+      }
+
 
       .field--name-field-women-in-this-article {
         padding: 20px;
@@ -817,8 +837,9 @@
               padding: 0px;
               margin-bottom: 20px;
               li{
+
                 a{
-                  font-size: 14px;
+                  font-size: 14px !important;
                 }
               }
             }
@@ -838,7 +859,8 @@
 
   .page-node-type-article .block-system-main-block .field--name-node-title h1, 
   .page-node-type-video .block-system-main-block .field--name-node-title h1 {
-    font-size: 44px;
+    font-size: 22px;
+    line-height: 32px;
   }
 
 

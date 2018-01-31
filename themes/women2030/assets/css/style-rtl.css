@@ -2671,43 +2671,43 @@
           right: auto;
         }*/
     /*    #page #main-menu-wrapper ul.menu {
-      padding-right: 0;
-    }
-
-    #page #main-menu-wrapper ul.menu > li {
-      margin-right: 0;
-      padding-left: 0;
-    }
-
-    #page #main-menu-wrapper ul.menu > li ul {
-      padding: 5px 30px 15px 0;
-    }
-
-    #page #main-menu-wrapper ul.menu > li ul li ul {
-      padding-left: 0;
-      padding-right: 20px;
-    }
-
-    #page #main-menu-wrapper ul.menu .expanded > a:before {
-      left: 10px;
-      right: auto;
-    }
-    #search-block-form {
-      right: auto;
-      left: 70px;
-    }
-    #page #block-search-form {
-      left: 50px;
-      right: auto;
-    }
-
-    #page #block-system-main-menu ul.menu li {
-      float: none;
-    }
-
-    #page .region-main-menu {
-      background-position: 0 0;
-    }*/
+          padding-right: 0;
+        }
+    
+        #page #main-menu-wrapper ul.menu > li {
+          margin-right: 0;
+          padding-left: 0;
+        }
+    
+        #page #main-menu-wrapper ul.menu > li ul {
+          padding: 5px 30px 15px 0;
+        }
+    
+        #page #main-menu-wrapper ul.menu > li ul li ul {
+          padding-left: 0;
+          padding-right: 20px;
+        }
+    
+        #page #main-menu-wrapper ul.menu .expanded > a:before {
+          left: 10px;
+          right: auto;
+        }
+        #search-block-form {
+          right: auto;
+          left: 70px;
+        }
+        #page #block-search-form {
+          left: 50px;
+          right: auto;
+        }
+    
+        #page #block-system-main-menu ul.menu li {
+          float: none;
+        }
+    
+        #page .region-main-menu {
+          background-position: 0 0;
+        }*/
     /* End Mobile menu */
   }
   /* line 2086, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
@@ -3058,6 +3058,48 @@
 /* line 2417, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
 [dir="rtl"] .se-block {
   float: left;
+}
+
+@media (max-width: 991px) {
+  /* line 1486, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
+  [dir="rtl"] {
+    /* Article Mobile */
+  }
+  /* line 2424, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
+  [dir="rtl"] .page-node-type-article .block-system-main-block .field--name-node-post-date {
+    left: auto;
+    float: right;
+  }
+  /* line 2428, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
+  [dir="rtl"] .page-node-type-article .block-system-main-block .node__links {
+    float: none;
+    left: auto;
+  }
+  /* line 2431, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
+  [dir="rtl"] .page-node-type-article .block-system-main-block .node__links ul.inline {
+    margin-bottom: 0;
+  }
+  /* line 2435, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
+  [dir="rtl"] .page-node-type-article .block-system-main-block .field--name-field-tags {
+    padding: 6px 0;
+    margin-bottom: 0;
+  }
+  /* line 2439, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
+  [dir="rtl"] .page-node-type-article .block-system-main-block .field--name-field-tags h3 {
+    display: none;
+  }
+  /* line 2442, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
+  [dir="rtl"] .page-node-type-article .block-system-main-block .field--name-field-tags ul li:first-child {
+    margin-right: 0px;
+  }
+  /* line 2447, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
+  [dir="rtl"] .page-node-type-article .block-system-main-block .field--name-node-title h1 {
+    font-size: 22px;
+  }
+  /* line 2451, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
+  [dir="rtl"] .page-node-type-article .block-system-main-block .field--name-body {
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=../css/style-rtl.map */
