@@ -465,7 +465,6 @@
   h2, .h2 {
     font-size: 1.42em;
   }
-
   .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -837,6 +836,11 @@
 
   }
 
+  .page-node-type-article .block-system-main-block .field--name-node-title h1, 
+  .page-node-type-video .block-system-main-block .field--name-node-title h1 {
+    font-size: 44px;
+  }
+
 
   /* Block Related Articles */
   .block-views-blockrelated-articles-block-1,
@@ -883,6 +887,19 @@
     }
 
   }
+
+  .view-filters {
+    margin: 0 auto;
+    text-align: center;
+
+    label {
+      width: 50px;
+      text-align: left;
+    }
+    .form-actions{
+      text-align: center !important;
+    }
+  }
 }
 
 @media (max-width: 480px) {
@@ -923,9 +940,12 @@
   .article-teaser .view-content .group-header .field--name-node-title h2, .teaser .view-content .group-header .field--name-node-title h2 {
     height: auto;
   }
-  .page #main .field--name-comment .field--name-field-comment-body {
-    margin: auto;
-    word-wrap: break-word;
+  .page #main .field--name-comment {
+    .form-item-name,
+    .field--name-field-comment-body {
+      margin: auto;
+      word-wrap: break-word;
+    }
   }
 
 }
