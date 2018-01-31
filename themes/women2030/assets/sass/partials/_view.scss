@@ -512,6 +512,9 @@
               margin: 0;
             }
           }
+          &:after, &:before {
+            content: none;
+          }
         }
         .content { display: none;}
 
