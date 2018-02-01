@@ -83,6 +83,26 @@ The following content was designed & implemented under AlexSeif.com
       font-size: 12px;
     }
 
+    .se-links-container {
+      position: fixed !important;
+      left: auto !important;
+      right: 0px !important; /* ltr */
+      bottom: 40%;
+      width: 50px !important;
+      background: grey;
+      height: 180px !important;
+      margin: 0 !important;
+      padding: 10px;
+
+      .se-links {
+        text-align: center !important;
+        -webkit-animation-name: se-animation-right-active !important;
+        -moz-animation-name: se-animation-right-active !important;
+        -o-animation-name: se-animation-right-active !important;
+        animation-name: se-animation-right-active !important;
+      }
+    }
+
     .field--name-node-title {
       clear: both;
     }
