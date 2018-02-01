@@ -797,10 +797,6 @@
 .block-views-blockauthor-articles-block-1,
 .block-views-blockrelated-articles-block-1,
 .block-views-blockduplicate-of-related-articles-block-1 {
-  &:before {
-    @include page_gold_border_footer();
-    height: 2416px;
-  }
 
   h2{
     font-size: 60px;

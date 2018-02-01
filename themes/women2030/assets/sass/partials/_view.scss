@@ -596,22 +596,6 @@
     }*/
 }
 
-.path-taxonomy .block-system-main-block .view-taxonomy-term .view-content,
-.view-frontpage-header {
-  &::before {
-    @include page_gold_border_header();
-  }
-}
-
-.view-frontpage::before {
-  @include page_gold_border_content();
-}
-
-#panel_second::before {
-  @include page_gold_border_footer;
-  margin-left: 0px;
-}
-
 .view-taxonomy-term {
   .view-header {
     height: 300px;
@@ -628,6 +612,7 @@
     text-align: center;
     padding-top: 150px;
     margin-bottom: 60px;
+    background-size: cover;
 
     h2 {
       font-size: 60px;
@@ -642,7 +627,7 @@
         height: 1px;
         width: 160px;
         position: absolute;
-        right: 43%;
+        left: 45%;
       }
     }
     &:after, &:before {

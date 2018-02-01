@@ -2216,32 +2216,6 @@
     }
   }
 
-
-  /* gold bars */
-  .view-frontpage,
-  .view-taxonomy-term .view-content,
-  .view-frontpage-header, 
-  .field--name-field-image {
-    &::before {
-      right: 0; 
-      margin-left: 0px;
-      margin-right: -194px;
-    }
-  }
-
-  #panel_second:before {
-    right: 0;
-    margin-left: 0px;
-  }
-
-  .page-node-type-woman-profile {
-
-    .layout__region--bottom:before {
-      /*right: 45px;  ltr */
-      left: auto; /* ltr */
-
-    }
-  }
   .view-filters .form-actions{
     text-align: left;
   }
@@ -2321,7 +2295,6 @@
         float: left;
         text-align: left;
         right: auto;
-        left: 95px; 
       }
 
       .node__links {
@@ -2458,6 +2431,11 @@
   .page-node-type-video .block-system-main-block .se-links-container {
     left: 0px !important;
     right: auto !important;
+  }
+
+  .goldbar {
+    left: auto;
+    right: 0;
   }
 }
 

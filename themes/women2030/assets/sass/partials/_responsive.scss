@@ -38,19 +38,8 @@
   }
 
   /* Gold Bars */
-  .block-views-blockrelated-articles-block-1, 
-  .block-views-blockduplicate-of-related-articles-block-1,
-  .page-node-type-article .block-system-main-block .field--name-field-image, 
-  .page-node-type-video .block-system-main-block .field--name-field-image,
-  .page-node-type-article .block-system-main-block .field--name-node-title, 
-  .page-node-type-video .block-system-main-block .field--name-node-title,
-  .view-taxonomy-term .view-content,
-  .view-frontpage-header,
-  .view-frontpage,
-  #panel_second{
-    &::before {
-      content: none;
-    }
+  .goldbar{
+    display: none;
   }
 
 
@@ -958,7 +947,7 @@
     }
   }
   .view-taxonomy-term .view-header h2:after {
-    right: 28%;
+    left: 28%;
   }
   .article-teaser .view-content .group-header .field--name-node-title h2, .teaser .view-content .group-header .field--name-node-title h2 {
     height: auto;

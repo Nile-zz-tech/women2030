@@ -165,16 +165,10 @@
   background-image: linear-gradient(-90deg, #a88231 0%, #e9d16c 100%);
 }
 
-@mixin page_gold_border_header {
-  height: 665px;
-  @include page_gold_border(1);
-}
-
-@mixin page_gold_border_content {
-  height: 2455px;
-  @include page_gold_border(0.2);
-}
-@mixin page_gold_border_footer {
-  height: 463px;
-  @include page_gold_border(0.1);
+@mixin page_goldbar($opacity) { 
+  opacity: $opacity;
+  background-image: -webkit-linear-gradient(-90deg, #a88231 0%, #e9d16c 100%);
+  background-image: -moz-linear-gradient(-90deg, #a88231 0%, #e9d16c 100%);
+  background-image: -o-linear-gradient(-90deg, #a88231 0%, #e9d16c 100%);
+  background-image: linear-gradient(-90deg, #a88231 0%, #e9d16c 100%);
 }

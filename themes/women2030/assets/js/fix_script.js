@@ -46,11 +46,42 @@ jQuery(function () {
       jQuery('#panel_second').hide();
     }
 
-//    $page_gold_border_ele = jQuery('.block-views-blockrelated-articles-block-1, .block-views-blockduplicate-of-related-articles-block-1');
-//    if ($page_gold_border_ele.length) {
-//      jQuery('.block-views-blockrelated-articles-block-1:before').css('height', $page_gold_border_ele.height());
-//      jQuery('.block-views-blockduplicate-of-related-articles-block-1').css('height', $page_gold_border_ele.height());
-//    }
+    jQuery('.goldbar #bar3').css('height', jQuery('#panel_second').height());
+
+    /* homepage */
+    if (jQuery('.path-frontpage').length) {
+      jQuery('.path-frontpage .goldbar').css('top', jQuery('.article-teaser').offset().top);
+      jQuery('.path-frontpage .goldbar #bar1').css('height', jQuery('.article-teaser').first().height() + 50);
+      jQuery('.path-frontpage .goldbar #bar2').css('height', jQuery('.view-frontpage').first().height());
+    }
+
+    /* article */
+    if (jQuery('.page-node-type-article').length) {
+      jQuery('.goldbar').css('top', jQuery('.field--name-field-image').offset().top);
+      jQuery('.goldbar #bar1').css('height', 1000);
+      jQuery('.goldbar #bar2').css('height', jQuery('.block-system-main-block').first().height() - 1000);
+      jQuery('.goldbar #bar3').css('height', jQuery('.block-views-blockduplicate-of-related-articles-block-1').height() - 40);
+
+    }
+
+    /* taxonomy */
+    if (jQuery('.path-taxonomy').length) {
+      jQuery('.path-taxonomy .goldbar').css('top', jQuery('.view-taxonomy-term .view-content').first().offset().top);
+      jQuery('.path-taxonomy .goldbar #bar1').css('height', jQuery('.view-taxonomy-term .view-content .node').first().height());
+      jQuery('.path-taxonomy .goldbar #bar2').css('height', jQuery('.view-taxonomy-term .view-content').first().height() + jQuery('.view-taxonomy-term .view-content .node').first().height() + 50);
+    }
+
+    /* Women Profiles */
+    if (jQuery('.path-women-profiles').length) {
+      jQuery('.path-women-profiles .goldbar').css('top', jQuery('.view-women-profiles .view-header').offset().top);
+      jQuery('.path-women-profiles .goldbar #bar1').css('height', 800);
+      jQuery('.path-women-profiles .goldbar #bar2').css('height', jQuery('.view-women-profiles .view-content').first().height() - 600);
+    }
+
+
+
+    jQuery('.goldbar #bar3').css('height', jQuery('#panel_second').height());
+
   }
 
   function fix_morelink() {
