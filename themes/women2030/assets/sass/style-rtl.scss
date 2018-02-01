@@ -2453,5 +2453,11 @@
       }
     }
   }
+
+  .page-node-type-article .block-system-main-block .se-links-container, 
+  .page-node-type-video .block-system-main-block .se-links-container {
+    left: 0px !important;
+    right: auto !important;
+  }
 }
 

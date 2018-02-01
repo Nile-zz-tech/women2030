@@ -3102,4 +3102,11 @@
   }
 }
 
+/* line 2457, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
+[dir="rtl"] .page-node-type-article .block-system-main-block .se-links-container,
+[dir="rtl"] .page-node-type-video .block-system-main-block .se-links-container {
+  left: 0px !important;
+  right: auto !important;
+}
+
 /*# sourceMappingURL=../css/style-rtl.map */
