@@ -82,7 +82,9 @@ The following content was designed & implemented under AlexSeif.com
       position: relative;
       font-size: 12px;
     }
-
+    .se-trigger {
+      display: none !important;
+    }
     .se-links-container {
       position: fixed !important;
       left: auto !important;
