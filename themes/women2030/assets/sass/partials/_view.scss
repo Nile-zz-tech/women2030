@@ -613,36 +613,40 @@
 }
 
 .view-taxonomy-term {
-  .view-header{
+  .view-header {
     height: 300px;
-    background-image: -webkit-linear-gradient(#bfa39b 0%, #e3cdc7 100%);
-    background-image: -moz-linear-gradient(#bfa39b 0%, #e3cdc7 100%);
-    background-image: -o-linear-gradient(#bfa39b 0%, #e3cdc7 100%);
-    background-image: linear-gradient(#bfa39b 0%, #e3cdc7 100%);
-    text-align: center;
-    padding-top: 150px;
-    margin-bottom: 60px;
+    .taxonomy-term{
 
-    h2 {
-      font-size: 60px;
+      height: 300px;
+      background-image: -webkit-linear-gradient(#bfa39b 0%, #e3cdc7 100%);
+      background-image: -moz-linear-gradient(#bfa39b 0%, #e3cdc7 100%);
+      background-image: -o-linear-gradient(#bfa39b 0%, #e3cdc7 100%);
+      background-image: linear-gradient(#bfa39b 0%, #e3cdc7 100%);
+      text-align: center;
+      padding-top: 150px;
+      margin-bottom: 60px;
 
-      a {
-        color: white;
-      }
+      h2 {
+        font-size: 60px;
 
-      &:after {
-        content: " ";
-        border-bottom: 2px solid white;
-        height: 1px;
-        width: 160px;
-        position: absolute;
-        right: 43%;
+        a {
+          color: white;
+        }
+
+        &:after {
+          content: " ";
+          border-bottom: 2px solid white;
+          height: 1px;
+          width: 160px;
+          position: absolute;
+          right: 43%;
+        }
       }
     }
-
     &:after, &:before {
       content: none;
     }
+
   }
 }
 

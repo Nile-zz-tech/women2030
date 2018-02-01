@@ -49,11 +49,12 @@ $default_color: $grey_font;
 
 .form-submit {
   margin: 0 10px 10px 0;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
+  border-radius: 4px;
   padding: 8px 80px;
   color: #000;
   cursor: pointer;
-background: white;
+  background: white;
 
   &:first-child {
     margin: 0 10px 10px 0;

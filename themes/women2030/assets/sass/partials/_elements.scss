@@ -99,6 +99,7 @@ blockquote {
 /* Share everywhere */
 .se-block  {
   float: right;
+  margin-top: 5px;
 
   .block-content {
     .se-container {
@@ -118,8 +119,12 @@ blockquote {
         }
       } 
       .se-trigger {
-        /*float: none;*/
-        padding-top: 5px;
+
+        img {
+          z-index: 10000;
+          position: relative;
+          top: 0;
+        }
       }
     }
   }
