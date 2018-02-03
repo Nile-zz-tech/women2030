@@ -89,7 +89,7 @@
         padding: 7px 15px;
         text-transform: none;
         font-family: arial;
-        font-size: 1em;
+        font-size: 18px;
         border: 0 none;
         margin: 0;
         font-weight: normal;
@@ -115,6 +115,7 @@
       &:first-child {
         border: 0 none;
         > a{
+          /*@extend %font_noto;*/
           padding-top: 7px;
           &:before,
             &:after{
@@ -143,8 +144,14 @@
         padding: 4px 20px; /* ltr */
         background-color: transparent;
         &:hover, &:focus {
-          color: $gold;
+          color: #ffffff;
           background-color: transparent;
+        }
+      }
+      &:hover {
+        background-color: #6c510b;
+        a{
+          color: #ffffff;
         }
       }
       &.active, &.active-trail{

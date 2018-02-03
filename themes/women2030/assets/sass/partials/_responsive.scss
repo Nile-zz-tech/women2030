@@ -207,6 +207,30 @@
 
   /* Mega mobile menu */
   .navbar-we-mega-menu.navbar {
+    .nav .open{
+      >a{
+        &:focus, &:hover {
+          color: $menu_color !important; 
+          background-color: transparent;
+          cursor: default;
+          border: 0 none;
+          -moz-box-shadow: 0 1px 0 rgba(255,255,255,0.05) inset;
+          -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.05) inset;
+          box-shadow: 0 1px 0 rgba(255,255,255,0.05) inset;
+          border-top: 1px solid rgba(0,0,0,0.3);
+        }
+      }   
+    } 
+    ul a{
+      color: $menu_color;
+    }
+    ul li{
+      clear: both;
+    }
+  }
+
+
+  .navbar-we-mega-menu.navbar {
     background-color: #FFFFFF;
   }
 
@@ -214,6 +238,7 @@
     width: 100%;
     padding: 0 10px;
   }
+
   .navbar-we-mega-menu.navbar .we-mega-menu-ul>li>a{
     color: $menu_color;
     text-shadow: none;
@@ -222,8 +247,8 @@
     box-shadow: none;
     font-weight: bold;
     border-top-color: #EEEEEE;
-
   }
+
   .navbar-we-mega-menu.navbar .nav-tabs>li.active>a, 
   .navbar-we-mega-menu.navbar .nav-tabs>li.active>a:focus, 
   .navbar-we-mega-menu.navbar .nav-tabs>li.active>a:hover {
@@ -237,18 +262,22 @@
     position: absolute;
     right: 15px;
     top: 15px;
-
     .form-search {
       width: 0px;
     }
-
+    &:before {
+      float: right;
+    }
     &:hover, &:focus {
-      width: 249px;
+      width: 70%;
 
       .form-search {
-        width: 198px;
+        width: auto;
       }
     }
+  }
+  .block-language ul.links li a {
+    padding: 0px;
   }
 
   .logged-in {
