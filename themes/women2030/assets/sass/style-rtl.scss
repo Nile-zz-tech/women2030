@@ -2437,5 +2437,11 @@
     left: auto;
     right: 0;
   }
+  .page-node-type-woman-profile {
+    .layout__region--bottom:before {
+    right: 30px; /* ltr */
+
+    }
+  }
 }
 

@@ -3090,4 +3090,10 @@
   right: 0;
 }
 
+/* line 2441, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
+[dir="rtl"] .page-node-type-woman-profile .layout__region--bottom:before {
+  right: 30px;
+  /* ltr */
+}
+
 /*# sourceMappingURL=../css/style-rtl.map */
