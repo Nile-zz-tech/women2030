@@ -3096,4 +3096,10 @@
   /* ltr */
 }
 
+/* line 2446, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
+[dir="rtl"] .navbar-we-mega-menu .we-mega-menu-submenu .nav-tabs li a:before {
+  margin-right: 0;
+  margin-left: 5px;
+}
+
 /*# sourceMappingURL=../css/style-rtl.map */

@@ -26,9 +26,33 @@
       display: block;
       max-width: inherit;
       > *{
+        width: 100%;
         margin: 0;
         display: block;
         max-width: inherit !important;
+        float: left;
+      }
+    }
+    .we-mega-menu-submenu{
+      .nav-tabs {
+        width: 100%;
+        padding: 5px;
+        li {
+          width: 100%;
+          &:hover {
+            background-color: #6C510B;
+          }
+          a{ 
+            &:hover {
+              color: #FFF;
+            }
+            &:before {
+              content: "-";
+              color: #FFF;
+              margin-right: 5px;
+            }
+          }
+        }
       }
     }
     .nav-tabs > li{
@@ -144,8 +168,9 @@
           width: auto;
           height: auto;
           line-height: 1;
-          margin-top: -10px;
+          margin-top: -7px;
           float: right; /* ltr */
+          left: .9375rem;
         }
         &:after{
           display: none;

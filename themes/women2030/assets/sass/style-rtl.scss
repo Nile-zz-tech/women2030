@@ -2439,9 +2439,13 @@
   }
   .page-node-type-woman-profile {
     .layout__region--bottom:before {
-    right: 30px; /* ltr */
+      right: 30px; /* ltr */
 
     }
+  }
+  .navbar-we-mega-menu .we-mega-menu-submenu .nav-tabs li a:before {
+    margin-right: 0;
+    margin-left: 5px;
   }
 }
 
