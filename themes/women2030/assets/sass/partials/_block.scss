@@ -400,13 +400,38 @@
 .slick-slider {
   margin-bottom: 0;
   .slick-dots{
-    display: none !important;
+    /*display: none !important;*/
+    float: none;
+    text-align: center;
+    margin-top: -75px;
+    padding: 0;
+    li {
+      display: inline-block;
+      &:before {
+        content: "•"; /* Insert content that looks like bullets */
+        padding-right: 8px;
+        color: #000;
+        font-size: 30px;
+        @include opacity(0.2)
+      }
+      button {
+        display: none;
+        background: none;
+        border: none;
+      }
+    }
+    li.slick-active{
+      &:before {
+        color: $gold;
+        @include opacity(0.99)
+      }
+    }
   }
   .slick-slide {
     position: relative;
     overflow: hidden;
 
-    @include opacity(0.8);
+    /*@include opacity(0.8);*/
 
     @include transition(opacity 0.3s);
 
@@ -968,7 +993,15 @@
 
   ul.links {
     list-style: none;
-
+    li{
+      a{
+        font-family: inherit;
+        text-transform: uppercase;
+        display: block;
+        padding: 4px 20px;
+        background-color: transparent;
+      }
+    }
     li[hreflang="en"] {
       display: none;
     }
