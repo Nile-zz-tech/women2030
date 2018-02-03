@@ -713,6 +713,25 @@
     }
   }
 
+  .page-node-type-woman-profile {
+    .layout.layout--twocol {
+      display: table;
+      .layout__region--first {
+        /*        position: relative;
+                top: 400px;*/
+      }
+      .layout__region--second {
+        /*margin-top: -400px;*/
+        display: table-header-group;
+        text-align: center;
+      }
+      .layout__region--bottom {
+        /*margin-top: 400px;*/
+        display: table-footer-group; 
+      }
+    }
+  }
+
   .article-teaser .view-content .field--name-node-title h2 a, 
   .teaser .view-content .field--name-node-title h2 a, 
   .block-views-blockrelated-articles-block-1 .view-content .field--name-node-title h2 a, 
