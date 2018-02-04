@@ -900,10 +900,21 @@
 
   }
 
-  .page-node-type-article .block-system-main-block .field--name-node-title h1, 
-  .page-node-type-video .block-system-main-block .field--name-node-title h1 {
-    font-size: 22px;
-    line-height: 32px;
+  .page-node-type-article {
+    .block-system-main-block {
+      .field--name-node-title h1{
+        font-size: 26px;
+        line-height: 32px;
+        margin-top: 20px;
+      }
+      .field--name-body {
+        p{
+          font-size: 20px;
+          line-height: 30px;
+          color: black;
+        }
+      }
+    }
   }
 
 
