@@ -98,6 +98,7 @@ blockquote {
 }
 /* Share everywhere */
 .se-block  {
+  margin-top: 4px;
   &:hover {
     .se-links-container{
       display: block !important;
@@ -108,6 +109,7 @@ blockquote {
   }
   .block-content {
     .se-container {
+      height: 40px;
       float: right !important;
       width: auto;
       margin-top: -15px;
