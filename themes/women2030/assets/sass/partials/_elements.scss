@@ -98,34 +98,70 @@ blockquote {
 }
 /* Share everywhere */
 .se-block  {
-  float: right;
-  margin-top: 5px;
-
+  &:hover {
+    .se-links-container{
+      display: block !important;
+    }
+    .se-container{
+      background: gray;
+    }
+  }
   .block-content {
     .se-container {
-      /*width: auto;*/
+      float: right !important;
+      width: auto;
+      margin-top: -15px;
+      text-align: center;
+      .se-trigger {
+        width: 50px !important;
+        float: none !important;
+        img {
+          margin-top: 15px;
+          margin-bottom: 0;
+        }
+      }
       .se-links-container{
-        /*width: auto;*/
-        position: absolute;
-        left: 0;
+        display: none;
+        overflow: visible;
+        width: auto;
+        margin: 0 !important;
+        float: none !important;
+        bottom: 35px;
         ul.se-links {
-          background: grey;
-          border-radius: 8px 0 0 8px;
-          padding: 0 4px;
-
+          text-align: center !important;
+          height: auto;
+          bottom: 0;
+          -webkit-animation-duration: 0s;
+          -moz-animation-duration: 0s;
+          -o-animation-duration: 0s;
+          animation-duration: 0s;
+          -webkit-animation-iteration-count: 1;
+          -moz-animation-iteration-count: 1;
+          -o-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+          -webkit-animation-timing-function: linear;
+          -moz-animation-timing-function: linear;
+          -o-animation-timing-function: linear;
+          animation-timing-function: linear;
+          -webkit-animation-direction: alternate;
+          -moz-animation-direction: alternate;
+          -o-animation-direction: alternate;
+          animation-direction: alternate;
+          -webkit-animation-fill-mode: forwards;
+          -moz-animation-fill-mode: forwards;
+          -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+          li{
+            width: 50px !important;
+            padding: 10px;
+            background: grey;
+          }
           .se-link img {
             height: 20px; 
+            margin-bottom: 0px;
           }
         }
       } 
-      .se-trigger {
-
-        img {
-          z-index: 10000;
-          position: relative;
-          top: 0;
-        }
-      }
     }
   }
 }
