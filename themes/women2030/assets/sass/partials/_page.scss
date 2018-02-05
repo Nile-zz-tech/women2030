@@ -1033,16 +1033,13 @@
   top: 290px;
 
   #bar1 {
-    /*height: 684px;*/
     @include page_goldbar(1);
   }
   #bar2 {
-    /*height: 2455px;*/
     margin-top: 40px;
     @include page_goldbar(0.2);
   }
   #bar3 {
-    /*height: 463px;*/
     margin-top: 40px;
     @include page_goldbar(0.1);
   }

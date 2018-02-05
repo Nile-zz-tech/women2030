@@ -7748,7 +7748,6 @@ blockquote p:last-child {
 
 /* line 1035, /srv/www/women2030/themes/women2030/assets/sass/partials/_page.scss */
 .goldbar #bar1 {
-  /*height: 684px;*/
   opacity: 1;
   background-image: -webkit-linear-gradient(-90deg, #a88231 0%, #e9d16c 100%);
   background-image: -moz-linear-gradient(-90deg, #a88231 0%, #e9d16c 100%);
@@ -7756,9 +7755,8 @@ blockquote p:last-child {
   background-image: linear-gradient(-90deg, #a88231 0%, #e9d16c 100%);
 }
 
-/* line 1039, /srv/www/women2030/themes/women2030/assets/sass/partials/_page.scss */
+/* line 1038, /srv/www/women2030/themes/women2030/assets/sass/partials/_page.scss */
 .goldbar #bar2 {
-  /*height: 2455px;*/
   margin-top: 40px;
   opacity: 0.2;
   background-image: -webkit-linear-gradient(-90deg, #a88231 0%, #e9d16c 100%);
@@ -7767,9 +7765,8 @@ blockquote p:last-child {
   background-image: linear-gradient(-90deg, #a88231 0%, #e9d16c 100%);
 }
 
-/* line 1044, /srv/www/women2030/themes/women2030/assets/sass/partials/_page.scss */
+/* line 1042, /srv/www/women2030/themes/women2030/assets/sass/partials/_page.scss */
 .goldbar #bar3 {
-  /*height: 463px;*/
   margin-top: 40px;
   opacity: 0.1;
   background-image: -webkit-linear-gradient(-90deg, #a88231 0%, #e9d16c 100%);

@@ -68,7 +68,9 @@ jQuery(function () {
     if (jQuery('.path-taxonomy').length) {
       jQuery('.path-taxonomy .goldbar').css('top', jQuery('.view-taxonomy-term .view-content').first().offset().top);
       jQuery('.path-taxonomy .goldbar #bar1').css('height', jQuery('.view-taxonomy-term .view-content .node').first().height());
-      jQuery('.path-taxonomy .goldbar #bar2').css('height', jQuery('.view-taxonomy-term .view-content').first().height() + jQuery('.view-taxonomy-term .view-content .node').first().height() + 50);
+      if (jQuery('.view-taxonomy-term .view-content .node').length > 2) {
+        jQuery('.path-taxonomy .goldbar #bar2').css('height', jQuery('.view-taxonomy-term .view-content').first().height() + jQuery('.view-taxonomy-term .view-content .node').first().height() + 50);
+      }
     }
 
     /* Women Profiles */
