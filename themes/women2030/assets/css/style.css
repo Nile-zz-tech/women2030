@@ -6112,7 +6112,7 @@ blockquote p:last-child {
 /* line 349, /srv/www/women2030/themes/women2030/assets/sass/partials/_view.scss */
 .article-teaser .view-content .group-footer,
 .teaser .view-content .group-footer {
-  border: 1px solid #F8F8F8;
+  border: 1px solid #DDDCDC;
   border-radius: 4px;
   height: 40px;
   padding: 6px 0;
