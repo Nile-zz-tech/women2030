@@ -293,15 +293,31 @@
         }
       }
 
+      .field--name-username{
+        display: none;
+      }
+
+      .field--name-field-name,
+      .field--name-comment-author,
+      .field--name-comment-post-date,
       .form-item-name,
       .field--name-field-comment-body {
         font-size: 18px;
         color: #555555;
         margin: 0 100px;
-        /*padding-bottom: 22px;*/
+        padding-bottom: 22px;
       }
-
+      .field--name-field-name,
+      .field--name-comment-author {
+        color: $grey_font_header;
+        float: right;
+      }
+      .field--name-comment-post-date {
+        color: $grey_font_header;
+        float: left;
+      }
       .field--name-field-comment-body {
+        clear: both;
         border-bottom: 1px solid #dddddd;
       }
     }
