@@ -50,7 +50,9 @@
 <div class="group-mobile">
   <div class="field field--name-node-title field--type-ds field--label-hidden field__item">
     <h2{{ title_attributes }}>
-      <a  rel="bookmark">{{ title }}</a>
+{#      <a  rel="bookmark">#}
+        {{ title }}
+{#      </a>#}
     </h2>
   </div>
   {{ content.field_image|render }}
