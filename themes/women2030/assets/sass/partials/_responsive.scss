@@ -480,6 +480,18 @@
   .sidebar {
     margin-top: 20px;
   }
+
+  .teaser ,
+  .article-teaser {
+    .view-content {
+      .group-header{
+        display: none;
+      }
+      .group-mobile{
+        display: block;
+      }
+    }
+  }
 }
 
 //mobile

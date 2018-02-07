@@ -204,7 +204,56 @@
   }
   .view-content {
     margin-bottom: 60px;
+    .group-mobile{
+      display: none;
 
+      .field--name-node-title{
+        /*float: right;   ltr */
+        width: calc(100% - 113px);
+        display: inline-block;
+        h2 {
+          margin: 0 auto;
+          a {
+            line-height: 22px;
+            color: #000000;
+            font-size: 16px;
+            display: block;
+          }
+        }
+      }
+
+      .field--name-field-image{
+        float: left;   /* ltr */
+        width: 113px;
+        display: inline-block;
+      }
+      
+      .field--name-field-women-in-this-article {
+        clear: both;
+
+        .field--name-field-photo {
+          width: 40px;
+          display: inline-block;
+          img {
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0;
+          }
+        }
+
+        .field--name-node-title {
+          display: inline-block;
+
+          &:before, &:after {
+            content: none;
+          }  
+          h3 {
+            font-size: 14px;
+          }
+        }
+      }
+
+    }
     .group-header {
       margin-bottom: 30px;
 

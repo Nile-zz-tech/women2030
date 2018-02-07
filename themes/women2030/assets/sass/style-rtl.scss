@@ -2038,7 +2038,7 @@
       #page #sidebar-second-wrapper .item-list .quicktabs-tabs li:first-child {
       margin-left: 30px;
     }
-    
+
   }
 
   @media (min-width: 768px) and (max-width: 991px) {
@@ -2171,20 +2171,23 @@
     text-align: left;
   }
 
-  .article-teaser .view-content .field--name-field-women-in-this-article, 
-  .teaser .view-content .field--name-field-women-in-this-article, 
-  .block-views-blockrelated-articles-block-1 .view-content .field--name-field-women-in-this-article, 
-  .view-taxonomy-term .view-content .field--name-field-women-in-this-article, 
-  .view-women-profiles .view-content .field--name-field-women-in-this-article {
-    margin-right: 30px; 
+  .article-teaser,
+  .teaser,
+  .block-views-blockrelated-articles-block-1,
+  .view-taxonomy-term,
+  .view-women-profiles {
+    .view-content {
+      .group-header {
+        .field--name-field-women-in-this-article {
+          margin-right: 30px; 
+          .field--name-node-title {
+            margin-right: 70px;
+          }
+        }
+      }
+    }
   }
-  .article-teaser .view-content .field--name-field-women-in-this-article .field--name-node-title, 
-  .teaser .view-content .field--name-field-women-in-this-article .field--name-node-title, 
-  .block-views-blockrelated-articles-block-1 .view-content .field--name-field-women-in-this-article .field--name-node-title, 
-  .view-taxonomy-term .view-content .field--name-field-women-in-this-article .field--name-node-title, 
-  .view-women-profiles .view-content .field--name-field-women-in-this-article .field--name-node-title {
-    margin-right: 70px;
-  }
+
 
   .article-teaser .view-content .field--name-node-post-date, 
   .teaser .view-content .field--name-node-post-date, 
