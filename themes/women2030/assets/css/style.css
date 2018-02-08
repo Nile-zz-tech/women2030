@@ -7019,14 +7019,16 @@ blockquote p:last-child {
 /* line 310, /srv/www/women2030/themes/women2030/assets/sass/partials/_page.scss */
 .page #main .field--name-comment .field--name-field-name,
 .page #main .field--name-comment .field--name-comment-author {
+  float: left;
+  /* ltr */
   color: #9B9B9B;
-  float: right;
 }
 
 /* line 315, /srv/www/women2030/themes/women2030/assets/sass/partials/_page.scss */
 .page #main .field--name-comment .field--name-comment-post-date {
+  float: right;
+  /* ltr */
   color: #9B9B9B;
-  float: left;
 }
 
 /* line 319, /srv/www/women2030/themes/women2030/assets/sass/partials/_page.scss */

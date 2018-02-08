@@ -309,12 +309,12 @@
       }
       .field--name-field-name,
       .field--name-comment-author {
+        float: left; /* ltr */
         color: $grey_font_header;
-        float: right;
       }
       .field--name-comment-post-date {
+        float: right; /* ltr */
         color: $grey_font_header;
-        float: left;
       }
       .field--name-field-comment-body {
         clear: both;

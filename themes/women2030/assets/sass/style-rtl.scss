@@ -1757,16 +1757,29 @@
   }
 
   /*form comment*/
-  .page #main #comment-form .field--name-subject label {
-    /*float: right;*/
-    font-size: 16px;
-  }
-  .page #main #comment-form .field--name-comment-body label {
-    position: relative;
-    &:after{
-      position: absolute;
-      left: 27px;
-      top:3px;
+  .page #main {
+    #comment-form {
+      .field--name-subject label {
+        /*float: right;*/
+        font-size: 16px;
+      }
+      .field--name-comment-body label {
+        position: relative;
+        &:after{
+          position: absolute;
+          left: 27px;
+          top:3px;
+        }
+      }
+    }
+    .field--name-comment {
+      .field--name-field-name, 
+      .field--name-comment-author {
+        float: right;
+      }
+      .field--name-comment-post-date {
+        float: left; 
+      }
     }
   }
   /* login */
