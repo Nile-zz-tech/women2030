@@ -2265,10 +2265,15 @@
         right: -50px;
       }
 
-      .node__links {
+      .se-block {
         float: left; 
         right: auto; 
         left: -100px; 
+      }
+      .node__links {
+        float: left; 
+        right: auto; 
+        left: -140px; 
       }
 
       .field--name-field-tags {
@@ -2398,8 +2403,7 @@
 
   .page-node-type-article .block-system-main-block .se-links-container, 
   .page-node-type-video .block-system-main-block .se-links-container {
-    left: 0px !important;
-    right: auto !important;
+    right: calc(100% - 50px) !important;
   }
 
   .goldbar {

@@ -71,41 +71,21 @@ The following content was designed & implemented under AlexSeif.com
       color: $grey_font_header;
       margin-top: 30px;
       float: right; /* ltr */
-      text-align: right; /* ltr */
-      position: relative;
       font-size: 12px;
-      left: -50px;
     }
-    .se-trigger {
-      display: none !important;
-    }
-    .se-links-container {
-      position: fixed !important;
-      left: auto !important;
-      right: 0px !important; /* ltr */
-      bottom: 40% !important;
-      margin: 0 !important;
-      padding: 10px;
-      display: block !important;
 
-      .se-links {
-        text-align: center !important;
-        -webkit-animation-name: se-animation-right-active !important;
-        -moz-animation-name: se-animation-right-active !important;
-        -o-animation-name: se-animation-right-active !important;
-        animation-name: se-animation-right-active !important;
-      }
-    }
+
 
     .field--name-node-title {
       clear: both;
     }
-
+    .se-block {
+      margin-top: 30px;
+      float: right; /* ltr */
+    }
     .node__links {
       margin-top: 30px;
-      position: relative;
       float: right; /* ltr */
-      right: -140px; /* ltr */
     }
 
     .field--name-field-tags {

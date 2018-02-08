@@ -491,6 +491,17 @@
       }
     }
   }
+
+  .block-views-blockauthor-articles-block-1, 
+  .block-views-blockrelated-articles-block-1, 
+  .block-views-blockduplicate-of-related-articles-block-1  {
+    h2 {
+      text-align: initial;
+      &:before, &:after {
+        content: none;
+      }
+    }
+  }
 }
 
 //mobile
@@ -786,7 +797,6 @@
     font-size: 16px;
   }
 
-
   /* articles */
   .page-node-type-article ,
   .page-node-type-video {
@@ -902,6 +912,27 @@
           }
         }
 
+      }
+      .se-trigger {
+        display: none !important;
+      }
+      .se-links-container {
+        z-index: 100;
+        position: fixed !important;
+        left: auto !important;
+        right: 0px !important; /* ltr */ 
+        bottom: 40% !important;
+        margin: 0 !important;
+        padding: 10px;
+        display: block !important;
+
+        .se-links {
+          text-align: center !important;
+          -webkit-animation-name: se-animation-right-active !important;
+          -moz-animation-name: se-animation-right-active !important;
+          -o-animation-name: se-animation-right-active !important;
+          animation-name: se-animation-right-active !important;
+        }
       }
 
     }
