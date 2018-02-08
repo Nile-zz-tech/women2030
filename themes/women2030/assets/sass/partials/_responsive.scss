@@ -483,15 +483,47 @@
 
   .teaser{
     .view-content {
-      .group-header{
-        display: none;
-      }
-      .group-mobile{
-        display: block;
+      .node--view-mode-teaser{
+        .group-header{
+          display: none;
+        }
+        .group-mobile{
+          display: block;
+        }
       }
     }
   }
 
+  /*  .view-taxonomy-term {
+      .view-content {
+        .node::first-child {
+          .group-header{
+            display: block;
+          }
+        }
+      }
+    }*/
+
+  /*  .block-views-blockrelated-articles-block-1 .view-content .field--name-node-title:after, 
+    .block-views-blockrelated-articles-block-1 .view-content .field--name-node-title:before, 
+    .view-taxonomy-term .view-content .field--name-node-title:after, 
+    .view-taxonomy-term .view-content .field--name-node-title:before, 
+    .view-women-profiles .view-content .field--name-node-title:after, 
+    .view-women-profiles .view-content .field--name-node-title:before*/
+
+  .view-taxonomy-term {
+    .view-content {
+      h2,
+      .field--name-node-title {
+        width: auto;
+        text-align: initial;
+        &:before, &:after {
+          content: none;
+        }
+
+      }
+    }
+  }
   .block-views-blockauthor-articles-block-1, 
   .block-views-blockrelated-articles-block-1, 
   .block-views-blockduplicate-of-related-articles-block-1  {

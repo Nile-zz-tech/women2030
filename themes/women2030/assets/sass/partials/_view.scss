@@ -228,7 +228,7 @@
         width: 113px;
         display: inline-block;
       }
-      
+
       .field--name-field-women-in-this-article {
         clear: both;
 
@@ -445,76 +445,76 @@
   }
   .view-content {
     margin-bottom: 60px;
-
-    .field--name-field-image {
-      margin-bottom: 10px;   
-    }
-
-    .field--name-node-title {
-      display: block;
-      position: relative;
-      margin-bottom: 30px;
-
-      &:after, &:before {
-        content: " ";
-        position: absolute;
-        border: 1px solid #DDDDDD;
-        width: 13%;
-        height: 1px;
-      }
-
-      &:before {
-        top: 50%;
-        right: 0;
-      }
-
-      &:after {
-        bottom: 50%;
-        left: 0;
-      }
-
-      h2 {
-        text-align: center;
-        width: 70%;
-        margin: 0 auto;
-        line-height: 33px;
-
-        a {
-          line-height: 33px;
-          color: #000000;
-          font-size: 29px;
-        }
-        &:after, &:before {
-          content: none;
-        }
-      }
-    }
-
-    .field--name-field-women-in-this-article {
-      margin-top: -50px;
-      margin-left: 30px; /* ltr */
-
-      .field--name-field-photo {
-        img {
-          border-radius: 50%;
-          overflow: hidden;
-          margin: 0;
-        }
+    .group-header {
+      .field--name-field-image {
+        margin-bottom: 10px;   
       }
 
       .field--name-node-title {
-        margin-top: -30px;
-        margin-left: 70px;
+        display: block;
+        position: relative;
+        margin-bottom: 30px;
 
-        &:before, &:after {
-          content: none;
-        }  
-        h3 {
-          font-size: 14px;
+        &:after, &:before {
+          content: " ";
+          position: absolute;
+          border: 1px solid #DDDDDD;
+          width: 13%;
+          height: 1px;
+        }
+
+        &:before {
+          top: 50%;
+          right: 0;
+        }
+
+        &:after {
+          bottom: 50%;
+          left: 0;
+        }
+
+        h2 {
+          text-align: center;
+          width: 70%;
+          margin: 0 auto;
+          line-height: 33px;
+
+          a {
+            line-height: 33px;
+            color: #000000;
+            font-size: 29px;
+          }
+          &:after, &:before {
+            content: none;
+          }
+        }
+      }
+
+      .field--name-field-women-in-this-article {
+        margin-top: -50px;
+        margin-left: 30px; /* ltr */
+
+        .field--name-field-photo {
+          img {
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0;
+          }
+        }
+
+        .field--name-node-title {
+          margin-top: -30px;
+          margin-left: 70px;
+
+          &:before, &:after {
+            content: none;
+          }  
+          h3 {
+            font-size: 14px;
+          }
         }
       }
     }
-
     .field--name-field-category,
     .field--name-node-post-date {
       float: left; /* ltr */
