@@ -34,11 +34,13 @@ The following content was designed & implemented under AlexSeif.com
         color: $grey_font_article;
       }
     }
-
+    
+    .field--name-field-author,
     .field--name-user {
       float: left; /* ltr */
       clear: left; /* ltr */
 
+      .field--name-field-photo,
       .field--name-user-picture {
         float: left; /* ltr */
         margin-right: 10px; /* ltr */
@@ -48,6 +50,7 @@ The following content was designed & implemented under AlexSeif.com
       img.image-style-woman-thumbnail {
         margin-bottom: 0px;
       }
+      .field--name-node-title,
       .field--name-field-name {
         float: left; /* ltr */
         margin-right: 10px; /* ltr */
