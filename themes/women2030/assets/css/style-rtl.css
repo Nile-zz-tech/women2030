@@ -2883,13 +2883,13 @@
 }
 
 /* line 2254, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
-[dir="rtl"] .page-node-type-article .block-system-main-block .field--name-field-author .field--name-field-name,
+[dir="rtl"] .page-node-type-article .block-system-main-block .field--name-field-author .field--name-field-photo,
 [dir="rtl"] .page-node-type-article .block-system-main-block .field--name-field-author .field--name-user-picture,
-[dir="rtl"] .page-node-type-article .block-system-main-block .field--name-user .field--name-field-name,
+[dir="rtl"] .page-node-type-article .block-system-main-block .field--name-user .field--name-field-photo,
 [dir="rtl"] .page-node-type-article .block-system-main-block .field--name-user .field--name-user-picture,
-[dir="rtl"] .page-node-type-video .block-system-main-block .field--name-field-author .field--name-field-name,
+[dir="rtl"] .page-node-type-video .block-system-main-block .field--name-field-author .field--name-field-photo,
 [dir="rtl"] .page-node-type-video .block-system-main-block .field--name-field-author .field--name-user-picture,
-[dir="rtl"] .page-node-type-video .block-system-main-block .field--name-user .field--name-field-name,
+[dir="rtl"] .page-node-type-video .block-system-main-block .field--name-user .field--name-field-photo,
 [dir="rtl"] .page-node-type-video .block-system-main-block .field--name-user .field--name-user-picture {
   float: right;
   margin-left: 10px;

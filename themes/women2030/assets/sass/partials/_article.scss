@@ -34,7 +34,7 @@ The following content was designed & implemented under AlexSeif.com
         color: $grey_font_article;
       }
     }
-    
+
     .field--name-field-author,
     .field--name-user {
       float: left; /* ltr */
@@ -52,10 +52,12 @@ The following content was designed & implemented under AlexSeif.com
       }
       .field--name-node-title,
       .field--name-field-name {
-        float: left; /* ltr */
-        margin-right: 10px; /* ltr */
+        /*float: left;  ltr */
+        display: inline-block;
         margin-top: 5px;
-
+        h2{
+          margin-bottom: 5px;
+        }
         a {
           color: $gold;
           font-size: 18px;
@@ -67,6 +69,8 @@ The following content was designed & implemented under AlexSeif.com
         font-size: 15px;
         font-weight: bold;
         color: $grey_font_header;
+        margin-bottom: 0px;
+
       }
     }
 
