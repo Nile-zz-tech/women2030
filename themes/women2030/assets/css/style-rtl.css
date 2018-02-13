@@ -2811,20 +2811,20 @@
 }
 
 /* line 2194, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
-[dir="rtl"] .article-teaser .view-content .group-header .field--name-field-women-in-this-article,
-[dir="rtl"] .teaser .view-content .group-header .field--name-field-women-in-this-article,
-[dir="rtl"] .block-views-blockrelated-articles-block-1 .view-content .group-header .field--name-field-women-in-this-article,
-[dir="rtl"] .view-taxonomy-term .view-content .group-header .field--name-field-women-in-this-article,
-[dir="rtl"] .view-women-profiles .view-content .group-header .field--name-field-women-in-this-article {
+[dir="rtl"] .article-teaser .view-content .group-header .field--name-field-author,
+[dir="rtl"] .teaser .view-content .group-header .field--name-field-author,
+[dir="rtl"] .block-views-blockrelated-articles-block-1 .view-content .group-header .field--name-field-author,
+[dir="rtl"] .view-taxonomy-term .view-content .group-header .field--name-field-author,
+[dir="rtl"] .view-women-profiles .view-content .group-header .field--name-field-author {
   margin-right: 30px;
 }
 
 /* line 2196, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
-[dir="rtl"] .article-teaser .view-content .group-header .field--name-field-women-in-this-article .field--name-node-title,
-[dir="rtl"] .teaser .view-content .group-header .field--name-field-women-in-this-article .field--name-node-title,
-[dir="rtl"] .block-views-blockrelated-articles-block-1 .view-content .group-header .field--name-field-women-in-this-article .field--name-node-title,
-[dir="rtl"] .view-taxonomy-term .view-content .group-header .field--name-field-women-in-this-article .field--name-node-title,
-[dir="rtl"] .view-women-profiles .view-content .group-header .field--name-field-women-in-this-article .field--name-node-title {
+[dir="rtl"] .article-teaser .view-content .group-header .field--name-field-author .field--name-node-title,
+[dir="rtl"] .teaser .view-content .group-header .field--name-field-author .field--name-node-title,
+[dir="rtl"] .block-views-blockrelated-articles-block-1 .view-content .group-header .field--name-field-author .field--name-node-title,
+[dir="rtl"] .view-taxonomy-term .view-content .group-header .field--name-field-author .field--name-node-title,
+[dir="rtl"] .view-women-profiles .view-content .group-header .field--name-field-author .field--name-node-title {
   margin-right: 70px;
 }
 
