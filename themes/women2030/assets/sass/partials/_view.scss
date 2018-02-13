@@ -168,7 +168,13 @@
     }
   }
 }
-
+.top-gold-border:before{
+  content: " ";
+  border-top: 1px solid $gold;
+  display: block;
+  margin-bottom: 20px;
+  margin-top: -20px;
+}
 .article-teaser,
 .teaser {
   .node--type-article  {
