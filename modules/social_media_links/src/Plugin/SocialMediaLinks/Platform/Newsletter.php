@@ -10,7 +10,7 @@ use Drupal\social_media_links\PlatformBase;
  * @Platform(
  *   id = "envelope",
  *   name = @Translation("Newsletter"),
- *   urlPrefix = "https://women2030.com/",
+ *   urlPrefix = "http://women2030.com/",
  * )
  */
 class Newsletter extends PlatformBase {}
