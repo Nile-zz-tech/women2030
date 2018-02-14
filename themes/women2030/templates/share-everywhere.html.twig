@@ -36,11 +36,11 @@
       <div class="se-links-container">
         <ul id="{{ se_links_id }}" class="se-links {{ is_active }}">
           {% for key, button in buttons %}
-            <li class="se-link {{ key }}"> {{ button }} </li>
+            <li class="se-link {{ key }} {{ 'whatsapp' == key ? 'visible-xs'}}"> {{ button }} </li>
             {% endfor %}
-      {#    <li id="{{ share_icon.id }}" class="se-trigger {{ share_icon.class }}">
-            <img src="{{ share_icon.src }}" alt="{{ share_icon.alt }}">
-          </li>#}
+            {#    <li id="{{ share_icon.id }}" class="se-trigger {{ share_icon.class }}">
+                  <img src="{{ share_icon.src }}" alt="{{ share_icon.alt }}">
+                </li>#}
         </ul>
       </div>
     </div>

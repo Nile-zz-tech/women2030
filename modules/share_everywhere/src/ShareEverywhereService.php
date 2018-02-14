@@ -42,7 +42,7 @@ class ShareEverywhereService implements ShareEverywhereServiceInterface {
   /**
    * {@inheritdoc}
    */
-  public function build($url, $id) {
+  public function build($url, $id, $title="") {
     global $base_url;
     $config = $this->configFactory->get('share_everywhere.settings');
     $module_path = drupal_get_path('module', 'share_everywhere');
@@ -76,6 +76,7 @@ class ShareEverywhereService implements ShareEverywhereServiceInterface {
         $buttons[$key] = [
           '#theme' => 'se_' . $key,
           '#url' => $url,
+          '#title'=> $title,
         ];
 
         if ($key != 'facebook_like' && $config->get('style') == 'share_everywhere') {
