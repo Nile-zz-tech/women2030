@@ -841,17 +841,17 @@
     .block-system-main-block {
       padding: 0;
 
-      .field--name-user {
+      .field--name-field-author {
 
-        .field--name-user-picture {
+
+        .field--name-field-photo{
           width: 40px;
 
           img {
             margin:0;
           }
         }
-
-        .field--name-field-name {
+        .field--name-node-title {
           margin: 0 5px 0 0;
 
           a {

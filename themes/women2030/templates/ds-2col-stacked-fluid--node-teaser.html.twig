@@ -50,13 +50,13 @@
 <div class="group-mobile">
   <div class="field field--name-node-title field--type-ds field--label-hidden field__item">
     <h2{{ title_attributes }}>
-{#      <a  rel="bookmark">#}
+      <a  href="{{ path('entity.node.canonical', {'node': node.id}) }}">
         {{ title }}
-{#      </a>#}
+      </a>
     </h2>
   </div>
   {{ content.field_image|render }}
-  {{ content.field_women_in_this_article|render }}
+  {{ content.field_author|render }}
 </div>
 
 <{{ footer_wrapper }}{{ footer_attributes.addClass('group-footer') }}>

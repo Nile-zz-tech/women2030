@@ -5972,42 +5972,42 @@ blockquote p:last-child {
 }
 
 /* line 238, /srv/www/women2030/themes/women2030/assets/sass/partials/_view.scss */
-.article-teaser .view-content .group-mobile .field--name-field-women-in-this-article,
-.teaser .view-content .group-mobile .field--name-field-women-in-this-article {
+.article-teaser .view-content .group-mobile .field--name-field-author,
+.teaser .view-content .group-mobile .field--name-field-author {
   clear: both;
 }
 
 /* line 241, /srv/www/women2030/themes/women2030/assets/sass/partials/_view.scss */
-.article-teaser .view-content .group-mobile .field--name-field-women-in-this-article .field--name-field-photo,
-.teaser .view-content .group-mobile .field--name-field-women-in-this-article .field--name-field-photo {
+.article-teaser .view-content .group-mobile .field--name-field-author .field--name-field-photo,
+.teaser .view-content .group-mobile .field--name-field-author .field--name-field-photo {
   width: 40px;
   display: inline-block;
 }
 
 /* line 244, /srv/www/women2030/themes/women2030/assets/sass/partials/_view.scss */
-.article-teaser .view-content .group-mobile .field--name-field-women-in-this-article .field--name-field-photo img,
-.teaser .view-content .group-mobile .field--name-field-women-in-this-article .field--name-field-photo img {
+.article-teaser .view-content .group-mobile .field--name-field-author .field--name-field-photo img,
+.teaser .view-content .group-mobile .field--name-field-author .field--name-field-photo img {
   border-radius: 50%;
   overflow: hidden;
   margin: 0;
 }
 
 /* line 251, /srv/www/women2030/themes/women2030/assets/sass/partials/_view.scss */
-.article-teaser .view-content .group-mobile .field--name-field-women-in-this-article .field--name-node-title,
-.teaser .view-content .group-mobile .field--name-field-women-in-this-article .field--name-node-title {
+.article-teaser .view-content .group-mobile .field--name-field-author .field--name-node-title,
+.teaser .view-content .group-mobile .field--name-field-author .field--name-node-title {
   display: inline-block;
 }
 
 /* line 254, /srv/www/women2030/themes/women2030/assets/sass/partials/_view.scss */
-.article-teaser .view-content .group-mobile .field--name-field-women-in-this-article .field--name-node-title:before, .article-teaser .view-content .group-mobile .field--name-field-women-in-this-article .field--name-node-title:after,
-.teaser .view-content .group-mobile .field--name-field-women-in-this-article .field--name-node-title:before,
-.teaser .view-content .group-mobile .field--name-field-women-in-this-article .field--name-node-title:after {
+.article-teaser .view-content .group-mobile .field--name-field-author .field--name-node-title:before, .article-teaser .view-content .group-mobile .field--name-field-author .field--name-node-title:after,
+.teaser .view-content .group-mobile .field--name-field-author .field--name-node-title:before,
+.teaser .view-content .group-mobile .field--name-field-author .field--name-node-title:after {
   content: none;
 }
 
 /* line 257, /srv/www/women2030/themes/women2030/assets/sass/partials/_view.scss */
-.article-teaser .view-content .group-mobile .field--name-field-women-in-this-article .field--name-node-title h3,
-.teaser .view-content .group-mobile .field--name-field-women-in-this-article .field--name-node-title h3 {
+.article-teaser .view-content .group-mobile .field--name-field-author .field--name-node-title h3,
+.teaser .view-content .group-mobile .field--name-field-author .field--name-node-title h3 {
   font-size: 14px;
 }
 
@@ -9126,29 +9126,29 @@ The following content was designed & implemented under AlexSeif.com
   .page-node-type-video .block-system-main-block {
     padding: 0;
   }
-  /* line 846, /srv/www/women2030/themes/women2030/assets/sass/partials/_responsive.scss */
-  .page-node-type-article .block-system-main-block .field--name-user .field--name-user-picture,
-  .page-node-type-video .block-system-main-block .field--name-user .field--name-user-picture {
+  /* line 847, /srv/www/women2030/themes/women2030/assets/sass/partials/_responsive.scss */
+  .page-node-type-article .block-system-main-block .field--name-field-author .field--name-field-photo,
+  .page-node-type-video .block-system-main-block .field--name-field-author .field--name-field-photo {
     width: 40px;
   }
-  /* line 849, /srv/www/women2030/themes/women2030/assets/sass/partials/_responsive.scss */
-  .page-node-type-article .block-system-main-block .field--name-user .field--name-user-picture img,
-  .page-node-type-video .block-system-main-block .field--name-user .field--name-user-picture img {
+  /* line 850, /srv/www/women2030/themes/women2030/assets/sass/partials/_responsive.scss */
+  .page-node-type-article .block-system-main-block .field--name-field-author .field--name-field-photo img,
+  .page-node-type-video .block-system-main-block .field--name-field-author .field--name-field-photo img {
     margin: 0;
   }
   /* line 854, /srv/www/women2030/themes/women2030/assets/sass/partials/_responsive.scss */
-  .page-node-type-article .block-system-main-block .field--name-user .field--name-field-name,
-  .page-node-type-video .block-system-main-block .field--name-user .field--name-field-name {
+  .page-node-type-article .block-system-main-block .field--name-field-author .field--name-node-title,
+  .page-node-type-video .block-system-main-block .field--name-field-author .field--name-node-title {
     margin: 0 5px 0 0;
   }
   /* line 857, /srv/www/women2030/themes/women2030/assets/sass/partials/_responsive.scss */
-  .page-node-type-article .block-system-main-block .field--name-user .field--name-field-name a,
-  .page-node-type-video .block-system-main-block .field--name-user .field--name-field-name a {
+  .page-node-type-article .block-system-main-block .field--name-field-author .field--name-node-title a,
+  .page-node-type-video .block-system-main-block .field--name-field-author .field--name-node-title a {
     font-size: 12px;
   }
   /* line 861, /srv/www/women2030/themes/women2030/assets/sass/partials/_responsive.scss */
-  .page-node-type-article .block-system-main-block .field--name-user .field--name-field-description,
-  .page-node-type-video .block-system-main-block .field--name-user .field--name-field-description {
+  .page-node-type-article .block-system-main-block .field--name-field-author .field--name-field-description,
+  .page-node-type-video .block-system-main-block .field--name-field-author .field--name-field-description {
     font-size: 12px;
     margin: 0;
   }
