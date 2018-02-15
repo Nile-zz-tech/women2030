@@ -4402,7 +4402,7 @@ blockquote p:first-child {
   margin: 0 auto;
   position: relative;
   padding: 0 30px;
-  font-size: 30px;
+  font-size: 30px !important;
   color: #9B9B9B;
 }
 
