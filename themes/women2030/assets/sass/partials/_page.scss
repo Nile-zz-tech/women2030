@@ -318,7 +318,6 @@
         font-size: 18px;
         color: #555555;
         margin-left: 40px; /* ltr */
-        padding-bottom: 22px;
       }
       .field--name-field-name,
       .field--name-comment-author {
@@ -419,7 +418,7 @@
       }
       .form-textarea-wrapper{
         display: inline-block;
-        width: calc(100% - 104px);
+        width: calc(100% - 106px);
 
       }
       .form-item {
@@ -434,7 +433,7 @@
           /*float: right;*/
         }
         .form-text {
-          width: calc(100% - 104px);
+          width: calc(100% - 106px);
         }
         .form-text, .form-textarea, .form-select {
           border: 2px solid #e5e4e3;
