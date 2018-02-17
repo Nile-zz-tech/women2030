@@ -992,12 +992,47 @@
         p{
           font-size: 20px;
           line-height: 30px;
-          color: black;
         }
       }
     }
   }
 
+  blockquote {
+    border: none;
+    position: relative;
+    padding: 30px 0;
+    p {
+      text-align: center;
+      &:first-child {
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        padding: 0 30px;
+        font-size: 30px !important;
+        color: $grey_font_header;
+      }
+
+      &:last-child {
+        font-size: 18px;
+      }
+    }
+    &:after, &:before {
+      content: " ";
+      position: absolute;
+      border: 1px solid $gold;
+      width: 25%;
+      height: 1px;
+    }
+    &:before {
+      top: 0;
+      right: 35%;
+    }
+
+    &:after {
+      right: 35%;
+      bottom: 0;
+    }
+  }
 
   /* Block Related Articles */
   .block-views-blockrelated-articles-block-1,

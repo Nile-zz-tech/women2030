@@ -47,6 +47,7 @@
 }
 blockquote {
   border: none;
+  position: relative;
 
   p {
     text-align: center;
@@ -58,31 +59,28 @@ blockquote {
       padding: 0 30px;
       font-size: 30px !important;
       color: $grey_font_header;
-
-      &:after, &:before {
-        content: " ";
-        position: absolute;
-        border: 1px solid $gold;
-        width: 40%;
-        height: 1px;
-      }
-
-      &:before {
-        top: 50%;
-        right: -48%;
-      }
-
-      &:after {
-        bottom: 50%;
-        left: -48%;
-      }
     }
 
     &:last-child {
       font-size: 18px;
     }
   }
+  &:after, &:before {
+    content: " ";
+    position: absolute;
+    border: 1px solid $gold;
+    width: 25%;
+    height: 1px;
+  }
+  &:before {
+    top: 50%;
+    right: 0;
+  }
 
+  &:after {
+    bottom: 50%;
+    left: 0;
+  }
 }
 .pager { display: none;}
 .more-link {
