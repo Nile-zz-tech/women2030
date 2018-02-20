@@ -673,16 +673,17 @@
         padding: 20px;
       }
       #comment-form {
-        padding: 15px;
 
         .form-item {
-          .form-text {
+          label {
+            display: block;
+          }
+          .form-text,
+          .form-textarea-wrapper{
             max-width: 100%;
             width: 100%;
 
-            label {
-              display: block;
-            }
+
           }
         }
       }
