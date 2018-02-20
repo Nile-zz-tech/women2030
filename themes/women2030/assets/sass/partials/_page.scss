@@ -269,9 +269,11 @@
       }
 
       h2.title:not(.comment-form__title) {
+        font-size: 16px;
         color: #4c4c4c;
         border-bottom: 5px solid #e5e4e3;
         padding-bottom: 4px;
+        margin-top: 53px;
 
         &:before {
           content: "\f104";
@@ -323,7 +325,9 @@
       .field--name-comment-author {
         float: left; /* ltr */
         color: $grey_font_header;
+        margin-bottom: 9px;
       }
+      .field--name-field-description {display: none;}
       .field--name-comment-post-date {
         float: right; /* ltr */
         color: $grey_font_header;
@@ -331,6 +335,8 @@
       .field--name-field-comment-body {
         clear: both;
         border-bottom: 1px solid #dddddd;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
       }
     }
 

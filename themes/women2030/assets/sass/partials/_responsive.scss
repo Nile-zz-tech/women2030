@@ -540,8 +540,9 @@
 @media (max-width: 767px) {
 
   h2, .h2 {
-    font-size: 1.42em;
+    margin-top: 40px;
   }
+
   .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -862,13 +863,15 @@
         .field--name-node-title {
           margin: 0 5px 0 0;
 
-          a {
+          h3 {
             font-size: 12px;
+            margin-bottom: 4px;
           }
         }
         .field--name-field-description {
           font-size: 12px;
-          margin:0;
+          margin:0;    
+          margin-right: 55px;
         }
       }
 
@@ -888,7 +891,7 @@
         font-size: 16px;
       }
       .field--name-field-tags {
-        padding: 6px 0;
+        padding: 0 !important;
         margin-bottom: 0;
 
         h3 {
@@ -1143,9 +1146,11 @@
     h2.title:not(.comment-form__title) {
 
       &:before {
+        font-size: 15px !important;
       }
 
       &:after {
+        width: 100% !important;
       }
     }
 
@@ -1178,7 +1183,12 @@
     .field--name-field-comment-body {
     }
   }
-
+  .top-gold-border{
+    padding-top:30px;
+  }
+  .se-block{
+    margin-top: 18px !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1223,6 +1233,7 @@
     .form-item-name,
     .field--name-field-comment-body {
       margin: auto;
+      margin-bottom: 20px;
       word-wrap: break-word;
     }
   }

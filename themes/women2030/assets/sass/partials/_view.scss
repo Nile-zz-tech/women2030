@@ -168,12 +168,12 @@
     }
   }
 }
-.top-gold-border:before{
+.top-gold-border{
   content: " ";
   border-top: 1px solid $gold;
   display: block;
-  margin-bottom: 20px;
-  margin-top: -20px;
+  padding-top: 60px;
+  margin-top: 27px;
 }
 .article-teaser,
 .teaser {
