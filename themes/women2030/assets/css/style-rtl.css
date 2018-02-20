@@ -2936,7 +2936,7 @@
 /* line 2287, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
 [dir="rtl"] .page-node-type-article .block-system-main-block .field--name-field-tags ul li,
 [dir="rtl"] .page-node-type-video .block-system-main-block .field--name-field-tags ul li {
-  float: left;
+  float: right;
   margin-left: auto;
   margin-right: 10px;
 }

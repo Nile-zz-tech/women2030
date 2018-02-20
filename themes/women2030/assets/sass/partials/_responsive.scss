@@ -894,8 +894,12 @@
         h3 {
           display: none;
         } 
-        ul li:first-child {
-          margin-left: 0px;
+        ul li {
+          margin-top: 5px;
+          margin-bottom: 5px;
+          &:first-child {
+            margin-left: 0px;
+          }
         }
       }
 
