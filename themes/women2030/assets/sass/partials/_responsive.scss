@@ -794,6 +794,7 @@
   .teaser .view-header, 
   .block-views-blockrelated-articles-block-1 .view-header, 
   .view-taxonomy-term .view-header, 
+  .view-taxonomy-term .view-header .category-header,
   .view-women-profiles .view-header {
     font-size: 26px;
 
@@ -801,7 +802,13 @@
       width: 20%;
     }
   }
+
   .view-taxonomy-term .view-header{
+    h2{
+      font-size: 26px;
+    }
+  }
+  .view-taxonomy-term .view-header .category-header {
     height: 190px;
     h2{
       font-size: 26px;
@@ -1108,7 +1115,7 @@
         display: block;   
       }
     }
-    
+
     .form-textarea-wrapper,
     .form-text, .form-textarea, select, .form-email {
       width: 100%;
@@ -1152,7 +1159,7 @@
       }
     }
   }
-  .view-taxonomy-term .view-header h2:after {
+  .view-taxonomy-term .view-header .category-header h2:after {
     left: 28%;
   }
   .article-teaser .view-content .group-header .field--name-node-title h2, .teaser .view-content .group-header .field--name-node-title h2 {
