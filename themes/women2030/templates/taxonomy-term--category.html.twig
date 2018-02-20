@@ -29,11 +29,26 @@
     'vocabulary-' ~ term.bundle|clean_class,
   ]
 %}
-
-<div{{ attributes.setAttribute('id', 'taxonomy-term-' ~ term.id).addClass(classes) }}>
-  {{ title_prefix }}
-  {% if not page %}
-    <h2><a href="{{ url }}">{{ name }}</a></h2>
-    {% endif %}
-    {{ title_suffix }}
+<style type="text/css">
+  {% if(content.field_image.0) %}
+    .view-taxonomy-term .view-header .category-header {
+      background-image: url('{{ content.field_image.0 }}');
+    }
+  {% endif %}
+  {% if(content.field_mobile_image.0) %}
+    @media (max-width: 767px) {
+      .view-taxonomy-term .view-header .category-header {
+        background-image: url('{{ content.field_mobile_image.0 }}');
+      }
+    }
+  {% endif %}
+</style>
+<div class="category-header">
+  <div{{ attributes.setAttribute('id', 'taxonomy-term-' ~ term.id).addClass(classes) }}>
+    {{ title_prefix }}
+    {% if not page %}
+      <h2><a href="{{ url }}">{{ name }}</a></h2>
+      {% endif %}
+      {{ title_suffix }}
+  </div>
 </div>

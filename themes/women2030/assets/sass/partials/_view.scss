@@ -651,44 +651,54 @@
 
 .view-taxonomy-term {
   .view-header {
-    height: 300px;
-    width: 100vw;
-    position: relative;
-    left: 49%;
-    right: 49%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    background-image: -webkit-linear-gradient(#bfa39b 0%, #e3cdc7 100%);
-    background-image: -moz-linear-gradient(#bfa39b 0%, #e3cdc7 100%);
-    background-image: -o-linear-gradient(#bfa39b 0%, #e3cdc7 100%);
-    background-image: linear-gradient(#bfa39b 0%, #e3cdc7 100%);
-    text-align: center;
-    padding-top: 150px;
-    margin-bottom: 60px;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    h2 {
-      font-size: 60px;
-
-      a {
-        color: white;
-      }
-
-      &:after {
-        content: " ";
-        border-bottom: 2px solid white;
-        height: 1px;
-        width: 160px;
-        position: absolute;
-        left: 45%;
-      }
-    }
     &:after, &:before {
       content: none;
     }
+    h2{
+      font-size: 52px;
+      color: $gold;
+    }
+    .category-header {
+      height: 300px;
+      width: 100vw;
+      position: relative;
+      left: 49%;
+      right: 49%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      background-image: -webkit-linear-gradient(#bfa39b 0%, #e3cdc7 100%);
+      background-image: -moz-linear-gradient(#bfa39b 0%, #e3cdc7 100%);
+      background-image: -o-linear-gradient(#bfa39b 0%, #e3cdc7 100%);
+      background-image: linear-gradient(#bfa39b 0%, #e3cdc7 100%);
+      text-align: center;
+      padding-top: 150px;
+      margin-bottom: 60px;
+      background-size: cover;
+      background-repeat: no-repeat;
 
+      h2 {
+        font-size: 60px;
+
+        a {
+          color: white;
+        }
+
+        &:after {
+          content: " ";
+          border-bottom: 2px solid white;
+          height: 1px;
+          width: 160px;
+          position: absolute;
+          left: 45%;
+        }
+      }
+      &:after, &:before {
+        content: none;
+      }
+
+    }
   }
+
 }
 
 .view-women-profiles {
