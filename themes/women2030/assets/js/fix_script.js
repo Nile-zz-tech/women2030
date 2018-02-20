@@ -8,6 +8,7 @@ jQuery(function () {
   fix_gallery();
   fix_goldbar();
   fix_morelink();
+  mobile_comment();
 
   function fix_gallery() {
     // preprocess for gallery
@@ -90,6 +91,12 @@ jQuery(function () {
     jQuery('.more-link a').click(function () {
       jQuery('.pager__item.pager__item--next a')[0].click();
       return false;
+    });
+  }
+
+  function mobile_comment() {
+    jQuery('.field--type-comment h2.comment-form__title').click(function () {
+      jQuery('.field--name-comment .comment-comment-form').show();
     });
   }
 

@@ -1130,6 +1130,55 @@
       text-align: center;
     }
   }
+
+  /* comment */
+  .field--name-comment {
+
+    .comment-form-block {
+
+      h2 {
+      }
+    }
+
+    h2.title:not(.comment-form__title) {
+
+      &:before {
+      }
+
+      &:after {
+      }
+    }
+
+    h2.comment-form__title {
+      font-size: 18px !important;
+      color: #4c4c4c;
+      margin-bottom: 0 !important;
+      &:after {
+        content: none !important;
+      }
+    }
+    .comment-comment-form {
+      display: none;
+    }
+    .field--name-username,
+    .field--name-user-picture {
+    }
+
+    .field--name-field-name,
+    .field--name-comment-author,
+    .field--name-comment-post-date,
+    .form-item-name,
+    .field--name-field-comment-body {
+    }
+    .field--name-field-name,
+    .field--name-comment-author {
+    }
+    .field--name-comment-post-date {
+    }
+    .field--name-field-comment-body {
+    }
+  }
+
 }
 
 @media (max-width: 480px) {
