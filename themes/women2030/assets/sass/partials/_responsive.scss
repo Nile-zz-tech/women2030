@@ -725,7 +725,7 @@
         }
 
         .form-text, .form-email {
-          max-width: 240px;
+          /*max-width: 240px;*/
         }
       }
 
@@ -1096,6 +1096,27 @@
 
   .more-link {
     margin-bottom: 10px;
+  }
+
+  .contact-message-feedback-form {
+    padding: 0;
+    border: 0;
+
+    .form-item {
+
+      label {
+        display: block;   
+      }
+    }
+    
+    .form-textarea-wrapper,
+    .form-text, .form-textarea, select, .form-email {
+      width: 100%;
+    }
+
+    .form-actions {
+      text-align: center;
+    }
   }
 }
 
