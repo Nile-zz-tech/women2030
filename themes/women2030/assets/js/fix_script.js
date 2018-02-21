@@ -9,6 +9,7 @@ jQuery(function () {
   fix_goldbar();
   fix_morelink();
   mobile_comment();
+  fix_search();
 
   function fix_gallery() {
     // preprocess for gallery
@@ -98,6 +99,10 @@ jQuery(function () {
     jQuery('.field--type-comment h2.comment-form__title').click(function () {
       jQuery('.field--name-comment .comment-comment-form').show();
     });
+  }
+
+  function fix_search() {
+    jQuery('#edit-keys').attr('placeholder', 'ابحث عن موضوع')
   }
 
 });
