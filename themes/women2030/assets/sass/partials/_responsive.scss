@@ -258,7 +258,8 @@
   }
 
   /* slideshow */
-  #search-block-form {
+  #search-api-page-block-form,
+  #search-api-page-block-form--2 {
     position: absolute;
     right: 15px;
     top: 15px;
@@ -601,9 +602,17 @@
     /*    .language-switcher-language-url {
           display: none;
         }*/
-    .block-search {
+
+    .search-api-page-block-form {
       height: auto;
       margin-top: 15px;
+
+      float: none; 
+      margin-left: auto; 
+      margin-top: auto;
+      height: auto;
+      width: auto;
+      border-bottom: 1px solid #dddddd;
     }
   }
 

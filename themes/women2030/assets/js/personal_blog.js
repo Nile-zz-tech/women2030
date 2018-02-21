@@ -103,7 +103,7 @@
     var $wd = $(window).width();
     if ($wd < 991) {
       $('#block-socialmedialinks').appendTo('.mobile-main-menu');
-      $('#block-women2030-search').appendTo('.mobile-main-menu');
+      $('#block-searchapipagesearchblockform').appendTo('.mobile-main-menu');
       var $langs = $('#block-languageswitcher');
       $langs.appendTo('#header .container');
       $('#block-languageswitcher a[hreflang="en"]').text('en');
