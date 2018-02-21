@@ -2183,8 +2183,16 @@
     }
   }
 
-  .view-filters .form-actions{
-    text-align: left;
+  .view-filters{
+    .form-type-entity-autocomplete{
+      width: 48%;
+    }
+    #edit-field-subtitle-target-id {
+      width: 90%;
+    }
+    .form-actions{
+      clear:none;
+    }
   }
 
   .article-teaser,
@@ -2444,3 +2452,4 @@
     }
   }
 }
+

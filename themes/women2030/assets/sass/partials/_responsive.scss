@@ -1189,6 +1189,28 @@
   .se-block{
     /*margin-top: 18px !important;*/
   }
+
+  .view-filters{
+    text-align: center;
+
+    .form-submit,
+    .form-item,
+    .form-type-entity-autocomplete {
+      margin-top: 0 !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      float: none !important;
+      text-align: center;
+      width: auto !important;
+    }
+
+    input {
+      width: 360px !important;
+    }
+    .form-item label{
+      text-align: center;
+    }
+  }
 }
 
 @media (max-width: 480px) {
