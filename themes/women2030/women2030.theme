@@ -64,3 +64,14 @@ function women2030_suggestions_page_alter(array &$suggestions, array $variables)
     $suggestions[] = 'page__' . $content_type;
   }
 }
+
+function women2030_form_alter(&$form, &$form_state, $form_id)
+{
+
+  if ($form_id == "search_api_page_block_form") {
+//    dsm($form); // print $form array on the top of the page
+//    if (isset($form['edit-keys'])) {
+      $form['edit-keys'][] = array('#placeholder' => t('Gemeente...'));
+//    }
+  }
+}
