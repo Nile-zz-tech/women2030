@@ -122,6 +122,15 @@
     color: #bebebe;
     font-weight: bold;
   }
+  .form-search::placeholder {
+    background: none;
+    border: none;
+    padding: 2px 4px 4px;
+    width: 138px;
+    text-indent: 16px;
+    color: #bebebe;
+    font-weight: bold;
+  }
   
   .button {
     margin: 0;

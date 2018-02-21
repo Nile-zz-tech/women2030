@@ -102,7 +102,10 @@ jQuery(function () {
   }
 
   function fix_search() {
-    jQuery('#edit-keys').attr('placeholder', 'ابحث عن موضوع')
+    lang = jQuery('html').attr('lang');
+    if ('ar' == lang) {
+      jQuery('#edit-keys').attr('placeholder', "ابحث عن موضوع")
+    }
   }
 
 });

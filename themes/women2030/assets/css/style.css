@@ -4073,7 +4073,19 @@ div ul {
   font-weight: bold;
 }
 
-/* line 126, /srv/www/women2030/themes/women2030/assets/sass/base/_header.scss */
+/* line 125, /srv/www/women2030/themes/women2030/assets/sass/base/_header.scss */
+#search-api-page-block-form .form-search::placeholder,
+#search-api-page-block-form--2 .form-search::placeholder {
+  background: none;
+  border: none;
+  padding: 2px 4px 4px;
+  width: 138px;
+  text-indent: 16px;
+  color: #bebebe;
+  font-weight: bold;
+}
+
+/* line 135, /srv/www/women2030/themes/women2030/assets/sass/base/_header.scss */
 #search-api-page-block-form .button,
 #search-api-page-block-form--2 .button {
   margin: 0;
@@ -4087,14 +4099,14 @@ div ul {
   color: #bebebe;
 }
 
-/* line 138, /srv/www/women2030/themes/women2030/assets/sass/base/_header.scss */
+/* line 147, /srv/www/women2030/themes/women2030/assets/sass/base/_header.scss */
 #search-api-page-block-form .form-actions,
 #search-api-page-block-form--2 .form-actions {
   position: relative;
   z-index: 5;
 }
 
-/* line 146, /srv/www/women2030/themes/women2030/assets/sass/base/_header.scss */
+/* line 155, /srv/www/women2030/themes/women2030/assets/sass/base/_header.scss */
 .search-block-form.contextual-region {
   position: static;
 }
