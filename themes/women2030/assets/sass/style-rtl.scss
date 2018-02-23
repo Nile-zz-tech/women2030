@@ -2211,7 +2211,10 @@
       }
     }
   }
-
+  .article-teaser .view-content .group-mobile .field--name-field-image, 
+  .teaser .view-content .group-mobile .field--name-field-image {
+    float: left;   /* ltr */
+  }
 
   .article-teaser .view-content .field--name-node-post-date, 
   .teaser .view-content .field--name-node-post-date, 

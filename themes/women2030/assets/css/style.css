@@ -5985,7 +5985,7 @@ blockquote:after {
 /* line 232, /srv/www/women2030/themes/women2030/assets/sass/partials/_view.scss */
 .article-teaser .view-content .group-mobile .field--name-field-image,
 .teaser .view-content .group-mobile .field--name-field-image {
-  float: left;
+  float: right;
   /* ltr */
   width: 113px;
   display: inline-block;
