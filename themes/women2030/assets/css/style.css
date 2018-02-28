@@ -6611,7 +6611,7 @@ blockquote:after {
 
 /* line 662, /srv/www/women2030/themes/women2030/assets/sass/partials/_view.scss */
 .view-taxonomy-term .view-header .category-header {
-  height: 300px;
+  height: 150px;
   width: 100vw;
   position: relative;
   left: 49%;
