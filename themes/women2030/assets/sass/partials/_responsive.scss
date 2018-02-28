@@ -1221,6 +1221,44 @@
       text-align: center;
     }
   }
+  .women-grid {
+    .field--name-field-photo{
+      width: 60px;
+      display: inline-block;
+      margin-right: 10px; /* ltr */
+      float: left; /* ltr */
+      img{
+        border-radius: 50%;
+      }
+    }
+    .field--name-node-title{
+      vertical-align: top;
+      display: inline-block;
+      h2{
+        margin-top: 0px;
+        margin-bottom: 5px;
+      }
+    }
+    .field--name-field-subtitle {
+      text-align: left; /* ltr */
+      font-size: 16px !important;
+      &:after{
+        content: none;
+      }
+    }
+    .field--name-body{
+      height: auto !important;
+      overflow: auto !important;
+      margin-bottom: 0px !important;
+      position: relative;
+      left: -15px; /* ltr */
+      p{
+        text-align: left !important; /* ltr */
+        font-size: 16px !important;
+        font-weight: normal !important;
+      }
+    }
+  }
 }
 
 @media (max-width: 480px) {

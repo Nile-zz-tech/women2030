@@ -2414,6 +2414,24 @@
         /*font-size: 16px;*/
       }
     }
+    .women-grid {
+      .field--name-field-photo{
+        margin-right: 0px; /* ltr */
+        margin-left: 10px; /* ltr */
+        float: right; /* ltr */
+      }
+      .field--name-field-subtitle {
+        text-align: right;
+      }
+      .field--name-body{
+        left: auto; 
+        right: -15px; 
+
+        p{
+          text-align: right !important; /* ltr */
+        }
+      }
+    }
   }
 
   .page-node-type-article .block-system-main-block .se-links-container, 
