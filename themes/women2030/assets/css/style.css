@@ -5700,9 +5700,12 @@ blockquote:after {
   display: block;
   padding: 4px 20px;
   background-color: transparent;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: -10px;
 }
 
-/* line 1016, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 1019, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .block-language ul.links li[hreflang="en"] {
   display: none;
 }
