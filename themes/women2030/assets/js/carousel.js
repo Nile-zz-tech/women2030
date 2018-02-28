@@ -33,14 +33,14 @@
       });
     }
     if ($(window).width() <= 991) {
-
+      var rtl = ("ar" == drupalSettings.path.currentLanguage) ? true : false;
       jQuery('#panel_second .container div').first().slick({
         dots: true,
         infinite: true,
         speed: 300,
         slidesToShow: 1,
         arrows: false,
-        rtl: true
+        rtl: rtl
       });
     }
   });
