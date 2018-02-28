@@ -1221,6 +1221,14 @@
       text-align: center;
     }
   }
+  .path-women-profiles {
+    h2{
+      font-size: 26px;
+      margin: auto;
+      line-height: unset;
+      padding-bottom: 6px;
+    }
+  }
   .women-grid {
     .field--name-field-photo{
       width: 60px;
@@ -1237,6 +1245,8 @@
       h2{
         margin-top: 0px;
         margin-bottom: 5px;
+        padding: 0px;
+        line-height: 26px;
       }
     }
     .field--name-field-subtitle {
