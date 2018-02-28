@@ -66,3 +66,24 @@
     }
   }
 }
+
+.path-women-profiles {
+  h2{
+    font-size: 50px;
+    line-height: 61px;
+    text-align: center;
+    color: $grey_font_article;
+    border-bottom: 1px solid $gold;
+    padding-bottom: 18px;
+    margin-top: 48px;
+    margin-bottom: 44px;
+  }
+  .view-header{
+    &:before, &:after {
+      content: none;
+    }
+  }
+  .view-content {
+    margin-bottom: 0px;
+  }
+}

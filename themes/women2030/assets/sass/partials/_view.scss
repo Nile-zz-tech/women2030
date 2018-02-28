@@ -535,7 +535,6 @@
     .field--name-body {
       height: 135px;
       overflow: hidden;
-      margin-bottom: 80px;
       
       p {
         text-align: center;
@@ -776,6 +775,8 @@
     h2{
       text-align: center;
       font-size: 26px;
+      border-bottom: 0px;
+      line-height: inherit;
     }
   }
   .field--name-field-subtitle {
