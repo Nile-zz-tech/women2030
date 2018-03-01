@@ -2,13 +2,14 @@
 namespace Composer\Installers\Test;
 
 use Composer\Installers\OntoWikiInstaller;
-use PHPUnit\Framework\TestCase as BaseTestCase;
+use Composer\Package\Package;
+use Composer\Composer;
 
 /**
  * Test for the OntoWikiInstaller
  * code was taken from DokuWikiInstaller
  */
-class OntoWikiInstallerTest extends BaseTestCase
+class OntoWikiInstallerTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var OntoWikiInstaller

@@ -4,9 +4,8 @@ namespace Composer\Installers\Test;
 use Composer\Installers\SyDESInstaller;
 use Composer\Package\Package;
 use Composer\Composer;
-use PHPUnit\Framework\TestCase as BaseTestCase;
 
-class SyDESInstallerTest extends BaseTestCase
+class SyDESInstallerTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var SyDESInstaller

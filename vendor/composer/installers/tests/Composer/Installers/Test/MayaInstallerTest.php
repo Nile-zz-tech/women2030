@@ -4,9 +4,8 @@ namespace Composer\Installers\Test;
 use Composer\Installers\MayaInstaller;
 use Composer\Package\Package;
 use Composer\Composer;
-use PHPUnit\Framework\TestCase as BaseTestCase;
 
-class MayaInstallerTest extends BaseTestCase
+class MayaInstallerTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var MayaInstaller

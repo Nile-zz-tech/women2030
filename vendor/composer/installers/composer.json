@@ -37,11 +37,9 @@
         "Lavalite",
         "Lithium",
         "Magento",
-        "majima",
         "Mako",
         "Mautic",
         "Maya",
-        "MODX",
         "MODX Evo",
         "MediaWiki",
         "OXID",
@@ -49,7 +47,6 @@
         "MODULEWork",
         "Moodle",
         "Piwik",
-        "pxcms",
         "phpBB",
         "Plentymarkets",
         "PPI",
@@ -97,7 +94,7 @@
     },
     "require-dev": {
         "composer/composer": "1.0.*@dev",
-        "phpunit/phpunit": "^4.8.36"
+        "phpunit/phpunit": "4.1.*"
     },
     "scripts": {
         "test": "phpunit"

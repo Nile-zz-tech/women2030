@@ -4,9 +4,8 @@ namespace Composer\Installers\Test;
 use Composer\Installers\VgmcpInstaller;
 use Composer\Package\Package;
 use Composer\Composer;
-use PHPUnit\Framework\TestCase as BaseTestCase;
 
-class VgmcpInstallerTest extends BaseTestCase
+class VgmcpInstallerTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var VgmcpInstaller
