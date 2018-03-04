@@ -393,9 +393,16 @@
       }
 
       .node__links {
-        float: right; /* ltr */
-        margin-right: 10px; /* ltr */
+        /*float: right;  ltr */
+        /*margin-right: 10px;  ltr */
       }
+    }
+  }
+}
+.teaser {
+  .group-header{
+    .field--name-body {
+     display: none;
     }
   }
 }
