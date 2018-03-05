@@ -87,3 +87,31 @@ div ul {
   list-style: none; 
   float: right; /* ltr */
 }
+
+.social-media-links--platforms [class*="fa fa-"] {
+  background-color: $gold;
+  border-radius: 30px;
+  color: #fff;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  margin: auto 3px;
+  width: 30px;
+  font-size: 15px;
+  text-align: center;
+}
+.social-media-links--platforms {
+  .fa-facebook{
+    background-color: #3b5998;
+  }
+  .fa-twitter { 
+    background-color: #46c0fb; 
+  }
+  .fa-snapchat {
+    background-color: #FFFC00;
+  }
+  .fa-instagram {
+    background-color: #d93175;
+  }
+
+}
