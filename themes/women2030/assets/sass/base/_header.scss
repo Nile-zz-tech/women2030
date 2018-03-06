@@ -65,7 +65,7 @@
       color: $gold;
       font-size: 18px;
 
-      
+
       &:before {
         content: none;
       }
@@ -120,7 +120,7 @@
     color: #bebebe;
     font-weight: bold;
   }
-  
+
   .button {
     margin: 0;
     float: right;
@@ -146,3 +146,15 @@
   }
 }
 
+
+#block-beta {
+  margin-left: -60px;
+  float: left;
+  margin-top: 40px;
+  color: $gold;
+  max-width: 60px;
+  p{
+    font-size: 14px;
+    margin: 0;
+  }
+}

@@ -2459,24 +2459,34 @@
     margin-right: 0;
     margin-left: 5px;
   }
-}
 
-.path-search {
-  .node{
-    .group-footer{
-      .field--name-field-category {
-        float: right; /* ltr */
-      }
-      .field--name-node-post-date {
-        float: right; /* ltr */
-      }
-      .se-block,
-      .node__links {
-        float: left; /* ltr */
-        margin-right: 0; /* ltr */
-        margin-left: 10px; /* ltr */
+  .path-search {
+    .node{
+      .group-footer{
+        .field--name-field-category {
+          float: right; /* ltr */
+        }
+        .field--name-node-post-date {
+          float: right; /* ltr */
+        }
+        .se-block,
+        .node__links {
+          float: left; /* ltr */
+          margin-right: 0; /* ltr */
+          margin-left: 10px; /* ltr */
+        }
       }
     }
   }
-}
 
+  #block-bthtjryby{
+    margin-right: -76px;
+    float: right;
+    margin-top: 40px;
+    color: #B69235;
+    p{
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+}
