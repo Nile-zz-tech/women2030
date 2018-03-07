@@ -5714,16 +5714,17 @@ blockquote:after {
 
 /* line 1002, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .block-language {
+  padding-top: 2px;
   float: right;
   /* ltr */
 }
 
-/* line 1005, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 1006, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .block-language ul.links {
   list-style: none;
 }
 
-/* line 1008, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 1009, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .block-language ul.links li a {
   font-family: inherit;
   text-transform: uppercase;
@@ -5735,7 +5736,7 @@ blockquote:after {
   margin-top: -10px;
 }
 
-/* line 1019, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
+/* line 1020, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .block-language ul.links li[hreflang="en"] {
   display: none;
 }
