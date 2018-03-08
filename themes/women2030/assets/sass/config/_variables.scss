@@ -35,9 +35,11 @@ $default_color: $grey_font;
   font-family: 'oswaldregular';
 }
 
-%font_noto {
-  font-family: 'Noto Naskh Arabic', serif; 
+
+%font_english {
+  font-family: Helvetica,Arial,freesans,sans-serif;
 }
+
 
 [class*="nc-icon"] {
   span {

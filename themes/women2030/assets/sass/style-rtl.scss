@@ -1,4 +1,8 @@
 /*rtl bootstraps*/
+%font_noto {
+  font-family: 'Noto Naskh Arabic', serif; 
+}
+
 [dir="rtl"] {
   html {
     direction: rtl;
@@ -30,6 +34,12 @@
     margin-right: 0;
     margin-left: initial;
   }
+
+  h1, .h1, h2, .h2, h3, .h3 {
+    @extend %font_noto;
+  }
+
+
   @media (min-width: 768px) {
     .dl-horizontal dt {
       float: right;
@@ -1093,9 +1103,7 @@
   .nav-tabs > li > a {
     margin-left: auto;
     margin-right: -2px;
-    font-family: 'Noto Naskh Arabic', serif; 
-
-    // border-radius: 4px 4px 0 0;
+    @extend %font_noto
   }
   .nav-pills > li {
     float: right;
@@ -2260,7 +2268,9 @@
   .page-node-type-article , 
   .page-node-type-video  {
     .block-system-main-block {
-
+      .field--name-node-title h1{
+        @extend %font_noto;
+      }
       .field--name-field-author,
       .field--name-user {
         float: right;

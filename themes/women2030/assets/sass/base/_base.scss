@@ -4,7 +4,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-size: 14px;
   color: $default_color;
-  font-family: Arial,Helvetica,freesans,sans-serif;
+  @extend %font_english;
 }
 
 html {
@@ -37,15 +37,14 @@ h1, .h1 {
 h1, .h1, h2, .h2, h3, .h3 {
   margin: 0 0 15px;
   font-weight: bold;
-  @extend %font_noto;
+  @extend %font_english;
 
   color: $gold;
 }
 
 h2 {
-  font-size: 1.71em;
-
-  @extend %font_noto;
+  font-size: 26px;
+  @extend %font_english;
 }
 
 h4, h5, h6 {

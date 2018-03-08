@@ -144,11 +144,11 @@
         }
       }
       >a{
-        /*@extend %font_noto;*/
         font-family: inherit;
+        font-size: 16px;
         text-transform: uppercase;
         display: block;
-        padding: 4px 20px; /* ltr */
+        padding: 4px 10px; /* ltr */
         background-color: transparent;
         /*        
         &:hover, &:focus {
