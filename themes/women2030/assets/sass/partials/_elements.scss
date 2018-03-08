@@ -47,39 +47,25 @@
 }
 blockquote {
   border: none;
+  width: 475px;
   position: relative;
+  padding: 0;
+  left: -50px; /* ltr */
+  float: left; /* ltr */
 
   p {
-    text-align: center;
-
-    &:first-child {
-      width: 50%;
-      margin: 0 auto;
-      position: relative;
-      padding: 0 30px;
-      font-size: 30px !important;
-      color: $grey_font_header;
-    }
-
-    &:last-child {
-      font-size: 18px;
-    }
+    font-size: 30px;
+    color: $grey_font_header;
   }
-  &:after, &:before {
-    content: " ";
-    position: absolute;
-    border: 1px solid $gold;
-    width: 25%;
-    height: 1px;
-  }
+
+
   &:before {
-    top: 50%;
-    right: 0;
-  }
-
-  &:after {
-    bottom: 50%;
-    left: 0;
+    color: #ccc;
+    content: open-quote;
+    font-size: 70px;
+    position: absolute;
+    left: -30px; /* ltr */
+    top: -20px;
   }
 }
 .pager { display: none;}
