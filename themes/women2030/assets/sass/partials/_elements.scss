@@ -52,20 +52,29 @@ blockquote {
   padding: 0;
   left: -50px; /* ltr */
   float: left; /* ltr */
-
+  margin: 20px;
+  
   p {
-    font-size: 30px;
     color: $grey_font_header;
+    font-weight: bold;
   }
 
 
-  &:before {
+  &:before, &:after {
     color: #ccc;
-    content: open-quote;
     font-size: 70px;
     position: absolute;
-    left: -30px; /* ltr */
+    height: 40px;
+  }
+  &:before {
     top: -20px;
+    left: -30px; /* ltr */
+    content: open-quote;
+  }
+  &:after{
+    content: close-quote;
+    bottom: 0px; 
+    right: 0; /* ltr */
   }
 }
 .pager { display: none;}
