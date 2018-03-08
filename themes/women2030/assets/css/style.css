@@ -5714,7 +5714,7 @@ blockquote:after {
 
 /* line 1002, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 .block-language {
-  padding-top: 2px;
+  padding-top: 4px;
   float: right;
   /* ltr */
 }
