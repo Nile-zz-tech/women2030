@@ -8756,6 +8756,7 @@ The following content was designed & implemented under AlexSeif.com
 /* line 266, /srv/www/women2030/themes/women2030/assets/sass/partials/_article.scss */
 .page-node-type-article .block-system-main-block .field--name-field-women-in-this-article .field__items .field__item.wrapper:first-child .social-media-links--platforms li a .fa, .page-node-type-video .block-system-main-block .field--name-field-women-in-this-article .field__items .field__item.wrapper:first-child .social-media-links--platforms li a .fa {
   color: #9B9B9B;
+  background: transparent;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
