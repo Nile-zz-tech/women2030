@@ -7,10 +7,13 @@
 {% if no_of_results %}
   <p>{{ no_of_results }}</p>
 {% endif %}
+{% if no_results_found %}
+  <h2>{{ no_results_found }}</h2>
+  <div style="height: 35vh;"></div>
+{% endif %}
 
-{{ no_results_found }}
 
-{{ search_help }}
+{#{{ search_help }}#}
 
 {{ results }}
 {{ pager }}
