@@ -6,8 +6,7 @@
     "require": {
         "composer/installers": "^1.0.24",
         "wikimedia/composer-merge-plugin": "^1.4",
-        "embed/embed": "^3.3",
-        "drupal/google_analytics": "^2.2"
+        "embed/embed": "^3.3"
     },
     "replace": {
         "drupal/core": "^8.4"
