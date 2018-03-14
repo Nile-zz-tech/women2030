@@ -4,6 +4,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 
 /*
  * The following content was designed & implemented under AlexSeif.com
+ * https://drupal.stackexchange.com/questions/257650/multilingual-article-should-display-404-when-a-translation-is-not-available
  */
 
 function translation404_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode)
