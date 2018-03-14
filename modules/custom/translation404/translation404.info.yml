@@ -1,0 +1,5 @@
+name: Translation 404
+type: module
+description: 'Return a 404 incase of no translation available to an entity.'
+version: '8.x-3.0'
+core: '8.x'

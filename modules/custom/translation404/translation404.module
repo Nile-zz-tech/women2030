@@ -1,0 +1,20 @@
+<?php
+
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
+/*
+ * The following content was designed & implemented under AlexSeif.com
+ */
+
+function translation404_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode)
+{
+
+  $lang = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $ent_lang = $entity->langcode->value;
+  if ($view_mode == "full" && $lang != $ent_lang) {
+//    $response = new RedirectResponse("/$lang");
+//    $response->send();
+//    return;
+    throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
+  }
+}
