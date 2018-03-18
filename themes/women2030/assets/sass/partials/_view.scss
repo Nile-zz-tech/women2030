@@ -401,7 +401,7 @@
 .teaser {
   .group-header{
     .field--name-body {
-     display: none;
+      display: none;
     }
   }
 }
@@ -436,8 +436,7 @@
 }
 
 .block-views-blockrelated-articles-block-1,
-.view-taxonomy-term,
-.view-women-profiles {
+.view-taxonomy-term {
   .feed-icon{
     display: none;
   }
@@ -791,23 +790,41 @@
 }
 .women-grid {
   .field--name-node-title{
+    margin: 0;
     h2{
       text-align: center;
-      font-size: 26px;
+      font-size: 22px;
       border-bottom: 0px;
       line-height: inherit;
+      margin: 0;
+      padding: 0;
     }
   }
   .field--name-field-subtitle {
-    font-size: 20px !important;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: $grey_font_header;
+    margin-bottom: 24px;
+
     &:after{
       content: " ";
       border-bottom: 1px solid $gold;
       height: 1px;
       width: 64px;
       position: absolute;
-      left: 42%;
-      margin-top: 40px;
+      margin-top: 30px;
+      left: 75%;
+      margin-left: -37.5%;
+    }
+  }
+  .field--type-text-with-summary {
+    text-align: center;
+    height: 116px;
+    overflow: hidden;
+    p{
+      font-size: 16px;
+      line-height: inherit;
     }
   }
 }
