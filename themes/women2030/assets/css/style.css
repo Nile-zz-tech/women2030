@@ -8355,9 +8355,10 @@ blockquote:after {
 /* line 63, /srv/www/women2030/themes/women2030/assets/sass/partials/_woman.scss */
 .page-node-type-woman-profile ul.social-media-links--platforms a .fa {
   color: #9B9B9B;
+  background-color: transparent;
 }
 
-/* line 71, /srv/www/women2030/themes/women2030/assets/sass/partials/_woman.scss */
+/* line 72, /srv/www/women2030/themes/women2030/assets/sass/partials/_woman.scss */
 .path-women-profiles h2 {
   font-size: 50px;
   line-height: 61px;
@@ -8369,12 +8370,12 @@ blockquote:after {
   margin-bottom: 44px;
 }
 
-/* line 82, /srv/www/women2030/themes/women2030/assets/sass/partials/_woman.scss */
+/* line 83, /srv/www/women2030/themes/women2030/assets/sass/partials/_woman.scss */
 .path-women-profiles .view-header:before, .path-women-profiles .view-header:after {
   content: none;
 }
 
-/* line 86, /srv/www/women2030/themes/women2030/assets/sass/partials/_woman.scss */
+/* line 87, /srv/www/women2030/themes/women2030/assets/sass/partials/_woman.scss */
 .path-women-profiles .view-content {
   margin-bottom: 0px;
 }
