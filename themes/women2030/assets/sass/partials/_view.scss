@@ -697,19 +697,10 @@
 
       h2 {
         font-size: 60px;
-
-        a {
-          color: white;
-        }
-
-        &:after {
-          content: " ";
-          border-bottom: 2px solid white;
-          height: 1px;
-          width: 160px;
-          position: absolute;
-          left: 45%;
-        }
+        font-weight: normal;
+        font-family: "GE_SS"; /* ltr */
+        text-align: left; /* ltr */
+        margin-left: 10%; /* ltr */
       }
       &:after, &:before {
         content: none;

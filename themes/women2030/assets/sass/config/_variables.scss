@@ -20,6 +20,11 @@ $link-color: $gold;
 
 $default_color: $grey_font;
 
+@font-face {
+  font-family: GE_SS;
+  src: url("fonts/GE_SS_TEXT_LIGHT.OTF.otf") format("opentype");
+}
+
 /*  */
 %box_shadow {
   box-shadow: 0 0 5px #ccc;
