@@ -211,7 +211,7 @@ class LanguageDropdownForm extends FormBase {
       '#title' => $this->t('Select your language'),
       '#title_display' => 'invisible',
       '#type' => 'select',
-      '#default_value' => $selected_option ?? key($options),
+      '#default_value' => $selected_option ? $selected_option : key($options),
       '#options' => $options,
       '#attributes' => [
         'style' => 'width:' . $this->settings['width'] . 'px',
