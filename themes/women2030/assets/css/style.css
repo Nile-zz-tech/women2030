@@ -3945,6 +3945,11 @@ div ul {
   background-color: #d93175;
 }
 
+/* line 115, /srv/www/women2030/themes/women2030/assets/sass/base/_base.scss */
+.social-media-links--platforms .fa-youtube {
+  background-color: #ed1f24;
+}
+
 /* header */
 /* line 2, /srv/www/women2030/themes/women2030/assets/sass/base/_header.scss */
 #header {
