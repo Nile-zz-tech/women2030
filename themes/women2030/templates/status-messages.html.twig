@@ -24,7 +24,41 @@
   {% if message_list is not empty %}
     {{ attach_library('bartik/messages') }}
     <div class="messages__wrapper layout-container">
-      {{ parent() }}
+      {#      {{ parent() }}#}
+      {% for type, messages in message_list %}
+        {%
+    set classes = [
+      'messages',
+      'messages--' ~ type,
+    ]
+        %}
+        <div role="contentinfo" aria-label="{{ status_headings[type] }}"{{ attributes.addClass(classes)|without('role', 'aria-label') }}>
+          {% if type == 'error' %}
+            <div role="alert">
+            {% endif %}
+            {% if status_headings[type] %}
+              <h2 class="visually-hidden">{{ status_headings[type] }}</h2>
+            {% endif %}
+            {% if messages|length > 1 %}
+              <ul class="messages__list">
+                {% for message in messages %}
+                  <li class="messages__item">Testing {{ message }}</li>
+                  {% endfor %}
+              </ul>
+            {% else %}
+              {% if 'contact' in url('<current>')['#markup'] %}
+                {{ messages|first|raw }}
+              {% else %}
+                {{ messages|first }}
+              {% endif %}
+            {% endif %}
+            {% if type == 'error' %}
+            </div>
+          {% endif %}
+        </div>
+        {# Remove type specific classes. #}
+        {% set attributes = attributes.removeClass(classes) %}
+      {% endfor %}
     </div>
   {% endif %}
 {% endblock messages %}
