@@ -2,21 +2,21 @@
 
 namespace Embed\Adapters;
 
-use Embed\Http\Response;
+use Embed\Request;
 use Embed\Utils;
 
 /**
  * Adapter to generate embed code from pastebin.
  */
-class Pastebin extends Webpage
+class Pastebin extends Webpage implements AdapterInterface
 {
     /**
      * {@inheritdoc}
      */
-    public static function check(Response $response)
+    public static function check(Request $request)
     {
-        return $response->isValid() && $response->getUrl()->match([
-            'pastebin.com/*',
+        return $request->isValid() && $request->match([
+            'http://pastebin.com/*',
         ]);
     }
 
@@ -28,9 +28,8 @@ class Pastebin extends Webpage
         $this->width = null;
         $this->height = null;
 
-        $url = $this->getResponse()->getUrl();
-        $path = '/embed_js' . $url->getPath();
+        $embed_url = 'http://pastebin.com/embed_iframe.php?i='.($this->request->getQueryParameter('i') ?: $this->request->getDirectoryPosition(0));
 
-        return Utils::script($this->getResponse()->getUrl()->getAbsolute($path));
+        return Utils::iframe($embed_url);
     }
 }

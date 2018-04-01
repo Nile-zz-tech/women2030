@@ -2,8 +2,23 @@
 
 namespace Embed\Providers\OEmbed;
 
-class Dotsub extends EndPoint implements EndPointInterface
+use Embed\Url;
+
+class Dotsub extends OEmbedImplementation
 {
-    protected static $pattern = 'dotsub.com/view/*';
-    protected static $endPoint = 'http://dotsub.com/services/oembed';
+    /**
+     * {@inheritdoc}
+     */
+    public static function getEndPoint(Url $url)
+    {
+        return 'http://dotsub.com/services/oembed';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public static function getPatterns()
+    {
+        return ['https?://dotsub.com/view/*'];
+    }
 }

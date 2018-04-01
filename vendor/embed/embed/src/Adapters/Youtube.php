@@ -2,21 +2,36 @@
 
 namespace Embed\Adapters;
 
-use Embed\Http\Response;
+use Embed\Request;
+use Embed\Providers;
 
 /**
  * Adapter to provide information from youtube.
  * Required when youtube returns a 429 status code.
  */
-class Youtube extends Webpage
+class Youtube extends Webpage implements AdapterInterface
 {
     /**
      * {@inheritdoc}
      */
-    public static function check(Response $response)
+    public static function check(Request $request)
     {
-        return $response->isValid([200, 429]) && $response->getUrl()->match([
-            '*.youtube.*',
+        return $request->isValid([200, 429]) && $request->match([
+            'https?://*.youtube.*',
         ]);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function run()
+    {
+        if ($this->request->getHttpCode() === 429) {
+            $this->addProvider('oembed', new Providers\OEmbed());
+
+            return;
+        }
+
+        parent::run();
     }
 }

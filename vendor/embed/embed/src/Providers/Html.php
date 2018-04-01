@@ -2,31 +2,37 @@
 
 namespace Embed\Providers;
 
+use Embed\Bag;
 use Embed\Utils;
-use Embed\Adapters\Adapter;
-use Embed\Http\Url;
-use DOMDocument;
-use Exception;
+use Embed\Url;
 
 /**
- * Provider to get the data from the HTML code
+ * Generic html provider.
+ *
+ * Load the html data of an url and store it
  */
-class Html extends Provider
+class Html extends Provider implements ProviderInterface
 {
+    protected $config = [
+        'maxImages' => -1,
+        'externalImages' => false,
+    ];
+
     /**
      * {@inheritdoc}
      */
-    public function __construct(Adapter $adapter)
+    public function run()
     {
-        parent::__construct($adapter);
-
-        if (!($html = $adapter->getResponse()->getHtmlContent())) {
-            return;
+        if (!($html = $this->request->getHtmlContent())) {
+            return false;
         }
 
-        $this->extractLinks($html);
-        $this->extractMetas($html);
-        $this->extractImages($html);
+        self::extractFromLink($html, $this->bag);
+        self::extractFromMeta($html, $this->bag);
+
+        if ($main = self::getMainElement($html)) {
+            $this->extractImages($main);
+        }
 
         //Title
         $title = $html->getElementsByTagName('title');
@@ -67,20 +73,17 @@ class Html extends Provider
     {
         $keywords = $this->bag->get('keywords').','.$this->bag->get('news_keywords');
 
-        return array_filter(
-            array_map('trim', explode(',', $keywords)),
-            function ($value) {
-                return !empty($value) && substr($value, -3) !== '...';
-            }
-        );
+        return array_filter(array_map('trim', explode(',', $keywords)));
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getFeeds()
+    public function getSource()
     {
-        return $this->normalizeUrls($this->bag->get('feeds'));
+        $feeds = $this->bag->get('feeds');
+
+        return isset($feeds[0]) ? $feeds[0] : null;
     }
 
     /**
@@ -88,12 +91,10 @@ class Html extends Provider
      */
     public function getCode()
     {
-        $src = $this->normalizeUrl($this->bag->get('video_src'));
-
-        if ($src !== null) {
+        if ($this->bag->has('video_src')) {
             switch ($this->bag->get('video_type')) {
                 case 'application/x-shockwave-flash':
-                    return Utils::flash($src, $this->getWidth(), $this->getHeight());
+                    return Utils::flash($this->bag->get('video_src'), $this->getWidth(), $this->getHeight());
             }
         }
     }
@@ -103,7 +104,7 @@ class Html extends Provider
      */
     public function getUrl()
     {
-        return $this->normalizeUrl($this->bag->get('canonical'));
+        return $this->bag->get('canonical');
     }
 
     /**
@@ -111,7 +112,7 @@ class Html extends Provider
      */
     public function getAuthorName()
     {
-        return $this->bag->get('author') ?: $this->bag->get('article:author') ?: $this->bag->get('contributors');
+        return $this->bag->get('author') ?: $this->bag->get('contributors');
     }
 
     /**
@@ -119,7 +120,7 @@ class Html extends Provider
      */
     public function getProviderIconsUrls()
     {
-        return $this->normalizeUrls($this->bag->get('icons'));
+        return (array) $this->bag->get('icons') ?: [];
     }
 
     /**
@@ -127,14 +128,10 @@ class Html extends Provider
      */
     public function getImagesUrls()
     {
-        $images = $this->normalizeUrls($this->bag->get('images'));
+        $images = (array) $this->bag->get('images');
 
-        if (!empty($images)) {
-            $maxImages = $this->adapter->getConfig('html[max_images]', -1);
-
-            if ($maxImages > -1) {
-                return array_slice($images, 0, $maxImages);
-            }
+        if ($this->config['maxImages'] > -1) {
+            return array_slice($images, 0, $this->config['maxImages']);
         }
 
         return $images;
@@ -145,7 +142,7 @@ class Html extends Provider
      */
     public function getWidth()
     {
-        return ((int) $this->bag->get('video_width')) ?: null;
+        return (int) $this->bag->get('video_width') ?: null;
     }
 
     /**
@@ -153,7 +150,7 @@ class Html extends Provider
      */
     public function getHeight()
     {
-        return ((int) $this->bag->get('video_height')) ?: null;
+        return (int) $this->bag->get('video_height') ?: null;
     }
 
     /**
@@ -201,7 +198,7 @@ class Html extends Provider
     {
         $data = [];
 
-        if (!($html = $this->adapter->getResponse()->getHtmlContent())) {
+        if (!($html = $this->request->getHtmlContent())) {
             return $data;
         }
 
@@ -215,7 +212,7 @@ class Html extends Provider
 
                 try {
                     $data[] = json_decode($value);
-                } catch (Exception $exception) {
+                } catch (\Exception $exception) {
                     continue;
                 }
             }
@@ -227,49 +224,43 @@ class Html extends Provider
     /**
      * Extract information from the <link> elements.
      *
-     * @param DOMDocument $html
+     * @param \DOMDocument $html
+     * @param Bag          $bag
      */
-    private function extractLinks(DOMDocument $html)
+    protected static function extractFromLink(\DOMDocument $html, Bag $bag)
     {
-        foreach ($html->getElementsByTagName('link') as $link) {
-            if ($link->hasAttribute('rel') && $link->hasAttribute('href')) {
-                $rel = trim(strtolower($link->getAttribute('rel')));
-                $href = $link->getAttribute('href');
+        foreach (Utils::getLinks($html) as $link) {
+            list($rel, $href, $element) = $link;
 
-                if (empty($href)) {
-                    continue;
-                }
+            if (empty($href)) {
+                continue;
+            }
 
-                switch ($rel) {
-                    case 'favicon':
-                    case 'favico':
-                    case 'icon':
-                    case 'shortcut icon':
-                    case 'apple-touch-icon-precomposed':
-                    case 'apple-touch-icon':
-                        $this->bag->add('icons', $href);
-                        break;
+            switch ($rel) {
+                case 'favicon':
+                case 'favico':
+                case 'icon':
+                case 'shortcut icon':
+                case 'apple-touch-icon-precomposed':
+                case 'apple-touch-icon':
+                    $bag->add('icons', $href);
+                    break;
 
-                    case 'image_src':
-                        $this->bag->add('images', $href);
-                        break;
+                case 'image_src':
+                    $bag->add('images', $href);
+                    break;
 
-                    case 'alternate':
-                        switch ($link->getAttribute('type')) {
-                            case 'application/atom+xml':
-                            case 'application/json':
-                            case 'application/rdf+xml':
-                            case 'application/rss+xml':
-                            case 'application/xml':
-                            case 'text/xml':
-                                $this->bag->add('feeds', $href);
-                                break;
-                        }
-                        break;
+                case 'alternate':
+                    switch ($element->getAttribute('type')) {
+                        case 'application/rss+xml':
+                        case 'application/atom+xml':
+                            $bag->add('feeds', $href);
+                            break;
+                    }
+                    break;
 
-                    default:
-                        $this->bag->set($rel, $href);
-                }
+                default:
+                    $bag->set($rel, $href);
             }
         }
     }
@@ -277,41 +268,38 @@ class Html extends Provider
     /**
      * Extract information from the <meta> elements.
      *
-     * @param DOMDocument $html
+     * @param \DOMDocument $html
+     * @param Bag          $bag
      */
-    private function extractMetas(DOMDocument $html)
+    protected static function extractFromMeta(\DOMDocument $html, Bag $bag)
     {
-        foreach ($html->getElementsByTagName('meta') as $meta) {
-            $value = $meta->getAttribute('content');
+        foreach (Utils::getMetas($html) as $meta) {
+            list($name, $value, $element) = $meta;
 
-            if (empty($value)) {
+            if (!$value) {
                 continue;
             }
 
-            if ($meta->hasAttribute('name')) {
-                $name = trim(strtolower($meta->getAttribute('name')));
+            if ($name) {
+                $name = strtolower($name);
 
                 switch ($name) {
                     case 'msapplication-tileimage':
-                        $this->bag->add('icons', $value);
+                        $bag->add('icons', $value);
                         continue 2;
 
                     default:
-                        $this->bag->set($name, $value);
+                        $bag->set($name, $value);
                         continue 2;
                 }
             }
 
-            if ($meta->hasAttribute('itemprop')) {
-                $this->bag->set($meta->getAttribute('itemprop'), $value);
+            if ($element->hasAttribute('itemprop')) {
+                $bag->set($element->getAttribute('itemprop'), $value);
             }
 
-            if ($meta->hasAttribute('http-equiv')) {
-                $this->bag->set($meta->getAttribute('http-equiv'), $value);
-            }
-
-            if ($meta->hasAttribute('property')) {
-                $this->bag->set($meta->getAttribute('property'), $value);
+            if ($element->hasAttribute('http-equiv')) {
+                $bag->set($element->getAttribute('http-equiv'), $value);
             }
         }
     }
@@ -319,100 +307,74 @@ class Html extends Provider
     /**
      * Extract <img> elements.
      *
-     * @param DOMDocument $html
+     * @param \DOMElement $html
      */
-    private function extractImages(DOMDocument $html)
+    protected function extractImages(\DOMElement $html)
     {
-        if ($this->adapter->getConfig('html[max_images]') === 0) {
-            return;
-        }
+        foreach ($html->getElementsByTagName('img') as $img) {
+            if ($img->hasAttribute('src')) {
+                $src = $this->request->createUrl($img->getAttribute('src'));
 
-        //Extract only from the main element
-        $main = self::getMainElement($html);
-
-        if (!$main) {
-            return;
-        }
-
-        $url = $this->adapter->getResponse()->getUrl();
-        $externalImages = $this->adapter->getConfig('html[external_images]');
-
-        foreach ($main->getElementsByTagName('img') as $img) {
-            if (!$img->hasAttribute('src')) {
-                continue;
-            }
-
-            try {
-                $src = $url->createAbsolute($img->getAttribute('src'));
-            } catch (Exception $exception) {
-                continue;
-            }
-
-            //Avoid external images
-            if (!self::imageIsValid($src, $url, $externalImages)) {
-                continue;
-            }
-
-            $parent = $img->parentNode;
-
-            //The image is in a link
-            while ($parent && isset($parent->tagName)) {
-                if ($parent->tagName === 'a') {
-                    //The link is external
-                    if ($parent->hasAttribute('href')) {
-                        try {
-                            $href = $url->createAbsolute($parent->getAttribute('href'));
-                        } catch (Exception $exception) {
-                            continue 2;
-                        }
-
-                        if (!self::imageIsValid($href, $url, $externalImages)) {
-                            continue 2;
-                        }
-                    }
-
-                    //The link has rel=nofollow
-                    if ($parent->hasAttribute('rel') && (string) $parent->getAttribute('rel') === 'nofollow') {
-                        continue 2;
-                    }
-
-                    break;
+                //Avoid external images
+                if (!$this->imageIsValid($src)) {
+                    continue;
                 }
 
-                $parent = $parent->parentNode;
-            }
+                $parent = $img->parentNode;
 
-            $this->bag->add('images', (string) $src);
+                //The image is in a link
+                while ($parent && isset($parent->tagName)) {
+                    if ($parent->tagName === 'a') {
+                        //The link is external
+                        if ($parent->hasAttribute('href')) {
+                            $href = $this->request->createUrl($parent->getAttribute('href'));
+
+                            if (!$this->imageIsValid($href)) {
+                                continue 2;
+                            }
+                        }
+
+                        //The link has rel=nofollow
+                        if ($parent->hasAttribute('rel') && (string) $parent->getAttribute('rel') === 'nofollow') {
+                            continue 2;
+                        }
+
+                        break;
+                    }
+
+                    $parent = $parent->parentNode;
+                }
+
+                $this->bag->add('images', $src->getUrl());
+            }
         }
     }
 
     /**
      * Check whether a image url is valid or not.
      *
-     * @param Url   $url
-     * @param Url   $baseUrl
-     * @param mixed $externalImages
+     * @param Url $url
      *
-     * @return bool
+     * return bool
      */
-    private static function imageIsValid(Url $url, Url $baseUrl, $externalImages)
+    protected function imageIsValid(Url $url)
     {
         //base64 or same domain
-        if ($url->getContent() !== null || $url->getDomain() === $baseUrl->getDomain()) {
+        if ($url->getContent() !== null || $url->getDomain() === $this->request->getDomain()) {
             return true;
         }
 
-        return is_bool($externalImages) ? $externalImages : $url->match($externalImages);
+        return is_bool($this->config['externalImages']) ? $this->config['externalImages'] : $url->match($this->config['externalImages']);
     }
 
     /**
      * Returns the main element of the document.
      *
-     * @param DOMDocument $html
+     * @param \DOMDocument $html
      *
-     * @return DOMElement
+     * @return \DOMElement
      */
-    private static function getMainElement(DOMDocument $html)
+    protected static function getMainElement(\DOMDocument $html)
     {
         // <main>
         $content = $html->getElementsByTagName('main');

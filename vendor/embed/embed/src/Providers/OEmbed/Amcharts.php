@@ -2,8 +2,31 @@
 
 namespace Embed\Providers\OEmbed;
 
-class Amcharts extends EndPoint implements EndPointInterface
+use Embed\Url;
+
+class Amcharts extends OEmbedImplementation
 {
-    protected static $pattern = 'live.amcharts.com/*';
-    protected static $endPoint = 'https://live.amcharts.com/oembed';
+    /**
+     * {@inheritdoc}
+     */
+    public static function getEndPoint(Url $url)
+    {
+        return 'https://live.amcharts.com/oembed';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public static function getPatterns()
+    {
+        return ['https?://live.amcharts.com/*'];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public static function embedInDomIsBroken()
+    {
+        return true;
+    }
 }

@@ -2,26 +2,37 @@
 
 namespace Embed\Providers\OEmbed;
 
-use Embed\Http\Url;
+use Embed\Url;
 
-class Facebook extends EndPoint implements EndPointInterface
+class Facebook extends OEmbedImplementation
 {
-    protected static $pattern = 'www.facebook.com/*';
+    /**
+     * {@inheritdoc}
+     */
+    public static function getEndPoint(Url $url)
+    {
+        if ($url->match(['*/videos/*', '/video.php'])) {
+            return 'https://www.facebook.com/plugins/video/oembed.json';
+        }
+
+        return 'https://www.facebook.com/plugins/post/oembed.json';
+    }
 
     /**
      * {@inheritdoc}
      */
-    public function getEndPoint()
+    public static function getPatterns()
     {
-        if ($this->response->getUrl()->match(['*/videos/*', '/video.php'])) {
-            $endPoint = Url::create('https://www.facebook.com/plugins/video/oembed.json');
-        } else {
-            $endPoint = Url::create('https://www.facebook.com/plugins/post/oembed.json');
-        }
+        return [
+            'https://www.facebook.com/*',
+        ];
+    }
 
-        return $endPoint->withQueryParameters([
-            'url' => (string) $this->response->getUrl(),
-            'format' => 'json',
-        ]);
+    /**
+     * {@inheritdoc}
+     */
+    public static function embedInDomIsBroken()
+    {
+        return true;
     }
 }

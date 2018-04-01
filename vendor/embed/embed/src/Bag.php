@@ -7,48 +7,32 @@ namespace Embed;
  */
 class Bag
 {
-    private $parameters = [];
-
-    /**
-     * Set the initial parameters.
-     *
-     * @param array $parameters
-     */
-    public function __construct(array $parameters = [])
-    {
-        $this->set($parameters);
-    }
+    protected $parameters = [];
 
     /**
      * Save a value.
      *
-     * @param string|array $name
-     * @param mixed        $value
+     * @param string|array $name  Name of the value
+     * @param mixed        $value The value to save
      */
     public function set($name, $value = null)
     {
-        if (!is_array($name)) {
-            $name = [$name => $value];
-        }
-
-        foreach ($name as $name => $value) {
-            $name = self::normalizeName($name);
-            $value = self::normalizeValue($value);
-
-            $this->parameters[$name] = $value;
+        if (is_array($name)) {
+            $this->parameters = array_replace($this->parameters, $name);
+        } else {
+            $this->parameters[trim(strtolower($name))] = is_string($value) ? trim($value) : $value;
         }
     }
 
     /**
      * Adds a subvalue.
      *
-     * @param string $name
-     * @param mixed  $value
+     * @param string $name  Name of the value
+     * @param mixed  $value The value to add
      */
     public function add($name, $value = null)
     {
-        $name = self::normalizeName($name);
-        $value = self::normalizeValue($value);
+        $name = trim($name);
 
         if (!isset($this->parameters[$name])) {
             $this->parameters[$name] = [];
@@ -62,15 +46,12 @@ class Bag
     /**
      * Get a value.
      *
-     * @param string $name
-     * @param bool   $isHtml
+     * @param string $name Value name
      *
      * @return string|null
      */
-    public function get($name, $isHtml = false)
+    public function get($name)
     {
-        $name = self::normalizeName($name);
-
         if (strpos($name, '[') !== false) {
             $names = explode('[', str_replace(']', '', $name));
             $key = array_shift($names);
@@ -84,26 +65,14 @@ class Bag
                 $item = $item[$key];
             }
 
-            return $isHtml ? $item : self::toPlainValue($item);
+            return $item;
         }
 
-        if (isset($this->parameters[$name])) {
-            return $isHtml ? $this->parameters[$name] : self::toPlainValue($this->parameters[$name]);
-        }
+        return isset($this->parameters[$name]) ? $this->parameters[$name] : null;
     }
 
     /**
-     * Return all stored values keys.
-     *
-     * @return array
-     */
-    public function getKeys()
-    {
-        return array_keys($this->parameters);
-    }
-
-    /**
-     * Return the raw stored values.
+     * Return all stored values.
      *
      * @return array
      */
@@ -113,16 +82,14 @@ class Bag
     }
 
     /**
-     * Check if a value exists and is not empty.
+     * Check if a value exists.
      *
-     * @param string $name
+     * @param string $name Value name
      *
-     * @return bool
+     * @return bool True if exists, false if not
      */
     public function has($name)
     {
-        $name = self::normalizeName($name);
-
         if (strpos($name, '[') !== false) {
             $names = explode('[', str_replace(']', '', $name));
             $key = array_shift($names);
@@ -136,61 +103,9 @@ class Bag
                 $item = $item[$key];
             }
 
-            return !empty($item);
+            return isset($item);
         }
 
-        return !empty($this->parameters[$name]);
-    }
-
-    /**
-     * Normalize a variable name.
-     *
-     * @param string $name
-     *
-     * @return string
-     */
-    private static function normalizeName($name)
-    {
-        return strtolower(trim($name));
-    }
-
-    /**
-     * Normalize a value.
-     * If it's a string, removes spaces and normalize some utf-8 chars.
-     *
-     * @param mixed $value
-     *
-     * @return mixed
-     */
-    private static function normalizeValue($value)
-    {
-        if (is_string($value)) {
-            $value = str_ireplace(['&nbsp;', '&#160;'], ' ', $value);
-            $value = trim($value);
-
-            return ($value === '') ? null : $value;
-        }
-
-        return $value;
-    }
-
-    /**
-     * Remove the html code and entities in a value
-     *
-     * @param mixed $value
-     *
-     * @return mixed
-     */
-    private static function toPlainValue($value)
-    {
-        if (is_string($value)) {
-            $value = strip_tags($value);
-            $value = html_entity_decode($value, ENT_QUOTES | ENT_XML1, 'UTF-8');
-            $value = trim($value);
-
-            return ($value === '') ? null : $value;
-        }
-
-        return $value;
+        return isset($this->parameters[$name]);
     }
 }

@@ -551,7 +551,7 @@ class LanguageDropdownBlock extends BlockBase implements ContainerFactoryPluginI
       // Retrieve role names for columns.
       $role_names[$rid] = new FormattableMarkup($role->label(), []);
       // Fetch languages for the roles.
-      $role_languages[$rid] = $this->configuration['hidden_languages'][$rid] ?? [];
+      $role_languages[$rid] = !empty($this->configuration['hidden_languages'][$rid]) ? $this->configuration['hidden_languages'][$rid] : [];
     }
 
     // Store $role_names for use when saving the data.

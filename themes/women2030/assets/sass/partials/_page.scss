@@ -854,9 +854,6 @@
   }
 }
 
-.page {
-  overflow-x: hidden;
-}
 
 .page #main .content .node h2 {
   /*font-size: 2em;*/
@@ -1082,6 +1079,34 @@
       border: 1px solid #4c4c4c;
       font-size: 18px;
       color: #4c4c4c;
+    }
+  }
+}
+
+.path-contact {
+  .messages.messages--status{
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    border: 0;
+  }
+  .thanks{
+    padding: 60px;
+    border: 1px solid $grey_font_header;
+    border-radius: 8px;
+    color:$grey_font_article;
+    background: #fff;
+    box-shadow: none;
+    text-align: center;
+    font-size: 30px;
+    img{
+      margin: 34px auto 0;
+      display: block;
+    }
+    h3{
+      font-size: 50px;
+      color:$grey_font_article;
     }
   }
 }

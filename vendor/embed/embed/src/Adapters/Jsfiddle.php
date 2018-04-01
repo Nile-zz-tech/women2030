@@ -7,7 +7,7 @@ use Embed\Utils;
 /**
  * Adapter to fix some issues from jsfiddle.
  */
-class Jsfiddle extends Webpage
+class Jsfiddle extends Webpage implements AdapterInterface
 {
     /**
      * {@inheritdoc}

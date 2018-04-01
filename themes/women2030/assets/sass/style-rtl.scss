@@ -2237,7 +2237,18 @@
   .teaser .view-content .group-mobile .field--name-field-image {
     float: left;   /* ltr */
   }
-
+  .view-taxonomy-term {
+    .view-header {
+      .category-header {
+        h2 {
+          font-family: 'Noto Naskh Arabic', serif; 
+          text-align: right; /* ltr */
+          margin-left: auto; /* ltr */
+          margin-right: 10%; /* ltr */
+        }
+      }
+    }
+  }
   .article-teaser .view-content .field--name-node-post-date, 
   .teaser .view-content .field--name-node-post-date, 
   .block-views-blockrelated-articles-block-1 .view-content .field--name-node-post-date,
