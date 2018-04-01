@@ -2,26 +2,24 @@
 
 namespace Embed\Providers\Api;
 
-use Embed\Adapters\Adapter;
 use Embed\Providers\Provider;
+use Embed\Providers\ProviderInterface;
 
 /**
  * Provider to use the API of wikipedia.
  */
-class Wikipedia extends Provider
+class Wikipedia extends Provider implements ProviderInterface
 {
     /**
      * {@inheritdoc}
      */
-    public function __construct(Adapter $adapter)
+    public function run()
     {
-        parent::__construct($adapter);
-
-        $titles = $adapter->getResponse()->getUrl()->getDirectoryPosition(1);
+        $titles = $this->request->getDirectoryPosition(1);
 
         if (!empty($titles)) {
             //extract images
-            $endPoint = $adapter->getResponse()->getUrl()
+            $api = $this->request
                 ->withPath('/w/api.php')
                 ->withQueryParameters([
                     'action' => 'query',
@@ -31,20 +29,16 @@ class Wikipedia extends Provider
                     'prop' => 'images',
                 ]);
 
-            $response = $adapter->getDispatcher()->dispatch($endPoint);
-
-            if (($json = $response->getJsonContent())) {
+            if (($json = $api->getJsonContent())) {
                 $this->bag->set('images', $json);
             }
 
             //extract content
-            $endPoint = $endPoint
+            $api = $api
                 ->withQueryParameter('prop', 'extracts')
                 ->withQueryParameter('exchars', 1500);
 
-            $response = $adapter->getDispatcher()->dispatch($endPoint);
-
-            if (($json = $response->getJsonContent())) {
+            if (($json = $api->getJsonContent())) {
                 $this->bag->set('extracts', $json);
             }
         }
@@ -57,7 +51,7 @@ class Wikipedia extends Provider
     {
         $pages = $this->bag->get('extracts[query][pages]');
 
-        if (!empty($pages)) {
+        if ($pages) {
             $page = current($pages);
 
             return strip_tags($page['title']);
@@ -71,8 +65,10 @@ class Wikipedia extends Provider
     {
         $pages = $this->bag->get('extracts[query][pages]');
 
-        if (!empty($pages)) {
-            return $this->bag->get('extracts[query][pages]['.key($pages).'][extract]');
+        if ($pages) {
+            $page = current($pages);
+
+            return isset($page['extract']) ? strip_tags($page['extract']) : null;
         }
     }
 
@@ -85,7 +81,7 @@ class Wikipedia extends Provider
 
         $pages = $this->bag->get('images[query][pages]');
 
-        if (!empty($pages)) {
+        if ($pages) {
             $page = current($pages);
 
             $imgs = [];
@@ -104,8 +100,8 @@ class Wikipedia extends Provider
             }
 
             //Get image urls
-            if (!empty($imgs)) {
-                $endPoint = $this->adapter->getResponse()->getUrl()
+            if ($imgs) {
+                $json = $this->request
                     ->withPath('/w/api.php')
                     ->withQueryParameters([
                         'action' => 'query',
@@ -114,10 +110,8 @@ class Wikipedia extends Provider
                         'format' => 'json',
                         'continue' => '',
                         'titles' => implode('|', $imgs),
-                    ]);
-
-                $response = $this->adapter->getDispatcher()->dispatch($endPoint);
-                $json = $response->getJsonContent();
+                    ])
+                    ->getJsonContent();
 
                 if (isset($json['query']['pages'])) {
                     foreach ($json['query']['pages'] as $page) {
@@ -129,6 +123,6 @@ class Wikipedia extends Provider
             }
         }
 
-        return $this->normalizeUrls($images);
+        return $images;
     }
 }

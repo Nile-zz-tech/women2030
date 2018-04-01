@@ -2,33 +2,33 @@
 
 namespace Embed\Adapters;
 
-use Embed\Http\Response;
+use Embed\Request;
 use Embed\Utils;
 use Embed\Providers\Api;
 
 /**
  * Adapter to provide information from archive.org API.
  */
-class Archive extends Webpage
+class Archive extends Webpage implements AdapterInterface
 {
     /**
      * {@inheritdoc}
      */
-    public static function check(Response $response)
+    public static function check(Request $request)
     {
-        return $response->isValid() && $response->getUrl()->match([
-            'archive.org/details/*',
+        return $request->isValid() && $request->match([
+            'https?://archive.org/details/*',
         ]);
     }
 
     /**
      * {@inheritdoc}
      */
-    protected function init()
+    protected function run()
     {
-        parent::init();
+        $this->addProvider('archive', new Api\Archive());
 
-        $this->providers = ['archive' => new Api\Archive($this)] + $this->providers;
+        parent::run();
     }
 
     /**
@@ -36,7 +36,7 @@ class Archive extends Webpage
      */
     public function getCode()
     {
-        return Utils::iframe(str_replace('/details/', '/embed/', $this->url), $this->width, $this->height);
+        return Utils::iframe(str_replace('/details/', '/embed/', $this->getUrl()), $this->getWidth(), $this->getHeight());
     }
 
     /**

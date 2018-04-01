@@ -2,8 +2,23 @@
 
 namespace Embed\Providers\OEmbed;
 
-class Shoudio extends EndPoint implements EndPointInterface
+use Embed\Url;
+
+class Shoudio extends OEmbedImplementation
 {
-    protected static $pattern = 'shoudio.com/*';
-    protected static $endPoint = 'http://shoudio.com/api/oembed';
+    /**
+     * {@inheritdoc}
+     */
+    public static function getEndPoint(Url $url)
+    {
+        return 'http://shoudio.com/api/oembed';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public static function getPatterns()
+    {
+        return ['https?://shoudio.com/*'];
+    }
 }

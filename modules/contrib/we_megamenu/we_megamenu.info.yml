@@ -9,8 +9,8 @@ package: 'WeMegaMenu'
 # core: '8.x'
 # datestamp: 1488240000
 
-# Information added by Drupal.org packaging script on 2017-12-04
-version: '8.x-1.0-rc2'
+# Information added by Drupal.org packaging script on 2018-03-30
+version: '8.x-1.0'
 core: '8.x'
 project: 'we_megamenu'
-datestamp: 1512375793
+datestamp: 1522379888

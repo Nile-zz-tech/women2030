@@ -2,14 +2,14 @@
 
 namespace Embed\Adapters;
 
-use Embed\Http\Response;
+use Embed\Request;
 use Embed\Utils;
 use Embed\Providers;
 
 /**
  * Adapter to provide information from raw files.
  */
-class File extends Adapter
+class File extends Adapter implements AdapterInterface
 {
     private static $contentTypes = [
         'video/ogg' => ['video', 'videoHtml'],
@@ -22,7 +22,6 @@ class File extends Adapter
         'audio/mpeg' => ['audio', 'audioHtml'],
         'audio/webm' => ['audio', 'audioHtml'],
         'image/jpeg' => ['photo', 'imageHtml'],
-        'image/jpg' => ['photo', 'imageHtml'],
         'image/gif' => ['photo', 'imageHtml'],
         'image/png' => ['photo', 'imageHtml'],
         'image/bmp' => ['photo', 'imageHtml'],
@@ -40,19 +39,17 @@ class File extends Adapter
     /**
      * {@inheritdoc}
      */
-    public static function check(Response $response)
+    public static function check(Request $request)
     {
-        return $response->isValid() && isset(self::$contentTypes[$response->getContentType()]);
+        return $request->isValid() && isset(self::$contentTypes[$request->getMimeType()]);
     }
 
     /**
      * {@inheritdoc}
      */
-    protected function init()
+    protected function run()
     {
-        $this->providers = [
-            'oembed' => new Providers\OEmbed($this),
-        ];
+        $this->addProvider('oembed', new Providers\OEmbed());
     }
 
     /**
@@ -60,7 +57,7 @@ class File extends Adapter
      */
     public function getType()
     {
-        return self::$contentTypes[$this->getResponse()->getContentType()][0];
+        return self::$contentTypes[$this->request->getMimeType()][0];
     }
 
     /**
@@ -72,7 +69,7 @@ class File extends Adapter
             return $code;
         }
 
-        switch (self::$contentTypes[$this->getResponse()->getContentType()][1]) {
+        switch (self::$contentTypes[$this->request->getMimeType()][1]) {
             case 'videoHtml':
                 return Utils::videoHtml($this->image, $this->url, $this->imageWidth, $this->imageHeight);
 
@@ -90,7 +87,12 @@ class File extends Adapter
     public function getImagesUrls()
     {
         if ($this->type === 'photo') {
-            return [$this->url];
+            return [
+                [
+                    'value' => $this->url,
+                    'providers' => ['adapter'],
+                ],
+            ];
         }
 
         return [];

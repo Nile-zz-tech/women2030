@@ -2,27 +2,23 @@
 
 namespace Embed\Providers\Api;
 
-use Embed\Http\Url;
-use Embed\Adapters\Adapter;
 use Embed\Providers\Provider;
+use Embed\Providers\ProviderInterface;
 
 /**
  * Provider to use the API of imageshack.com.
  */
-class Imageshack extends Provider
+class Imageshack extends Provider implements ProviderInterface
 {
     /**
      * {@inheritdoc}
      */
-    public function __construct(Adapter $adapter)
+    public function run()
     {
-        parent::__construct($adapter);
+        $id = $this->request->getDirectoryPosition(1);
+        $api = $this->request->withUrl('https://api.imageshack.com/v2/images/'.$id);
 
-        $id = $adapter->getResponse()->getUrl()->getDirectoryPosition(1);
-        $endPoint = Url::create('https://api.imageshack.com/v2/images/'.$id);
-        $response = $adapter->getDispatcher()->dispatch($endPoint);
-
-        if (($json = $response->getJsonContent()) && !empty($json['result'])) {
+        if (($json = $api->getJsonContent()) && !empty($json['result'])) {
             $this->bag->set($json['result']);
         }
     }
@@ -100,6 +96,6 @@ class Imageshack extends Provider
      */
     public function getImagesUrls()
     {
-        return $this->normalizeUrls($this->bag->get('direct_link'));
+        return (array) $this->bag->get('direct_link');
     }
 }

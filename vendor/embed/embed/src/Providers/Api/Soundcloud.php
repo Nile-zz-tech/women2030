@@ -2,34 +2,30 @@
 
 namespace Embed\Providers\Api;
 
-use Embed\Http\Url;
-use Embed\Adapters\Adapter;
 use Embed\Providers\Provider;
+use Embed\Providers\ProviderInterface;
 
 /**
  * Provider to use the API of soundcloud.
  */
-class Soundcloud extends Provider
+class Soundcloud extends Provider implements ProviderInterface
 {
+    protected $config = [
+        'key' => null,
+    ];
+
     /**
      * {@inheritdoc}
      */
-    public function __construct(Adapter $adapter)
+    public function run()
     {
-        parent::__construct($adapter);
+        if (!empty($this->config['key'])) {
+            $api = $this->request
+                ->withUrl('http://api.soundcloud.com/resolve.json')
+                ->withQueryParameter('client_id', $this->config['key'])
+                ->withQueryParameter('url', $this->request->getUrl());
 
-        $key = $adapter->getConfig('soundcloud[key]');
-
-        if (!empty($key)) {
-            $endPoint = Url::create('http://api.soundcloud.com/resolve.json')
-                ->withQueryParameters([
-                    'client_id' => $key,
-                    'url' => (string) $adapter->getResponse()->getUrl(),
-                ]);
-
-            $response = $adapter->getDispatcher()->dispatch($endPoint);
-
-            if ($json = $response->getJsonContent()) {
+            if ($json = $api->getJsonContent()) {
                 $this->bag->set($json);
             }
         }
@@ -56,7 +52,7 @@ class Soundcloud extends Provider
      */
     public function getUrl()
     {
-        return $this->normalizeUrl($this->bag->get('permalink_url'));
+        return $this->bag->get('permalink_url');
     }
 
     /**
@@ -66,11 +62,11 @@ class Soundcloud extends Provider
     {
         $images = [];
 
-        if (empty($this->bag->get('artwork_url')) && ($img = $this->bag->get('user[avatar_url]'))) {
+        if (!$this->bag->get('artwork_url') && ($img = $this->bag->get('user[avatar_url]'))) {
             $images[] = str_replace('-large.jpg', '-t500x500.jpg', $img);
         }
 
-        return $this->normalizeUrls($images);
+        return $images;
     }
 
     /**
@@ -86,6 +82,6 @@ class Soundcloud extends Provider
      */
     public function getAuthorUrl()
     {
-        return $this->normalizeUrl($this->bag->get('user[permalink_url]'));
+        return $this->bag->get('user[permalink_url]');
     }
 }

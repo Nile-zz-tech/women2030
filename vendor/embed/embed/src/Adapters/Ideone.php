@@ -2,21 +2,21 @@
 
 namespace Embed\Adapters;
 
-use Embed\Http\Response;
+use Embed\Request;
 use Embed\Utils;
 
 /**
  * Adapter to generate embed code from ideone.com.
  */
-class Ideone extends Webpage
+class Ideone extends Webpage implements AdapterInterface
 {
     /**
      * {@inheritdoc}
      */
-    public static function check(Response $response)
+    public static function check(Request $request)
     {
-        return $response->isValid() && $response->getUrl()->match([
-            'ideone.com/*',
+        return $request->isValid() && $request->match([
+            'https?://ideone.com/*',
         ]);
     }
 
@@ -28,9 +28,8 @@ class Ideone extends Webpage
         $this->width = null;
         $this->height = null;
 
-        $url = $this->getResponse()->getUrl();
-        $path = '/e.js'.$url->getPath();
+        $path = '/e.js'.$this->request->getPath();
 
-        return Utils::script($url->getAbsolute($path));
+        return Utils::script($this->request->createUrl($path)->getUrl());
     }
 }

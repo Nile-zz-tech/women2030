@@ -2,26 +2,33 @@
 
 namespace Embed\Providers\OEmbed;
 
-use Embed\Http\Url;
+use Embed\Url;
 
-class Deviantart extends EndPoint implements EndPointInterface
+class Deviantart extends OEmbedImplementation
 {
-    protected static $pattern = [
-        '*.deviantart.com/art/*',
-        'www.deviantart.com/#/d*',
-    ];
-    protected static $endPoint = 'http://backend.deviantart.com/oembed';
+    /**
+     * {@inheritdoc}
+     */
+    public static function getEndPoint(Url $url)
+    {
+        return 'http://backend.deviantart.com/oembed';
+    }
 
     /**
      * {@inheritdoc}
      */
-    public function getEndPoint()
+    public static function getPatterns()
     {
-        return Url::create(static::$endPoint)
-                ->withQueryParameters([
-                    'url' => (string) $this->response->getUrl(),
-                    'format' => 'json',
-                    'for' => 'embed',
-                ]);
+        return ['http://*.deviantart.com/art/*', 'http://www.deviantart.com/#/d*'];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public static function getParams(Url $url)
+    {
+        return [
+            'for' => 'embed',
+        ];
     }
 }

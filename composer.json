@@ -6,9 +6,28 @@
     "require": {
         "composer/installers": "^1.0.24",
         "wikimedia/composer-merge-plugin": "^1.4",
-        "embed/embed": "^3.3",
-        "drupal/backup_migrate": "^4.0@RC",
-        "drupal/devel": "^1.2"
+        "embed/embed": "^2.2",
+        "drupal/backup_migrate": "^4.0",
+        "drupal/devel": "^1.2",
+        "drupal/metatag": "^1.5",
+        "drupal/simple_sitemap": "^2.11",
+        "drupal/ctools": "^3.0",
+        "drupal/ds": "^3.1",
+        "drupal/embed": "^1.0",
+        "drupal/google_analytics": "^2.2",
+        "drupal/lang_dropdown": "^2.0@beta",
+        "drupal/mailchimp": "^1.6",
+        "drupal/pathauto": "^1.1",
+        "drupal/scheduler": "^1.0",
+        "drupal/search_api": "^1.7",
+        "drupal/search_api_page": "^1.0@alpha",
+        "drupal/share_everywhere": "^1.1",
+        "drupal/social_media_links": "^2.6",
+        "drupal/we_megamenu": "^1.0",
+        "drupal/entity": "^1.0",
+        "drupal/media_entity": "^1.7",
+        "drupal/video_embed_field": "^1.5",
+        "drupal/url_embed": "^1.0"
     },
     "replace": {
         "drupal/core": "^8.5"

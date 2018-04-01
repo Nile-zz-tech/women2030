@@ -75,6 +75,7 @@ class ComposerStaticInitDrupal8
         'M' => 
         array (
             'Masterminds\\' => 12,
+            'Mailchimp\\' => 10,
         ),
         'G' => 
         array (
@@ -125,7 +126,6 @@ class ComposerStaticInitDrupal8
         array (
             'Composer\\Semver\\' => 16,
             'Composer\\Installers\\' => 20,
-            'Composer\\CaBundle\\' => 18,
         ),
         'B' => 
         array (
@@ -285,6 +285,10 @@ class ComposerStaticInitDrupal8
         array (
             0 => __DIR__ . '/..' . '/masterminds/html5/src',
         ),
+        'Mailchimp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/thinkshout/mailchimp-api-php/src',
+        ),
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
@@ -437,10 +441,6 @@ class ComposerStaticInitDrupal8
         array (
             0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
         ),
-        'Composer\\CaBundle\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/ca-bundle/src',
-        ),
         'Behat\\Mink\\Driver\\' => 
         array (
             0 => __DIR__ . '/..' . '/behat/mink-browserkit-driver/src',
@@ -491,6 +491,13 @@ class ComposerStaticInitDrupal8
             'Prophecy\\' => 
             array (
                 0 => __DIR__ . '/..' . '/phpspec/prophecy/src',
+            ),
+        ),
+        'M' => 
+        array (
+            'Mailchimp' => 
+            array (
+                0 => __DIR__ . '/../..' . '/modules/contrib/mailchimp/src',
             ),
         ),
         'E' => 
