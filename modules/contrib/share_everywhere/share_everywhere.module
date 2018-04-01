@@ -4,7 +4,6 @@
  * @file
  * A module that adds social buttons to your website.
  */
-
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -12,15 +11,15 @@ use Drupal\Core\Routing\RouteMatchInterface;
 /**
  * Implements hook_help().
  */
-function share_everywhere_help($route_name, RouteMatchInterface $route_match) {
+function share_everywhere_help($route_name, RouteMatchInterface $route_match)
+{
   switch ($route_name) {
     case 'help.page.share_everywhere':
       $text = file_get_contents(dirname(__FILE__) . "/README.md");
 
       if (!\Drupal::moduleHandler()->moduleExists('markdown')) {
         return '<pre>' . $text . '</pre>';
-      }
-      else {
+      } else {
         // Use the Markdown filter to render the README.
         $filter_manager = \Drupal::service('plugin.manager.filter');
         $settings = \Drupal::configFactory()->get('markdown.settings')->getRawData();
@@ -35,10 +34,12 @@ function share_everywhere_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_theme().
  */
-function share_everywhere_theme($existing, $type, $theme, $path) {
+function share_everywhere_theme($existing, $type, $theme, $path)
+{
   $template_vars = [
     'url' => NULL,
     'content' => NULL,
+    'title' => NULL
   ];
   $variables = [
     'share_everywhere' => [
@@ -96,7 +97,8 @@ function share_everywhere_theme($existing, $type, $theme, $path) {
 /**
  * Implements hook_entity_extra_field_info().
  */
-function share_everywhere_entity_extra_field_info() {
+function share_everywhere_entity_extra_field_info()
+{
   $config = \Drupal::config('share_everywhere.settings');
   $extra = [];
 
@@ -132,7 +134,8 @@ function share_everywhere_entity_extra_field_info() {
 /**
  * Implements hook_ENTITY_TYPE_view().
  */
-function share_everywhere_node_view(array &$build, EntityInterface $node, EntityViewDisplayInterface $display, $view_mode) {
+function share_everywhere_node_view(array &$build, EntityInterface $node, EntityViewDisplayInterface $display, $view_mode)
+{
   $config = \Drupal::config('share_everywhere.settings');
   $share_service = \Drupal::service('share_everywhere.service');
   $route_params = \Drupal::routeMatch()->getParameters();
@@ -144,6 +147,7 @@ function share_everywhere_node_view(array &$build, EntityInterface $node, Entity
   }
 
   $url = $node->toUrl()->setAbsolute()->toString();
+  $title = $node->getTitle();
   $current_path = \Drupal::request()->getPathInfo();
 
   if ($share_service->isRestricted($view_mode, $current_path)) {
@@ -157,7 +161,7 @@ function share_everywhere_node_view(array &$build, EntityInterface $node, Entity
     case 'content':
       if (isset($enabled_types[$node->bundle()]) && $enabled_types[$node->bundle()] === $node->bundle() && $display->getComponent('share_everywhere')) {
         if (isset($enabled_view_modes[$view_mode]) && $enabled_view_modes[$view_mode]) {
-          $build['share_everywhere'] = $share_service->build($url, $id);
+          $build['share_everywhere'] = $share_service->build($url, $id, $title);
         }
       }
       break;
@@ -165,7 +169,7 @@ function share_everywhere_node_view(array &$build, EntityInterface $node, Entity
     case 'links':
       if (isset($enabled_types[$node->bundle()]) && $enabled_types[$node->bundle()] === $node->bundle() && $display->getComponent('links')) {
         if (isset($enabled_view_modes[$view_mode]) && $enabled_view_modes[$view_mode]) {
-          $content = $share_service->build($url, $id);
+          $content = $share_service->build($url, $id, $title);
           $links['share_everywhere'] = [
             'title' => $content,
           ];
@@ -184,7 +188,8 @@ function share_everywhere_node_view(array &$build, EntityInterface $node, Entity
 /**
  * Implements hook_ENTITY_TYPE_view().
  */
-function share_everywhere_commerce_product_view(array &$build, EntityInterface $node, EntityViewDisplayInterface $display, $view_mode) {
+function share_everywhere_commerce_product_view(array &$build, EntityInterface $node, EntityViewDisplayInterface $display, $view_mode)
+{
   $config = \Drupal::config('share_everywhere.settings');
   $share_service = \Drupal::service('share_everywhere.service');
   $module_handler = \Drupal::service('module_handler');
