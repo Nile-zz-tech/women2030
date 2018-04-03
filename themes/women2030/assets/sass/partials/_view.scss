@@ -700,6 +700,9 @@
         font-family: "GE_SS"; /* ltr */
         text-align: left; /* ltr */
         margin-left: 10%; /* ltr */
+        a{
+          color: #e4b640;
+        }
       }
       &:after, &:before {
         content: none;
