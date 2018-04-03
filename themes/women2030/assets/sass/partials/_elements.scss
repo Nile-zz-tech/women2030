@@ -53,7 +53,7 @@ blockquote {
   left: -50px; /* ltr */
   float: left; /* ltr */
   margin: 20px;
-  
+
   p {
     color: $grey_font_header;
     font-weight: bold;
@@ -159,4 +159,7 @@ blockquote {
       } 
     }
   }
+}
+input#edit-preview {
+  display: none;
 }

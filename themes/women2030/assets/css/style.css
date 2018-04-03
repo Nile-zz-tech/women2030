@@ -4593,6 +4593,11 @@ blockquote:after {
   margin-bottom: 0px;
 }
 
+/* line 163, /srv/www/women2030/themes/women2030/assets/sass/partials/_elements.scss */
+input#edit-preview {
+  display: none;
+}
+
 /* nav */
 /* line 2, /srv/www/women2030/themes/women2030/assets/sass/partials/_block.scss */
 #main-menu {
