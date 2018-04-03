@@ -6160,7 +6160,7 @@ blockquote:after {
 .teaser .view-content .group-header .field--name-node-title h2 a {
   line-height: 33px;
   color: #000000;
-  font-size: 24px;
+  font-size: 22px;
   display: block;
 }
 
@@ -6407,7 +6407,7 @@ blockquote:after {
 .view-taxonomy-term .view-content .group-header .field--name-node-title h2 a {
   line-height: 33px;
   color: #000000;
-  font-size: 29px;
+  font-size: 24px;
 }
 
 /* line 512, /srv/www/women2030/themes/women2030/assets/sass/partials/_view.scss */
@@ -9343,7 +9343,7 @@ The following content was designed & implemented under AlexSeif.com
   }
   /* line 578, /srv/www/women2030/themes/women2030/assets/sass/partials/_responsive.scss */
   #header .block-social-media-links {
-    position: absolute;
+    position: unset;
     bottom: 0px;
     width: 100%;
     text-align: center;
