@@ -1,0 +1,15 @@
+name: Facebook Instant Articles
+type: module
+description: Base module for Facebook Instant Articles.
+# core: 8.x
+package: Facebook Instant Articles
+configure: fb_instant_articles.base_settings_form
+dependencies:
+  - drupal:system (>= 8.3.x)
+  - drupal:serialization
+
+# Information added by Drupal.org packaging script on 2018-03-15
+version: '8.x-2.1'
+core: '8.x'
+project: 'fb_instant_articles'
+datestamp: 1521074886

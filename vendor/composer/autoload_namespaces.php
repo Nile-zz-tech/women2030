@@ -10,6 +10,8 @@ return array(
     'WebDriver' => array($vendorDir . '/instaclick/php-webdriver/lib'),
     'Twig_' => array($vendorDir . '/twig/twig/lib'),
     'Stack' => array($vendorDir . '/stack/builder/src'),
+    'Sabberworm\\CSS' => array($vendorDir . '/sabberworm/php-css-parser/lib'),
+    'QueryPath' => array($vendorDir . '/querypath/querypath/src'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),
     'Mailchimp' => array($baseDir . '/modules/contrib/mailchimp/src'),
     'Egulias\\' => array($vendorDir . '/egulias/email-validator/src'),
