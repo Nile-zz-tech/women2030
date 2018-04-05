@@ -77,10 +77,11 @@ blockquote {
     right: 0; /* ltr */
   }
 }
-.pager { display: none;}
+.pager ,
 .more-link {
   text-align: center !important;
-
+  float: none;
+  li a, 
   a {
     padding: 9px 118px 3px;
     font-size: 28px;

@@ -27,7 +27,8 @@
         "drupal/entity": "^1.0",
         "drupal/media_entity": "^1.7",
         "drupal/video_embed_field": "^1.5",
-        "drupal/url_embed": "^1.0"
+        "drupal/url_embed": "^1.0",
+        "drupal/views_infinite_scroll": "^1.5"
     },
     "replace": {
         "drupal/core": "^8.5"
