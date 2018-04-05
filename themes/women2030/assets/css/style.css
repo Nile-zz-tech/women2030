@@ -9884,7 +9884,8 @@ The following content was designed & implemented under AlexSeif.com
   .view-filters .form-actions {
     text-align: center !important;
   }
-  /* line 1122, /srv/www/women2030/themes/women2030/assets/sass/partials/_responsive.scss */
+  /* line 1121, /srv/www/women2030/themes/women2030/assets/sass/partials/_responsive.scss */
+  .pager,
   .more-link {
     margin-bottom: 10px;
   }
