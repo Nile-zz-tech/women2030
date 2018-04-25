@@ -9,13 +9,14 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 
 function translation404_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode)
 {
-
   $lang = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $lang = ($lang == "en") ? "" : $lang;
   $ent_lang = $entity->langcode->value;
   if ($view_mode == "full" && $lang != $ent_lang) {
-//    $response = new RedirectResponse("/$lang");
-//    $response->send();
-//    return;
-    throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
+    $response = new RedirectResponse("/$lang");
+    drupal_set_message(t('Page not found.'));
+    $response->send();
+    return;
+//    throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
   }
 }
