@@ -8,6 +8,8 @@ use Drupal\Core\Entity\EntityManagerInterface;
 use Drupal\Core\Entity\EntityFormBuilderInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Language\LanguageInterface;
+use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FormatterBase;
@@ -30,16 +32,19 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *   }
  * )
  */
-class CommentDefaultFormatter extends FormatterBase implements ContainerFactoryPluginInterface {
+class CommentDefaultFormatter extends FormatterBase implements ContainerFactoryPluginInterface
+{
 
   /**
    * {@inheritdoc}
    */
-  public static function defaultSettings() {
+  public static function defaultSettings()
+  {
     return [
       'view_mode' => 'default',
       'pager_id' => 0,
-    ] + parent::defaultSettings();
+      'language_filter' => [],
+        ] + parent::defaultSettings();
   }
 
   /**
@@ -83,21 +88,26 @@ class CommentDefaultFormatter extends FormatterBase implements ContainerFactoryP
   protected $routeMatch;
 
   /**
+   * The language manager.
+   *
+   * @var \Drupal\Core\Language\LanguageManagerInterface
+   */
+  protected $languageManager;
+
+  /**
+   * Stores the language options for the language filter setting.
+   *
+   * @var array
+   */
+  protected $languageOptions;
+
+  /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition)
+  {
     return new static(
-      $plugin_id,
-      $plugin_definition,
-      $configuration['field_definition'],
-      $configuration['settings'],
-      $configuration['label'],
-      $configuration['view_mode'],
-      $configuration['third_party_settings'],
-      $container->get('current_user'),
-      $container->get('entity.manager'),
-      $container->get('entity.form_builder'),
-      $container->get('current_route_match')
+        $plugin_id, $plugin_definition, $configuration['field_definition'], $configuration['settings'], $configuration['label'], $configuration['view_mode'], $configuration['third_party_settings'], $container->get('current_user'), $container->get('entity.manager'), $container->get('entity.form_builder'), $container->get('current_route_match'), $container->get('language_manager')
     );
   }
 
@@ -126,8 +136,11 @@ class CommentDefaultFormatter extends FormatterBase implements ContainerFactoryP
    *   The entity form builder.
    * @param \Drupal\Core\Routing\RouteMatchInterface $route_match
    *   The route match object.
+   * @param \Drupal\Core\Language\LanguageManagerInterface $languageManager
+   *   The language manager object.
    */
-  public function __construct($plugin_id, $plugin_definition, FieldDefinitionInterface $field_definition, array $settings, $label, $view_mode, array $third_party_settings, AccountInterface $current_user, EntityManagerInterface $entity_manager, EntityFormBuilderInterface $entity_form_builder, RouteMatchInterface $route_match) {
+  public function __construct($plugin_id, $plugin_definition, FieldDefinitionInterface $field_definition, array $settings, $label, $view_mode, array $third_party_settings, AccountInterface $current_user, EntityManagerInterface $entity_manager, EntityFormBuilderInterface $entity_form_builder, RouteMatchInterface $route_match, LanguageManagerInterface $languageManager)
+  {
     parent::__construct($plugin_id, $plugin_definition, $field_definition, $settings, $label, $view_mode, $third_party_settings);
     $this->viewBuilder = $entity_manager->getViewBuilder('comment');
     $this->storage = $entity_manager->getStorage('comment');
@@ -135,12 +148,14 @@ class CommentDefaultFormatter extends FormatterBase implements ContainerFactoryP
     $this->entityManager = $entity_manager;
     $this->entityFormBuilder = $entity_form_builder;
     $this->routeMatch = $route_match;
+    $this->languageManager = $languageManager;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function viewElements(FieldItemListInterface $items, $langcode) {
+  public function viewElements(FieldItemListInterface $items, $langcode)
+  {
     $elements = [];
     $output = [];
 
@@ -150,10 +165,10 @@ class CommentDefaultFormatter extends FormatterBase implements ContainerFactoryP
     $status = $items->status;
 
     if ($status != CommentItemInterface::HIDDEN && empty($entity->in_preview) &&
-      // Comments are added to the search results and search index by
-      // comment_node_update_index() instead of by this formatter, so don't
-      // return anything if the view mode is search_index or search_result.
-      !in_array($this->viewMode, ['search_result', 'search_index'])) {
+        // Comments are added to the search results and search index by
+        // comment_node_update_index() instead of by this formatter, so don't
+        // return anything if the view mode is search_index or search_result.
+        !in_array($this->viewMode, ['search_result', 'search_index'])) {
       $comment_settings = $this->getFieldSettings();
 
       // Only attempt to render comments if the entity has visible comments.
@@ -164,10 +179,29 @@ class CommentDefaultFormatter extends FormatterBase implements ContainerFactoryP
       if ($this->currentUser->hasPermission('access comments') || $this->currentUser->hasPermission('administer comments')) {
         $output['comments'] = [];
 
-        if ($entity->get($field_name)->comment_count || $this->currentUser->hasPermission('administer comments')) {
+//        if ($entity->get($field_name)->comment_count || $this->currentUser->hasPermission('administer comments')) {
+        if ($entity->get($field_name)->comment_count || $this->currentUser->hasPermission('access comments') || $this->currentUser->hasPermission('administer comments')) {
           $mode = $comment_settings['default_mode'];
           $comments_per_page = $comment_settings['per_page'];
-          $comments = $this->storage->loadThread($entity, $field_name, $mode, $comments_per_page, $this->getSetting('pager_id'));
+//          $comments = $this->storage->loadThread($entity, $field_name, $mode, $comments_per_page, $this->getSetting('pager_id'));
+
+          $langcodes = [];
+          $language_ids = $this->getSetting('language_filter');
+          if (!empty($language_ids)) {
+            foreach ($language_ids as $language_id) {
+              // Skip if the language_id is disabled.
+              if (!$language_id) {
+                continue;
+              }
+              // Use the interface language for filtering.
+              if ($language_id === LanguageInterface::TYPE_INTERFACE) {
+                $language_id = $langcode;
+              }
+              $langcodes[] = $language_id;
+            }
+          }
+
+          $comments = $this->storage->loadThread($entity, $field_name, $mode, $comments_per_page, $this->getSetting('pager_id'), $langcodes);
           if ($comments) {
             $build = $this->viewBuilder->viewMultiple($comments, $this->getSetting('view_mode'));
             $build['pager']['#type'] = 'pager';
@@ -220,7 +254,8 @@ class CommentDefaultFormatter extends FormatterBase implements ContainerFactoryP
   /**
    * {@inheritdoc}
    */
-  public function settingsForm(array $form, FormStateInterface $form_state) {
+  public function settingsForm(array $form, FormStateInterface $form_state)
+  {
     $element = [];
     $view_modes = $this->getViewModes();
     $element['view_mode'] = [
@@ -239,13 +274,21 @@ class CommentDefaultFormatter extends FormatterBase implements ContainerFactoryP
       '#default_value' => $this->getSetting('pager_id'),
       '#description' => $this->t("Unless you're experiencing problems with pagers related to this field, you should leave this at 0. If using multiple pagers on one page you may need to set this number to a higher value so as not to conflict within the ?page= array. Large values will add a lot of commas to your URLs, so avoid if possible."),
     ];
+    $element['language_filter'] = [
+      '#type' => 'checkboxes',
+      '#title' => $this->t('Filter by language'),
+      '#options' => $this->getLanguageOptions(),
+      '#default_value' => $this->getSetting('language_filter'),
+      '#description' => $this->t("Show comments in the selected languages. If none selected, all comments will be showed."),
+    ];
     return $element;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function settingsSummary() {
+  public function settingsSummary()
+  {
     $view_mode = $this->getSetting('view_mode');
     $view_modes = $this->getViewModes();
     $view_mode_label = isset($view_modes[$view_mode]) ? $view_modes[$view_mode] : 'default';
@@ -253,13 +296,36 @@ class CommentDefaultFormatter extends FormatterBase implements ContainerFactoryP
     if ($pager_id = $this->getSetting('pager_id')) {
       $summary[] = $this->t('Pager ID: @id', ['@id' => $pager_id]);
     }
+    if (!empty($this->getSetting('language_filter'))) {
+      $language_filter = array_intersect_key($this->getLanguageOptions(), array_flip($this->getSetting('language_filter')));
+      $summary[] = $this->t('Show comments in the following languages: @languages', ['@languages' => implode(', ', $language_filter)]);
+    }
     return $summary;
+  }
+
+  /**
+   * Get a list of language options for the language_filter setting.
+   *
+   * @return array
+   *   All available language options.
+   */
+  protected function getLanguageOptions()
+  {
+    if (!isset($this->languageOptions)) {
+      $this->languageOptions[LanguageInterface::TYPE_INTERFACE] = $this->t('Interface text language selected for page');
+      $languages = $this->languageManager->getLanguages(LanguageInterface::STATE_ALL);
+      foreach ($languages as $langcode => $language) {
+        $this->languageOptions[$langcode] = $language->getName();
+      }
+    }
+    return $this->languageOptions;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function calculateDependencies() {
+  public function calculateDependencies()
+  {
     $dependencies = parent::calculateDependencies();
     if ($mode = $this->getSetting('view_mode')) {
       if ($bundle = $this->getFieldSetting('comment_type')) {
@@ -279,7 +345,8 @@ class CommentDefaultFormatter extends FormatterBase implements ContainerFactoryP
    *   Associative array keyed by view mode key and having the view mode label
    *   as value.
    */
-  protected function getViewModes() {
+  protected function getViewModes()
+  {
     return $this->entityManager->getViewModeOptionsByBundle('comment', $this->getFieldSetting('comment_type'));
   }
 
