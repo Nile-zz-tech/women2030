@@ -5,7 +5,6 @@
   $.fn.mobileMenu = function(options) {
 
     var settings = $.extend({
-      pageSelector: '#page',
       targetWrapper: '.navbar-we-mega-menu',
       accordionMenu: 'true',
       toggledClass : 'toggled'
@@ -52,7 +51,7 @@
         }
         if (wrapper.find('.btn-close').length == 0) {
           var btnClose = $('<span class="btn-close"></span>');
-          btnClose.prependTo('.mobile-main-menu');
+          btnClose.prependTo(wrapper);
 
           $('.btn-close').on('click', function(e) {
             toggleButton.trigger('click');

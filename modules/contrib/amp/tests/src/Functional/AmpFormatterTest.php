@@ -27,7 +27,6 @@ class AmpFormatterTest extends BrowserTestBase {
     'contextual',
     'field_ui',
     'quickedit',
-    'composer_manager',
   ];
 
   /**
@@ -57,8 +56,15 @@ class AmpFormatterTest extends BrowserTestBase {
   protected function setUp() {
     parent::setUp();
 
-    // Install the AMP theme.
-    \Drupal::service('theme_handler')->install(['amptheme', 'ampsubtheme_example']);
+    // Install the theme. It is not possible to test a contrib theme
+    // so tests are limited to things that work in the core themes.
+    // @see https://www.drupal.org/node/2232651
+    $this->container->get('theme_installer')->install(['bartik', 'seven']);
+    $this->container->get('config.factory')
+      ->getEditable('system.theme')
+      ->set('default', 'bartik')
+      ->set('admin', 'seven')
+      ->save();
 
     // Create Article node type.
     $this->createContentType([
@@ -109,6 +115,7 @@ class AmpFormatterTest extends BrowserTestBase {
     $this->assertSession()->pageTextContains('AMP test body');
     $this->assertSession()->responseContains('data-quickedit-field-id="node/1/body/en/full"');
     $this->assertSession()->responseContains('link rel="amphtml" href="' . $amp_node_url . '"');
+    $this->assertSession()->responseHeaderEquals('Link', '<' . $amp_node_url . '> rel="amphtml"');
 
     // Check the metadata of the AMP display mode.
     $this->drupalGet($amp_node_url);
