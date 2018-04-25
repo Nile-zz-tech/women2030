@@ -77,12 +77,9 @@
 
 /* line 63, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */
 [dir="rtl"] blockquote {
-  left: auto;
-  /* ltr */
-  right: -50px;
-  /* ltr */
-  float: right;
-  /* ltr */
+  /*left: auto;  ltr */
+  /*right: -50px;  ltr */
+  /*float: right;  ltr */
 }
 
 /* line 67, /srv/www/women2030/themes/women2030/assets/sass/style-rtl.scss */

@@ -50,9 +50,10 @@ blockquote {
   width: 475px;
   position: relative;
   padding: 0;
-  left: -50px; /* ltr */
-  float: left; /* ltr */
-  margin: 20px;
+  /*left: -50px;  ltr */
+  /*float: left;  ltr */
+  text-align: center;
+  margin: 20px auto;
 
   p {
     color: $grey_font_header;
