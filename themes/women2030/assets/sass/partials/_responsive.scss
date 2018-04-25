@@ -260,6 +260,7 @@
   /* slideshow */
   #search-api-page-block-form,
   #search-api-page-block-form--2 {
+    max-height: 50px;
     position: absolute;
     right: 15px;
     top: 15px;
@@ -575,7 +576,7 @@
     }
 
     .block-social-media-links {
-      position: absolute;
+      position: unset;
       bottom: 0px;
       width: 100%;
       text-align: center;
@@ -1117,7 +1118,7 @@
       text-align: center !important;
     }
   }
-
+  .pager,
   .more-link {
     margin-bottom: 10px;
   }

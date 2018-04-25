@@ -319,7 +319,7 @@
           a {
             line-height: 33px;
             color: #000000;
-            font-size: 24px;
+            font-size: 22px;
             display: block;
           }
           &:after, &:before {
@@ -507,7 +507,7 @@
           a {
             line-height: 33px;
             color: #000000;
-            font-size: 29px;
+            font-size: 24px;
           }
           &:after, &:before {
             content: none;
@@ -679,28 +679,30 @@
     }
     .category-header {
       height: 150px;
-      width: 100vw;
+      /*width: 100vw;*/
       position: relative;
-      left: 49%;
-      right: 49%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      background-image: -webkit-linear-gradient(#bfa39b 0%, #e3cdc7 100%);
-      background-image: -moz-linear-gradient(#bfa39b 0%, #e3cdc7 100%);
-      background-image: -o-linear-gradient(#bfa39b 0%, #e3cdc7 100%);
-      background-image: linear-gradient(#bfa39b 0%, #e3cdc7 100%);
+      /*left: 49%;*/
+      /*right: 49%;*/
+      /*margin-left: -50vw;*/
+      /*margin-right: -50vw;*/
+      background-image: -webkit-linear-gradient(#bfa39b 0%,#e3cdc7 100%);
+      background-image: -moz-linear-gradient(#bfa39b 0%,#e3cdc7 100%);
+      background-image: -o-linear-gradient(#bfa39b 0%,#e3cdc7 100%);
+      background-image: linear-gradient(#bfa39b 0%,#e3cdc7 100%);
       text-align: center;
       padding-top: 40px;
-      margin-bottom: 60px;
       background-size: cover;
       background-repeat: no-repeat;
-
+      background-position: center center;
       h2 {
         font-size: 60px;
         font-weight: normal;
         font-family: "GE_SS"; /* ltr */
         text-align: left; /* ltr */
         margin-left: 10%; /* ltr */
+        a{
+          color: #e4b640;
+        }
       }
       &:after, &:before {
         content: none;

@@ -39,7 +39,7 @@ class WeMegaMenuBuilder {
           'plugin_id' => $item->link->getPluginId(),
         ];
       }
-    } 
+    }
     else {
       if ($items->hasChildren) {
         foreach ($items->subtree as $key_item => $item) {
@@ -115,8 +115,8 @@ class WeMegaMenuBuilder {
    *   Public static function sortMenu array.
    */
   public static function sortMenu($menu) {
-    for ($i = 0; $i < count($menu); $i++) { 
-      for ($j = $i + 1; $j < count($menu); $j++) { 
+    for ($i = 0; $i < count($menu); $i++) {
+      for ($j = $i + 1; $j < count($menu); $j++) {
         if ($menu[$i]['weight'] > $menu[$j]['weight']) {
           $menu_tmp = $menu[$i];
           $menu[$i] = $menu[$j];
@@ -227,21 +227,26 @@ class WeMegaMenuBuilder {
     $html = '';
     if ($bid && !empty($bid)) {
       $block = \Drupal\block\Entity\Block::load($bid);
-      $title = $block->label();
-      $block_content = \Drupal::entityManager()
-        ->getViewBuilder('block')
-        ->view($block);
+      if (isset($block) && !empty($block)) {
+        $title = $block->label();
+        $block_content = \Drupal::entityManager()
+          ->getViewBuilder('block')
+          ->view($block);
 
-      if ($section == 'admin') {
-        $html .= '<span class="close icon-remove" title="Remove this block">&nbsp;</span>';
+        if ($section == 'admin') {
+          $html .= '<span class="close icon-remove" title="Remove this block">&nbsp;</span>';
+        }
+
+        $html .= '<div class="type-of-block">';
+        $html .= '<div class="block-inner">';
+        $html .= $title_enable ? '<h2>' . $title . '</h2>' : '';
+        $html .= render($block_content);
+        $html .= '</div>';
+        $html .= '</div>';
       }
-
-      $html .= '<div class="type-of-block">';
-      $html .= '<div class="block-inner">';
-      $html .= $title_enable ? '<h2>' . $title . '</h2>' : '';
-      $html .= render($block_content);
-      $html .= '</div>';
-      $html .= '</div>';
+      else {
+        $html = '<p><b>Warning:</b> <i>Broken/Missing block</i></p>';
+      }
     }
     return $html;
   }
@@ -366,7 +371,7 @@ class WeMegaMenuBuilder {
           }
         }
       }
-      
+
       $menu_config->menu_config->{$key_menu}->rows_content[$row_count][$col_count]->col_content[] = $tmp_col_content;
       $items_validate_serialize = array_map("serialize", $menu_config->menu_config->{$key_menu}->rows_content[$row_count][$col_count]->col_content);
       $items_validate_unique = array_unique($items_validate_serialize);
@@ -463,6 +468,10 @@ class WeMegaMenuBuilder {
             }
           }
 
+          if (!sizeof($positions)) {
+            continue;
+          }
+
           $list_menu_items = WeMegaMenuBuilder::sortMenu($list_menu_items);
           foreach ($positions as $key_position => $position) {
             $pos_params = explode('-', $position);
@@ -471,17 +480,22 @@ class WeMegaMenuBuilder {
             $size = $pos_params[2];
 
             if ($size >= 0) {
-              $list_item = array_slice($list_menu_items, 0, $size);            
-              $list_menu_items = array_diff_assoc($list_menu_items, $list_item);
-              $menu_config->menu_config->{$key_menu}->rows_content[$row][$col]->col_content = [];
-              foreach ($list_item as $key_menu_item => $menu_itemnew) {
-                foreach ($list_mega_menu_items as $key_mega_menu => $mega_menu_item) {
-                  if ($menu_itemnew['derivativeId'] == $mega_menu_item->mlid) {
-                    $menu_config->menu_config->{$key_menu}->rows_content[$row][$col]->col_content[] = $mega_menu_item;
-                    $items_validate_serialize = array_map("serialize", $menu_config->menu_config->{$key_menu}->rows_content[$row][$col]->col_content);
-                    $items_validate_unique = array_unique($items_validate_serialize);
-                    $items_validate = array_map("unserialize", $items_validate_unique);
-                    $menu_config->menu_config->{$key_menu}->rows_content[$row][$col]->col_content = $items_validate;
+              if (is_array($list_menu_items)) {
+                $list_item = array_slice($list_menu_items, 0, $size);
+                if (is_array($list_item)) {
+                  $list_menu_items = array_map('unserialize', array_diff_assoc(array_map('serialize', $list_menu_items), array_map('serialize', $list_item)));
+
+                  $menu_config->menu_config->{$key_menu}->rows_content[$row][$col]->col_content = [];
+                  foreach ($list_item as $key_menu_item => $menu_itemnew) {
+                    foreach ($list_mega_menu_items as $key_mega_menu => $mega_menu_item) {
+                      if ($menu_itemnew['derivativeId'] == $mega_menu_item->mlid) {
+                        $menu_config->menu_config->{$key_menu}->rows_content[$row][$col]->col_content[] = $mega_menu_item;
+                        $items_validate_serialize = array_map("serialize", $menu_config->menu_config->{$key_menu}->rows_content[$row][$col]->col_content);
+                        $items_validate_unique = array_unique($items_validate_serialize);
+                        $items_validate = array_map("unserialize", $items_validate_unique);
+                        $menu_config->menu_config->{$key_menu}->rows_content[$row][$col]->col_content = $items_validate;
+                      }
+                    }
                   }
                 }
               }
@@ -491,7 +505,7 @@ class WeMegaMenuBuilder {
       }
     }
   }
-  
+
   /**
    * Drag-Drop menu item insert.
    *
@@ -504,7 +518,7 @@ class WeMegaMenuBuilder {
    * @param object $child_item
    *   Public static function menuItemInsert child_item.
    */
-  public static function dragDropMenuItems($menu_name, $theme_name = '', $menu_config, $child_item) { 
+  public static function dragDropMenuItems($menu_name, $theme_name = '', $menu_config, $child_item) {
     $list_menu_items = WeMegaMenuBuilder::getMenuItems($menu_name);
     $tmp_col_content = $child_item['col_content'];
     $tmp_col_cfg = $child_item['col_cfg'];
@@ -529,7 +543,7 @@ class WeMegaMenuBuilder {
                           if (isset($col->mlid)) {
                             $row_count = $key_rows;
                             $col_count = $key_row_col;
-                            
+
                             if (!in_array($col->mlid, $childs)) {
                               unset($menu_config->menu_config->{$key_menu}->rows_content[$key_rows][$key_row_col]->col_content[$key_col]);
                               if (!count($menu_config->menu_config->{$key_menu}->rows_content[$key_rows][$key_row_col]->col_content)) {
@@ -574,13 +588,13 @@ class WeMegaMenuBuilder {
             if ($key_menu == $uuid) {
               foreach ($childs as $key_child => $child_uuid) {
                 $tmp_col_content->mlid = $child_uuid;
-                $menu_config->menu_config->{$key_menu}->rows_content[$row_count][$col_count]->col_content[] = $tmp_col_content;
-                $items_validate_serialize = array_map("serialize", $menu_config->menu_config->{$key_menu}->rows_content[$row_count][$col_count]->col_content);
+                $menu_config->menu_config->{$key_menu}->rows_content[0][0]->col_content[] = $tmp_col_content;
+                $items_validate_serialize = array_map("serialize", $menu_config->menu_config->{$key_menu}->rows_content[0][0]->col_content);
                 $items_validate_unique = array_unique($items_validate_serialize);
                 $items_validate = array_map("unserialize", $items_validate_unique);
-                $menu_config->menu_config->{$key_menu}->rows_content[$row_count][$col_count]->col_content = $items_validate;
-                if (!isset($menu_config->menu_config->{$key_menu}->rows_content[$row_count][$col_count]->col_config)) {
-                  $menu_config->menu_config->{$key_menu}->rows_content[$row_count][$col_count]->col_config = $tmp_col_cfg;
+                $menu_config->menu_config->{$key_menu}->rows_content[0][0]->col_content = $items_validate;
+                if (!isset($menu_config->menu_config->{$key_menu}->rows_content[0][0]->col_config)) {
+                  $menu_config->menu_config->{$key_menu}->rows_content[0][0]->col_config = $tmp_col_cfg;
                 }
               }
             }
@@ -677,6 +691,6 @@ class WeMegaMenuBuilder {
         echo drupal_render($view);
         exit;
       }
-    }   
+    }
   }
 }

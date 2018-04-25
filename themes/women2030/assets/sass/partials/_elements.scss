@@ -50,10 +50,11 @@ blockquote {
   width: 475px;
   position: relative;
   padding: 0;
-  left: -50px; /* ltr */
-  float: left; /* ltr */
-  margin: 20px;
-  
+  /*left: -50px;  ltr */
+  /*float: left;  ltr */
+  text-align: center;
+  margin: 20px auto;
+
   p {
     color: $grey_font_header;
     font-weight: bold;
@@ -77,10 +78,11 @@ blockquote {
     right: 0; /* ltr */
   }
 }
-.pager { display: none;}
+.pager ,
 .more-link {
   text-align: center !important;
-
+  float: none;
+  li a, 
   a {
     padding: 9px 118px 3px;
     font-size: 28px;
@@ -159,4 +161,7 @@ blockquote {
       } 
     }
   }
+}
+input#edit-preview {
+  display: none;
 }

@@ -1,0 +1,23 @@
+{
+  "name": "drupal/fb_instant_articles",
+  "description": "Drupal Facebook Instant Articles.",
+  "keywords": ["facebook", "instant", "articles", "drupal"],
+  "type": "drupal-module",
+  "license": "GPL-2.0+",
+  "authors": [{
+    "name": "Drupal community",
+    "homepage": "https://www.drupal.org/node/2676800/committers"
+  }],
+  "require": {
+    "facebook/facebook-instant-articles-sdk-php": "1.7.0"
+  },
+  "require-dev": {
+    "drupal/drupal-extension": "dev-master",
+    "behat/mink-selenium2-driver": "^1.3@dev",
+    "drupal/coder": "^8.2",
+    "bex/behat-screenshot": "^1.2",
+    "phpmd/phpmd": "^2.6",
+    "phpmetrics/phpmetrics": "^2.3",
+    "cweagans/composer-patches": "^1.6"
+  }
+}
