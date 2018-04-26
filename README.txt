@@ -121,7 +121,7 @@ More about developing:
    https://www.drupal.org/project/examples
 
 MORE INFORMATION
---------------
+----------------
 
  * See the Drupal.org online documentation:
    https://www.drupal.org/documentation
